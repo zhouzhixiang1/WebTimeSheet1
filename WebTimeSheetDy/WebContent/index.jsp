@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<a href="dipen">tabella dipendente</a>
+<a href="dipens">tabella dipendente</a>
 
 </body>
 </html>

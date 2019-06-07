@@ -19,7 +19,7 @@ public class DipendenteHandler {
 	private DipendenteService dipendenteService;
 
 	// find all dipendenti
-	@RequestMapping(value = "/dipen", method = RequestMethod.GET)
+	@RequestMapping(value = "/dipens", method = RequestMethod.GET)
 	public String input(Map<String, Object> map) {
 		List<Dipendente> listD = dipendenteService.findAll();
 		map.put("list", listD);

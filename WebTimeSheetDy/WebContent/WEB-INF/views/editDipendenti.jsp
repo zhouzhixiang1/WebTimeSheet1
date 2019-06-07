@@ -11,7 +11,7 @@
 <body>
 
 	<form:form method="POST"
-		action="${pageContext.request.contextPath }/dipen/${dipendente.idDipendente}"
+		action="${pageContext.request.contextPath }/dipen/${idDipendente}"
 		modelAttribute="dipendente">
 		<form:hidden path="idDipendente" />
 		<input type="hidden" name="_method" value="PUT" />
