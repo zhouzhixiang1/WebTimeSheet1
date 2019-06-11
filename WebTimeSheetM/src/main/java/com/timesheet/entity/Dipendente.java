@@ -21,11 +21,11 @@ public class Dipendente {
 	
 	private Integer idDipendente;
 	private String nomeDipendente;
-	private Date oreLavorate;
+	private Integer oreLavorate;
 
 	private Set<Ticket> tickets = new HashSet<>();
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	@Id
 	public Integer getIdDipendente() {
 		return idDipendente;
@@ -40,11 +40,10 @@ public class Dipendente {
 		this.nomeDipendente = nomeDipendente;
 	}
 	
-	@Temporal(TemporalType.TIME)
-	public Date getOreLavorate() {
+	public Integer getOreLavorate() {
 		return oreLavorate;
 	}
-	public void setOreLavorate(Date oreLavorate) {
+	public void setOreLavorate(Integer oreLavorate) {
 		this.oreLavorate = oreLavorate;
 	}
 	@JoinTable(name="DIPENDENTI_TICKET",joinColumns = {@JoinColumn(name="TICKET_ID")},
@@ -56,11 +55,4 @@ public class Dipendente {
 	public void setTickets(Set<Ticket> tickets) {
 		this.tickets = tickets;
 	}
-
-	
-
-	
-
-	
-
 }

@@ -18,8 +18,7 @@
 		<table>
 			<tr>
 				<td>NOME DIPENDENTE</td>
-				<td><form:input type="text" path="nomeDipendente"
-						readonly="readonly" /></td>
+				<td><form:input type="readonly" path="nomeDipendente" /></td>
 			</tr>
 			<tr>
 				<td>ORE LAVORATE</td>

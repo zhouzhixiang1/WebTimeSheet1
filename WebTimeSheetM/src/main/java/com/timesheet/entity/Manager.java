@@ -28,7 +28,7 @@ public class Manager {
 //	private Set<Cliente> clienti = new HashSet<>();
 
  
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	@Id
 	public Integer getIdManager() {
 		return idManager;

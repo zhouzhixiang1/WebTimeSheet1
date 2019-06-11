@@ -24,7 +24,7 @@ public class Ticket {
 	private Date dataRilascio;
 	private Double stima;
 	private String descrizione;
-	private Date totOreLavorate;
+	private Integer totOreLavorate;
 	private String commessa;
 	private String note;
 //	private Priorita priorita;
@@ -44,7 +44,7 @@ public class Ticket {
 		this.dipendenti = dipendenti;
 	}
 	
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	@Id
 	public Integer getIdTicket() {
 		return idTicket;
@@ -86,12 +86,10 @@ public class Ticket {
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
-	
-	@Temporal(TemporalType.TIME)
-	public Date getTotOreLavorate() {
+	public Integer getTotOreLavorate() {
 		return totOreLavorate;
 	}
-	public void setTotOreLavorate(Date totOreLavorate) {
+	public void setTotOreLavorate(Integer totOreLavorate) {
 		this.totOreLavorate = totOreLavorate;
 	}
 	public String getCommessa() {
