@@ -17,7 +17,7 @@
 				<th>modifica</th>
 				
 			</tr>
-		<c:forEach items="${page.content}"  var="d" >
+		<c:forEach items="${list}"  var="d" >
 			<tr>
 				<th>${d.idDipendente}</th>
 				<th>${d.nomeDipendente}</th>
@@ -25,15 +25,6 @@
 				<th><a href="${pageContext.request.contextPath }/dipen/${d.idDipendente}">modifica</a></th>
 			</tr>
 		</c:forEach>
-		<tr>
-				<td colspan="8">
-					TotalEmps${page.totalElements }&nbsp;&nbsp;
-					TotalPages${page.totalPages } &nbsp;&nbsp;
-					CurrentPage${page.number + 1 } &nbsp;&nbsp;
-					<a href="?pageNo=${page.number + 1 - 1 }">Previous</a>&nbsp;&nbsp;
-					<a href="?pageNo=${page.number + 1 + 1 }">Next</a>
-				</td>
-			</tr>
 		</table>
 </body>
 
