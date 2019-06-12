@@ -27,7 +27,6 @@
 		<property name="password" value="${jdbc.password}"></property>
 		<property name="driverClass" value="${jdbc.driverClass}"></property>
 		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
-
 	</bean>
 
 	<!-- configurare EntityManagerFactory -->
@@ -69,6 +68,6 @@
 
 	<!-- 配置 SpringData -->
 	<jpa:repositories base-package="com.timesheet"
-		entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>
-
+		entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>	
+				
 </beans>

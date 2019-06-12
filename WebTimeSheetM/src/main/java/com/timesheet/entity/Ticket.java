@@ -6,7 +6,6 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
@@ -27,6 +26,11 @@ public class Ticket {
 	private Integer totOreLavorate;
 	private String commessa;
 	private String note;
+	private String sorgenteTicket;
+	private String statoTicket;
+	private String priorita;
+	private String tipologiaTicket;
+	
 //	private Priorita priorita;
 //	private StatoTicket statoTicket;
 //	private SorgenteTicket sorgenteTicket;
@@ -104,6 +108,32 @@ public class Ticket {
 	public void setNote(String note) {
 		this.note = note;
 	}
+	public String getSorgenteTicket() {
+		return sorgenteTicket;
+	}
+	public void setSorgenteTicket(String sorgenteTicket) {
+		this.sorgenteTicket = sorgenteTicket;
+	}
+	public String getStatoTicket() {
+		return statoTicket;
+	}
+	public void setStatoTicket(String statoTicket) {
+		this.statoTicket = statoTicket;
+	}
+	public String getPriorita() {
+		return priorita;
+	}
+	public void setPriorita(String priorita) {
+		this.priorita = priorita;
+	}
+	public String getTipologiaTicket() {
+		return tipologiaTicket;
+	}
+	public void setTipologiaTicket(String tipologiaTicket) {
+		this.tipologiaTicket = tipologiaTicket;
+	}
+	
+	
 	
 //	@JoinColumn(name="TICKET_ID")
 //	@OneToMany

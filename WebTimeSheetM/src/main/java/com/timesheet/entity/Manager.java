@@ -5,7 +5,6 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -17,9 +16,8 @@ import javax.persistence.Table;
 public class Manager {
 	 
 	private Integer idManager;
-	
-
-	private String nomeManager;
+	private String managerName;
+	private String managerPassword;
 	
 	private Set<Ticket> tickets = new HashSet<>();
 	
@@ -36,11 +34,17 @@ public class Manager {
 	public void setIdManager(Integer idManager) {
 		this.idManager = idManager;
 	}
-	public String getNomeManager() {
-		return nomeManager;
+	public String getManagerName() {
+		return managerName;
 	}
-	public void setNomeManager(String nomeManager) {
-		this.nomeManager = nomeManager;
+	public void setManagerName(String managerName) {
+		this.managerName = managerName;
+	}
+	public String getManagerPassword() {
+		return managerPassword;
+	}
+	public void setManagerPassword(String managerPassword) {
+		this.managerPassword = managerPassword;
 	}
 	@JoinColumn(name="MANAGER_ID")
 	@OneToMany
