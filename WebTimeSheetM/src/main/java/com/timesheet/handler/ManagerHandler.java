@@ -19,12 +19,12 @@ public class ManagerHandler {
 	@Autowired
 	private ManagerService managerService;
 
+
 	// va alla pagina login
-	@RequestMapping(value = "/loginM", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String toLogin() {
 		return "login";
 	}
-
 	// login utente
 	@RequestMapping(value = "/managerLogin", method = RequestMethod.POST)
 	public String login(@RequestParam Integer idManager, @RequestParam String managerName,

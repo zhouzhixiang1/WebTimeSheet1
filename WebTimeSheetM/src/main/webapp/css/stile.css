@@ -1,59 +1,114 @@
+
 .navbar {
-  min-height: 100px;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
-  z-index: 1;	
+  left: 0;
+  right: 0;
+  z-index: 1;
+  position: fixed;
+  position: sticky;	
+  min-width: 800px;
+  min-height: 100px;
+  background-color: #729aff !important;
 }
 
 .sfondo {
-  background-image: url("manager.jpg");
   height: 100%;
+  background-size: cover;
   background-position: fixed;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("manager.jpg");
 }
 
 .button {
-  background-color: #729aff; 
-  border: 2px solid #729aff; 
+  width: 80px;
+  padding: 5px;
   color: white;
   font-weight: bold;
- -moz-border-radius: 20px;
- -webkit-border-radius: 20px;
- border-radius:20px;
+  border-radius:20px;
+  -moz-border-radius: 20px;
+  background-color: #729aff; 
+  border: 2px solid #96b4ff;
+  -webkit-border-radius: 20px;
 }
 
-.scelta {
-	
-  width: relative;
-  height: 50%;
-  
-}
 
 table {
-  border: 1px solid gray;
   padding: 6px;
-  text-align: center;
   width: responsive;
-  font-weight:lighter;
+  text-align: center;
+  font-weight: lighter;
+  border: 1px solid gray;
 }
 
 .linkStyle {
-  text-decoration: none;
   color: #729aff;
+  text-decoration: none;
 }
 
 .txtbox {
-  position: center;
-  align: justify;
+  width: 260px;
   margin: 10px;
-  
-	
+  position: center;
 }
 
+.p {
+  width: 120px;
+  padding: 2px;
+  align: justify;
+  
+}
 
+.instxt {
+  width: 180px;
+  height: 20px;
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 2px solid #d2d2d2;
+  -webkit-border-radius: 10px;
+}
 
+.button1:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); 
+}
+
+.button2:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); 
+}
+
+.button1 {
+  height: 50%;
+  opacity: 1.0;
+  font-size: 7;
+  width: relative;
+  position: center;
+  font-weight: bold;
+  border-sytle: solid;
+  text-decoration: none;
+  text-transform: uppercase;
+  filter: alpha(opacity=100);
+  background-color: transparent;
+}
+
+.button2 {
+  height: 50%;
+  opacity: 1.0;
+  font-size: 7;
+  width: relative;
+  position: center;
+  font-weight: bold;
+  border-sytle: solid;
+  text-decoration: none;
+  text-transform: uppercase;
+  filter: alpha(opacity=100);
+  background-color: transparent;
+  background-image: url("../images/scorp.jpg");
+  
+}
 
 

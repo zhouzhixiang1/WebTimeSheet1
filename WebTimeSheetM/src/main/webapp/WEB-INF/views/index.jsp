@@ -5,7 +5,11 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
+<<<<<<< HEAD
+		<link rel="stylesheet" href="css/stile.css" type = "text / css">
+=======
 		<link rel="stylesheet" href="css/stile.css">
+>>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 		<title>Insert title here</title>
 	</head>
 	<body style=" font-family: calibri; font-size: 16;">

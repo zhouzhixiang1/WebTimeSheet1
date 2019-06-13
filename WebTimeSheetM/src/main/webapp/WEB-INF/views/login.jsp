@@ -4,6 +4,32 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
+<<<<<<< HEAD
+		<link rel="stylesheet" href="css/stile.css" type = "text / css">
+		<title>Login TS</title>		
+	</head>
+	<body style=" font-family: calibri; font-size: 18; font-weight: 300;">
+		<div class="navbar">
+		<p class="p">
+			<button class="button">Tickets</button> <!-- solo se si è fatto il login -->
+			<a href="home.jsp">
+				<button class="button">Home</button>
+			</a>
+			<button class="button"></button>
+		</p>
+		
+		</div>
+		<br>
+		<div class="txtbox">
+			<form method="post" action="managerLogin">
+				<p class="p">Codice Manager
+					<input type="number" min="1001" max="5003"name="idManager">
+		  		</p>
+		  		<p class="p">Nome 
+					<input type="text" name="managerName">
+				</p>
+				<p class="p">Password 
+=======
 		<link rel="stylesheet" href="css/stile.css">
 		<title>Login TS</title>
 		<style>
@@ -72,6 +98,7 @@ input {
 					<input type="text" name="managerName">
 				</p>
 				<p>Password 
+>>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 					<input type="password" name="managerPassword">
 				</p>
 				<button class="button">login</button>
