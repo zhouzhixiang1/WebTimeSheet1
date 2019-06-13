@@ -64,17 +64,19 @@ input {
 		</div>
 		<br>
 		<div class="txtbox">
-			<form method="post" action="managerLogin">
-				<p>Codice Manager
-					<input type="number" min="1001" max="5003"name="idManager">
+			<form method="post" action="dipendenteLogin">
+			<p>Codice Dipendente
+					<input type="number" min="2001" max="2050"name="idDipendente">
 		  		</p>
-		  		<p>Nome 
-					<input type="text" name="managerName">
+		  		<p>NomeDipendente 
+					<input type="text" name="nomeDipendente">
 				</p>
 				<p>Password 
-					<input type="password" name="managerPassword">
+					<input type="password" name="passwordDipendente">
 				</p>
 				<button class="button">login</button>
+				<a href="provahome.jsp">back</a>
+				
 			</form>
 		</div>
 	</body>

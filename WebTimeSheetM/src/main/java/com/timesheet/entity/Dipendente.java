@@ -18,10 +18,10 @@ public class Dipendente {
 	
 	private Integer idDipendente;
 	private String nomeDipendente;
+	private String passwordDipendente;
 	private Integer oreLavorate;
 	private Manager idManager;
 	
-
 	private Set<Ticket> tickets = new HashSet<>();
 
 	@GeneratedValue
@@ -38,7 +38,12 @@ public class Dipendente {
 	public void setNomeDipendente(String nomeDipendente) {
 		this.nomeDipendente = nomeDipendente;
 	}
-	
+	public String getPasswordDipendente() {
+		return passwordDipendente;
+	}
+	public void setPasswordDipendente(String passwordDipendente) {
+		this.passwordDipendente = passwordDipendente;
+	}
 	public Integer getOreLavorate() {
 		return oreLavorate;
 	}

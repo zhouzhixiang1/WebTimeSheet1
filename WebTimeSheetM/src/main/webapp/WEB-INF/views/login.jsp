@@ -66,7 +66,7 @@ input {
 		<div class="txtbox">
 			<form method="post" action="managerLogin">
 				<p>Codice Manager
-					<input type="number" min="1001" max="5003"name="idManager">
+					<input type="number" min="1001" max="1003"name="idManager">
 		  		</p>
 		  		<p>Nome 
 					<input type="text" name="managerName">
@@ -75,6 +75,7 @@ input {
 					<input type="password" name="managerPassword">
 				</p>
 				<button class="button">login</button>
+				<a href="provahome.jsp">back</a>
 			</form>
 		</div>
 	</body>

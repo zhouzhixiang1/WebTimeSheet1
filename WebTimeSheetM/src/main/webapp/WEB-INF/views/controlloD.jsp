@@ -10,16 +10,16 @@
 	</head>
 	<body style=" font-family: calibri; font-size: 16;">
 		<jsp:include page="../../scripts/navbar.html"></jsp:include>
-		<c:if test="${not empty manager }">
-			Benvenuto,&nbsp;${manager.managerName}&nbsp;<br>	
-			<a href="logout" style=" text-decoration: none">logout</a><br>
-			<a href="dipens/${manager.idManager }" style=" text-decoration: none">tabella dipendente</a><br>
-			<a href="tickets/${manager.idManager }" style=" text-decoration: none">tabella ticket</a>
+		<c:if test="${not empty dipendente }">
+			Benvenuto,&nbsp;${dipendente.nomeDipendente}&nbsp;<br>	
+			<a href="logoutD" style=" text-decoration: none">logout</a><br>
+			<a href="" style=" text-decoration: none">visualizza ticket</a><br>
+			<a href="" style=" text-decoration: none">visualizza dati</a>
 		</c:if>
 		
-		<c:if test="${empty manager }">
+		<c:if test="${empty dipendente }">
 			Error login in ,Please 
-			<a href="login.jsp">try again</a>
+			<a href="loginD.jsp">try again</a>
 		</c:if>
 	</body>
 </html>

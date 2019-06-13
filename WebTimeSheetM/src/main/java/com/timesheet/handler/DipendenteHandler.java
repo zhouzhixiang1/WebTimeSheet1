@@ -8,6 +8,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,9 +16,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.timesheet.entity.Dipendente;
 import com.timesheet.repository.DipendenteRepository;
@@ -31,6 +34,30 @@ public class DipendenteHandler {
 
 	@Autowired
 	private DipendenteRepository dipendenteRepository;
+	
+	@RequestMapping(value="/loginD",method = RequestMethod.GET)
+	public String tologinD() {
+		return "loginD";
+		
+	}
+	@RequestMapping(value="/dipendenteLogin", method = RequestMethod.POST)
+	public String loginD(@RequestParam Integer idDipendente,@RequestParam String nomeDipendente,@RequestParam String passwordDipendente,
+						HttpSession session,Model m) {
+		Dipendente dipendente = dipendenteService.dipendenteLogin(idDipendente, nomeDipendente, passwordDipendente);
+		if(dipendente != null) {
+			session.setAttribute("dipendente", dipendente);
+			return "controlloD";
+		}
+		return "controlloD";
+		
+	}
+	
+	@RequestMapping(value="/logoutD",method=RequestMethod.GET)
+	public String logoutD(HttpSession session) {
+		session.removeAttribute("dipendente");
+		return "loginD";
+	}
+	
 //	// find all dipendenti
 //	@RequestMapping(value = "/dipens", method = RequestMethod.GET)
 //	public String input(Map<String, Object> map) {

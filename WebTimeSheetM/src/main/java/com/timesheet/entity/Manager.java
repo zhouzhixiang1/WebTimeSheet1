@@ -20,7 +20,7 @@ public class Manager {
 	private String managerPassword;
 	
 	
-	private Set<Ticket> tickets = new HashSet<>();
+//	private Set<Ticket> tickets = new HashSet<>();
 	
 //	private Set<Dipendente> dipendenti = new HashSet<>();
 
@@ -47,14 +47,14 @@ public class Manager {
 	public void setManagerPassword(String managerPassword) {
 		this.managerPassword = managerPassword;
 	}
-	@JoinColumn(name="MANAGER_ID")
-	@OneToMany
-	public Set<Ticket> getTickets() {
-		return tickets;
-	}
-	public void setTickets(Set<Ticket> tickets) {
-		this.tickets = tickets;
-	}
+//	@JoinColumn(name="MANAGER_ID")
+//	@OneToMany
+//	public Set<Ticket> getTickets() {
+//		return tickets;
+//	}
+//	public void setTickets(Set<Ticket> tickets) {
+//		this.tickets = tickets;
+//	}
 //	@JoinColumn(name="idManager")
 //	@OneToMany
 //	public Set<Dipendente> getDipendenti() {

@@ -22,22 +22,34 @@ public class DipendenteService {
 //		return dipendenteRepository.findAll();
 //	}
 	
+	//findOne dipendente
 	@Transactional(readOnly = true)
 	public Dipendente get(Integer idDipendente) {
 		return dipendenteRepository.findOne(idDipendente);
 		
 	}
+	
+	//modifica dipendente
 	@Transactional
 	public void put(Dipendente dipendente) {
 		dipendenteRepository.saveAndFlush(dipendente);
 	}
-	
-	@Transactional(readOnly = true)
-	public Page<Dipendente> getPage(int PageNo,int PageSize){
-		PageRequest pageable = new PageRequest(PageNo - 1 , PageSize);
-		return dipendenteRepository.findAll(pageable);
-		
+	//controllo login
+	public Dipendente dipendenteLogin(Integer idDipendente,String nomeDipendente,String passwordDipendente) {
+		Dipendente dipendente = this.get(idDipendente);
+		if(dipendente != null && dipendente.getNomeDipendente().equals(nomeDipendente)
+				&& dipendente.getPasswordDipendente().equals(passwordDipendente)) {
+			return dipendente;
+		}
+		return null;
 	}
+	//findAll dipendente PAGE
+//	@Transactional(readOnly = true)
+//	public Page<Dipendente> getPage(int PageNo,int PageSize){
+//		PageRequest pageable = new PageRequest(PageNo - 1 , PageSize);
+//		return dipendenteRepository.findAll(pageable);
+//		
+//	}
 
 
 }

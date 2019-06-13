@@ -7,7 +7,9 @@ import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,8 +21,9 @@ public class Ticket {
 	
 	private Integer idTicket ;
 	private String cliente;
-	private Date dataInserimente;
+	private Date dataInserimento;
 	private Date dataRilascio;
+	private String applicazioneRiferimento;
 	private Double stima;
 	private String descrizione;
 	private Integer totOreLavorate;
@@ -29,7 +32,8 @@ public class Ticket {
 	private String sorgenteTicket;
 	private String statoTicket;
 	private String priorita;
-	private String tipologiaTicket;
+	private String tipologia;
+	private Manager idManager;
 	
 //	private Priorita priorita;
 //	private StatoTicket statoTicket;
@@ -64,11 +68,11 @@ public class Ticket {
 	}
 	
 	@Temporal(TemporalType.DATE)
-	public Date getDataInserimente() {
-		return dataInserimente;
+	public Date getDataInserimento() {
+		return dataInserimento;
 	}
-	public void setDataInserimente(Date dataInserimente) {
-		this.dataInserimente = dataInserimente;
+	public void setDataInserimento(Date dataInserimento) {
+		this.dataInserimento = dataInserimento;
 	}
 	
 	@Temporal(TemporalType.DATE)
@@ -126,12 +130,30 @@ public class Ticket {
 	public void setPriorita(String priorita) {
 		this.priorita = priorita;
 	}
-	public String getTipologiaTicket() {
-		return tipologiaTicket;
+
+	public String getTipologia() {
+		return tipologia;
 	}
-	public void setTipologiaTicket(String tipologiaTicket) {
-		this.tipologiaTicket = tipologiaTicket;
+	public void setTipologia(String tipologia) {
+		this.tipologia = tipologia;
 	}
+	public String getApplicazioneRiferimento() {
+		return applicazioneRiferimento;
+	}
+	public void setApplicazioneRiferimento(String applicazioneRiferimento) {
+		this.applicazioneRiferimento = applicazioneRiferimento;
+	}
+	@JoinColumn(name="idManager")
+	@ManyToOne
+	public Manager getIdManager() {
+		return idManager;
+	}
+	public void setIdManager(Manager idManager) {
+		this.idManager = idManager;
+	}
+
+	
+	
 	
 	
 	
