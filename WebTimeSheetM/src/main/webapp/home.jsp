@@ -16,7 +16,7 @@
 		</a>
 		</div>
 		<div style="width: 100vw; height: 50vh; position: relative; background-color: #ff9a72 ">
-		<a href="login.jsp">
+		<a href="">
 			<button class="button2">dipendente</button>
 		</a> 
 		</div>
