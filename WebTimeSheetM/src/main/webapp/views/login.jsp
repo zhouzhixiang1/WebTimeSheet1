@@ -22,7 +22,7 @@
   border-radius:20px;
   -moz-border-radius: 20px;
   background-color: #729aff; 
-  border: 2px solid #729aff;
+  border: 2px solid #96b4ff;
   -webkit-border-radius: 20px;
 }
 
@@ -34,7 +34,7 @@
   position: sticky;	
   min-width: 800px;
   min-height: 100px;
-  position: -webkit-sticky;
+  position: fixed;
   background-color: #729aff !important;
 }
 
@@ -61,6 +61,12 @@ input {
 	</head>
 	<body style=" font-family: calibri; font-size: 18; font-weight: 300;">
 		<div class="navbar">
+		<p>
+		<button class="button">Tickets</button> <!-- solo se si è registrati -->
+		<button class="button">Home</button>
+		<button class="button"></button>
+		</p>
+		
 		</div>
 		<br>
 		<div class="txtbox">
