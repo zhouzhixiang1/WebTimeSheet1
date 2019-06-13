@@ -11,12 +11,12 @@
 		<div class="navbar">
 		</div>
 		<div style="width: 100vw; height: 50vh; top: 0; background-image: images/manager.jpg;">
-		<a href="login">
+		<a href="loginM">
 			<button class="button1" >manager</button>
 		</a>
 		</div>
 		<div style="width: 100vw; height: 50vh; position: relative; background-color: #ff9a72 ">
-		<a href="">
+		<a href="loginD">
 			<button class="button2">dipendente</button>
 		</a> 
 		</div>

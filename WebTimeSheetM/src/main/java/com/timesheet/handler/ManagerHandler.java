@@ -21,7 +21,7 @@ public class ManagerHandler {
 
 
 	// va alla pagina login
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/loginM", method = RequestMethod.GET)
 	public String toLogin() {
 		return "login";
 	}
