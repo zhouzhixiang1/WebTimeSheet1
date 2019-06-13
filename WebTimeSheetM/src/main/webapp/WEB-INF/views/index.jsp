@@ -12,7 +12,7 @@
 	<c:if test="${not empty manager }">
 		Benvenuto,${manager.managerName}&nbsp;	
 		<a href="logout">logout</a><br>
-		<a href="dipens">tabella dipendente</a><br>
+		<a href="dipens/${manager.idManager}">tabella dipendente</a><br>
 		<a href="">tabella ticket</a>
 	</c:if>
 	

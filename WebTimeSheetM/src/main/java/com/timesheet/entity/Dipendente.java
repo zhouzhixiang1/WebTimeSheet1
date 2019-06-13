@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Table(name="WEB_DIPENDENTI")
@@ -18,6 +19,8 @@ public class Dipendente {
 	private Integer idDipendente;
 	private String nomeDipendente;
 	private Integer oreLavorate;
+	private Manager idManager;
+	
 
 	private Set<Ticket> tickets = new HashSet<>();
 
@@ -41,6 +44,15 @@ public class Dipendente {
 	}
 	public void setOreLavorate(Integer oreLavorate) {
 		this.oreLavorate = oreLavorate;
+	}
+	
+	@JoinColumn(name="idManager")
+	@ManyToOne
+	public Manager getIdManager() {
+		return idManager;
+	}
+	public void setIdManager(Manager idManager) {
+		this.idManager = idManager;
 	}
 	@JoinTable(name="DIPENDENTI_TICKET",joinColumns = {@JoinColumn(name="TICKET_ID")},
 			inverseJoinColumns = {@JoinColumn(name="DIPENDENTE_ID")})
