@@ -5,19 +5,20 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
+		<link rel="stylesheet" href="css/stile.css">
 		<title>Insert title here</title>
 	</head>
-	<body>
+	<body style=" font-family: calibri; font-size: 16;">
 		<jsp:include page="../scripts/navbar.html"></jsp:include>
 		<c:if test="${not empty manager }">
-			Benvenuto,${manager.managerName}&nbsp;	
-			<a href="logout">logout</a><br>
-			<a href="dipens">tabella dipendente</a><br>
-			<a href="">tabella ticket</a>
+			Benvenuto,&nbsp;${manager.managerName}&nbsp;<br>	
+			<a href="logout" style=" text-decoration: none">logout</a><br>
+			<a href="dipens" style=" text-decoration: none">tabella dipendente</a><br>
+			<a href="" style=" text-decoration: none">tabella ticket</a>
 		</c:if>
 		
 		<c:if test="${empty manager }">
-			Error logggin in ,Please try again
+			Error login in ,Please 
 			<a href="login.jsp">try again</a>
 		</c:if>
 	</body>
