@@ -7,7 +7,7 @@
 }
 
 .sfondo {
-  background-image: url("");
+  background-image: url("manager.jpg");
   height: 100%;
   background-position: fixed;
   background-attachment: fixed;
@@ -43,6 +43,14 @@ table {
 .linkStyle {
   text-decoration: none;
   color: #729aff;
+}
+
+.txtbox {
+  position: center;
+  align: justify;
+  margin: 10px;
+  
+	
 }
 
 
