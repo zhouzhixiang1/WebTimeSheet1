@@ -7,7 +7,7 @@
 		<title>Home TS</title>
 		<link rel="stylesheet" href="css/stile.css" type="text/css">
 	</head>
-	<body style=" font-family: calibri; font-size: 18; font-weight: 300; ">
+	<body>
 		<%@ include file="scripts/navbar.html"%>	
 		<div style="width: 100vw; height: 50vh; position: relative; background-image: images/manager.jpg;">
 			<a href="login">

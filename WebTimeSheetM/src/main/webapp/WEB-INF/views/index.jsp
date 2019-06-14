@@ -12,7 +12,7 @@
 
 		<title>Insert title here</title>
 	</head>
-	<body style=" font-family: calibri; font-size: 16;">
+	<body>
 		<jsp:include page="../../scripts/navbar.html"></jsp:include>
 		<c:if test="${not empty manager }">
 			Benvenuto,&nbsp;${manager.managerName}&nbsp;<br>	

@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="../../css/stile.css" type = "text / css">
 		<title>Login TS</title>		
 	</head>
-	<body style=" font-family: calibri; font-size: 18; font-weight: 300;">
+	<body>
 		<%@ include file="../../scripts/navbar.html" %>
 		<br>
 	<body style=" font-family: calibri; font-size: 18; font-weight: 300;">

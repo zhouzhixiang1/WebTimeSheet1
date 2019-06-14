@@ -7,7 +7,7 @@
 		<title>Login TS</title>		
 		<link rel="stylesheet" href="css/stile.css">
 	</head>
-	<body style=" font-family: calibri; font-size: 18; font-weight: 300;">
+	<body>
 		<div class="navbar">
 		</div>
 		<br>

@@ -109,4 +109,8 @@ table {
   background-color: transparent;
 }
 
-
+body {
+  font-family: calibri;
+  font-size: 18;
+  font-weight: 300;
+  }
