@@ -52,7 +52,7 @@ table {
   position: center;
 }
 
-.p {
+.txt {
   width: 120px;
   padding: 2px;
   align: justify;
@@ -107,8 +107,6 @@ table {
   text-transform: uppercase;
   filter: alpha(opacity=100);
   background-color: transparent;
-  background-image: url("../images/scorp.jpg");
-  
 }
 
 
