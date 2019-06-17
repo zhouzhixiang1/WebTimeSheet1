@@ -5,11 +5,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Login TS</title>		
-		<link rel="stylesheet" href="css/stile.css">
+		<style type="text/css">
+		<%@ include file="/css/stile.css" %>
+		</style>
 	</head>
 	<body>
-		<div class="navbar">
-		</div>
+		<jsp:include page="/scripts/navbar.html"></jsp:include>
 		<br>
 		<div class="txtbox">
 			<form method="post" action="dipendenteLogin">
@@ -23,7 +24,9 @@
 					<input class="instxt" type="password" name="passwordDipendente">
 				</p>
 				<button class="button">login</button>
-				<a href="home.jsp">back</a>
+				<a href="home.jsp">
+					<button class="button">back</button>
+				</a>
 				
 			</form>
 		</div>

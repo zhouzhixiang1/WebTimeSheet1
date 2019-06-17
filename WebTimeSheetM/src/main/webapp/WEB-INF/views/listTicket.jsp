@@ -25,7 +25,7 @@
 				<th>Totale Ore Lavorate</th>
 				<th>Commessa</th>
 				<th>note</th>
-				<th>modifica</th>
+				<th>Modifica</th>
 			</tr>
 		<c:forEach items="${tpage.content}"  var="t" >
 			<tr>
@@ -43,7 +43,7 @@
 				<th>${t.totOreLavorate}</th>
 				<th>${t.commessa}</th>
 				<th>${t.note}</th>
-				<th><a href="">modifica</a></th>
+				<th><a href="">Modifica</a></th>
 			</tr>
 		</c:forEach>
 		<tr>

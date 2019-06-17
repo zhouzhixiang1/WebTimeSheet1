@@ -5,12 +5,8 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-
-		<link rel="stylesheet" href="css/stile.css" type = "text / css">
-
-		<link rel="stylesheet" href="css/stile.css">
-
 		<title>Insert title here</title>
+		<link rel="stylesheet" href="css/stile.css" type = "text/css">
 	</head>
 	<body>
 		<jsp:include page="../../scripts/navbar.html"></jsp:include>

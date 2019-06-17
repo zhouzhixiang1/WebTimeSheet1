@@ -1,12 +1,11 @@
 
 .navbar {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;	
+  width: 100%;
   position: fixed;
-  position: sticky;	
-  min-width: 800px;
   min-height: 100px;
   background-color: #729aff !important;
 }
@@ -21,7 +20,7 @@
 }
 
 .button {
-  width: 80px;
+  
   padding: 5px;
   color: white;
   font-weight: bold;
@@ -71,43 +70,28 @@ table {
   -webkit-border-radius: 10px;
 }
 
-.button1:hover {
+.split:hover {
   opacity: 0.5;
   filter: alpha(opacity=50); 
 }
 
-.button2:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50); 
-}
-
-.button1 {
-  height: 50%;
+.split {
+  color: white;
+  width: 100vw;
+  height: 50vh;
   opacity: 1.0;
-  font-size: 7;
-  width: relative;
+  font-size: 50px;
   position: center;
   font-weight: bold;
-  border-sytle: solid;
+  border-sytle: none;
   text-decoration: none;
+  background-size: cover;
   text-transform: uppercase;
   filter: alpha(opacity=100);
-  background-color: transparent;
+  background-repeat: no-repeat;
+  
 }
 
-.button2 {
-  height: 50%;
-  opacity: 1.0;
-  font-size: 7;
-  width: relative;
-  position: center;
-  font-weight: bold;
-  border-sytle: solid;
-  text-decoration: none;
-  text-transform: uppercase;
-  filter: alpha(opacity=100);
-  background-color: transparent;
-}
 
 body {
   font-family: calibri;

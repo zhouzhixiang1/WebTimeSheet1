@@ -4,20 +4,24 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Home TS</title>
-		<link rel="stylesheet" href="css/stile.css" type="text/css">
+		<title>Home-TS</title>
+		<style type="text/css">
+		<%@ include file="/css/stile.css" %>
+		</style>
 	</head>
 	<body>
-		<%@ include file="scripts/navbar.html"%>	
-		<div style="width: 100vw; height: 50vh; position: relative; background-image: images/manager.jpg;">
+		<jsp:include page="scripts/navbar.html"></jsp:include>
+		<form>
+		<div>
 			<a href="login">
-				<button class="button1">manager</button>
-			</a> 
-		</div>
-		<div style="width: 100vw; height: 50vh; position: relative; background-image: images/scorp.jpg;">
+				<button class="split" style="background-image: images/manager2.jpg;">manager</button>
+			</a>
+		</div>	
+		<div>
 			<a href="loginD">
-				<button class="button2">dipendente</button>
-			</a> 
+				<button class="split" style="background-image: images/code.jpg;">dipendente</button>
+			</a>
 		</div>
+		</form>	
 	</body>
 </html>
