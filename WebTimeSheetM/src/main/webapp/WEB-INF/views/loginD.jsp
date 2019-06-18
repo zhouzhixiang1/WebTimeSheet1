@@ -10,17 +10,23 @@
 		</style>
 	</head>
 	<body>
-	<div class="navbar">
-	<p>
-		<a href="">
-			<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-		</a>
-		<a href="home.jsp">
-			<button class="button" type="button">Home</button>
-		</a>
-	</p>
-</div>
-		
+		<!-- NAVBAR -->
+		<div class="navbar">
+			<p>
+				<a href="">
+					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
+				</a>
+				<a href="home.jsp">
+					<button class="button" type="button">Home</button>
+				</a>
+			</p>
+		</div>
+		<!-- ^NAVBAR^ -->
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 		<div class="txtbox">
 			<form method="post" action="dipendenteLogin">
 			<p class="txt">Codice Dipendente

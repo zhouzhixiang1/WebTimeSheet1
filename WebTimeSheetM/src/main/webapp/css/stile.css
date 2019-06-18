@@ -3,34 +3,31 @@
   top: 0px;
   left: 0px;
   right: 0px;
-  z-index: 1;	
   width: 100%;
-  position: fixed;
-  min-height: 100px;
+  height: 120px;
   background-color: #729aff !important;
 }
 
-.sfondo {
-  height: 100%;
-  background-size: cover;
-  background-position: fixed;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-image: url("manager.jpg");
-}
-
 .button {
-  
-  padding: 5px;
+  width: 80px;
+  height: 30px;
+  padding: 0px;
   color: white;
+  font-size: 20;
   font-weight: bold;
+  text-align: center;
   border-radius:20px;
+  border: 2px solid white;
   -moz-border-radius: 20px;
-  background-color: #729aff; 
-  border: 2px solid #96b4ff;
+  background-color: #729aff;
+  filter: alpha(opacity=100);
   -webkit-border-radius: 20px;
 }
 
+.button:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); 
+}
 
 table {
   padding: 6px;
@@ -47,12 +44,11 @@ table {
 
 .txtbox {
   width: 260px;
-  margin: 10px;
-  position: center;
+  margin: 16px;
 }
 
 .txt {
-  width: 120px;
+  width: 150px;
   padding: 2px;
   align: justify;
   
@@ -63,6 +59,7 @@ table {
   height: 20px;
   padding: 5px;
   color: black;
+  margin-top: 5px;
   font-weight: bold;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -77,13 +74,13 @@ table {
 
 .split {
   color: white;
+  border: none;
   width: 100vw;
   height: 50vh;
   opacity: 1.0;
   font-size: 50px;
   position: center;
   font-weight: bold;
-  border-sytle: none;
   text-decoration: none;
   background-size: cover;
   text-transform: uppercase;
@@ -91,13 +88,13 @@ table {
   background-repeat: no-repeat;
 }
 
-form {
-    margin-top: 120px;
-}
-
 body {
-  font-family: calibri;
+  margin: 0px;
   font-size: 18;
   font-weight: 300;
+  font-family: calibri;
+  }
 
+ a{
+  text-decoration: none;
   }
