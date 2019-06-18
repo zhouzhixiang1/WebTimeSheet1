@@ -6,7 +6,10 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Tickets-TS</title>
+		<style type="text/css">
+		<%@ include file="/css/stile.css" %>
+		</style>
 	</head>
 	<body>
 		<!-- NAVBAR -->
@@ -21,7 +24,7 @@
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
-		<table border="1" cellpadding="10" cellspacing="0">
+		<table border="0.5" cellpadding="10">
 			<tr>
 				<th>idTicket</th>
 				<th>Cliente</th>

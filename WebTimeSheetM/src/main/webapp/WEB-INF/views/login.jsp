@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		
-		<title>Login TS</title>	
+		<title>Login-TS</title>	
 		<style type="text/css">
 		<%@ include file="/css/stile.css" %>	
 		</style>
@@ -26,18 +26,18 @@
 		<div class="txtbox">
 			<form method="post" action="managerLogin">
 				<p class="txt">Codice Manager
-					<input class="instxt" type="number" min="1001" max="1003"name="idManager">
+					<input class="instxt" type="number" min="1001" max="1003"name="idManager" required>
 		  		</p>
 		  		<p class="txt">Nome 
-					<input class="instxt" type="text" name="managerName">
+					<input class="instxt" type="text" name="managerName" required>
 				</p>
 				<p class="txt">Password 
-					<input class="instxt" type="password" name="managerPassword">
+					<input class="instxt" type="password" name="managerPassword" required>
 				</p>
-				<button class="button">login</button>
 				<a href="home.jsp">
-					<button class="button" type="button">back</button>
+					<button class="button" type="button">Annulla</button>
 				</a>
+				<button class="button">login</button>
 			</form>
 		</div>
 	</body>

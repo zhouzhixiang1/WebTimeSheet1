@@ -5,6 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Home-TS</title>
+		<link rel="shortcut icon" type="image/png" href="zero.png"/>
 		<style type="text/css">
 		<%@ include file="/css/stile.css" %>
 		</style>
