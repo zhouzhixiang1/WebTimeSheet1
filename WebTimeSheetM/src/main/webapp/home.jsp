@@ -10,7 +10,17 @@
 		</style>
 	</head>
 	<body>
-		<jsp:include page="scripts/navbar.html"></jsp:include>
+		<div class="navbar">
+	<p>
+		<a href="/views/listTicket.jsp">
+			<button class="button">Tickets</button> <!-- solo se si è fatto il login -->
+		</a>
+		<a href="home.jsp">
+			<button class="button">Home</button>
+		</a>
+		<button class="button" style="align: right;">Logout</button>
+	</p>
+</div>
 		<form>
 		<div>
 			<a href="login">
