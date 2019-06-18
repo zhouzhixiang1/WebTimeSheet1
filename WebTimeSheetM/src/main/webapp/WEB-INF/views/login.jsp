@@ -11,9 +11,9 @@
 		</style>
 	</head>
 	<body>
-	<!-- NAVBAR -->
+		<!-- NAVBAR -->
 		<div class="navbar">
-			<p>
+			<p style=" margin-top: 0px; padding: 16px;">
 				<a href="">
 					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
 				</a>
@@ -23,11 +23,6 @@
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 		<div class="txtbox">
 			<form method="post" action="managerLogin">
 				<p class="txt">Codice Manager
