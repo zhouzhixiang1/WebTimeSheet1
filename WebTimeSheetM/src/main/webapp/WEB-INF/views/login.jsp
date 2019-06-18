@@ -35,7 +35,7 @@
 				</p>
 				<button class="button">login</button>
 				<a href="home.jsp">
-					<button class="button">back</button>
+					<button class="button" type="button">back</button>
 				</a>
 			</form>
 		</div>
