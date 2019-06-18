@@ -4,12 +4,27 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-		<table border="1" cellpadding="10" cellspacing="0">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Tickets-TS</title>
+		<style type="text/css">
+		<%@ include file="/css/stile.css" %>
+		</style>
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<div class="navbar">
+			<p style=" margin-top: 0px; padding: 16px;">
+				<a href="">
+					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
+				</a>
+				<a href="home.jsp">
+					<button class="button" type="button">Home</button>
+				</a>
+			</p>
+		</div>
+		<!-- ^NAVBAR^ -->
+		<table border="0.5" cellpadding="10">
 			<tr>
 				<th>idTicket</th>
 				<th>Cliente</th>
@@ -56,7 +71,5 @@
 				</td>
 			</tr>
 		</table>
-</body>
-
-
+	</body>
 </html>
