@@ -89,9 +89,11 @@ table {
   text-transform: uppercase;
   filter: alpha(opacity=100);
   background-repeat: no-repeat;
-  
 }
 
+form {
+    margin-top: 120px;
+}
 
 body {
   font-family: calibri;

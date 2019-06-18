@@ -10,14 +10,23 @@
 		</style>
 	</head>
 	<body>
-		<jsp:include page="/scripts/navbar.html"></jsp:include>
-		<br>
+	<div class="navbar">
+	<p>
+		<a href="">
+			<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
+		</a>
+		<a href="home.jsp">
+			<button class="button" type="button">Home</button>
+		</a>
+	</p>
+</div>
+		
 		<div class="txtbox">
 			<form method="post" action="dipendenteLogin">
 			<p class="txt">Codice Dipendente
 					<input class="instxt" type="number" min="2001" max="2050"name="idDipendente">
 		  		</p>
-		  		<p class="txt">NomeDipendente 
+		  		<p class="txt">Nome Dipendente 
 					<input class="instxt" type="text" name="nomeDipendente">
 				</p>
 				<p class="txt">Password 
