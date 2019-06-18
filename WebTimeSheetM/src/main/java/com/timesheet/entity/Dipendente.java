@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -22,7 +21,7 @@ public class Dipendente {
 	private Integer oreLavorate;
 	private Manager idManager;
 	
-	private Set<Ticket> tickets = new HashSet<>();
+//	private Set<Ticket> idTickets = new HashSet<>();
 
 	@GeneratedValue
 	@Id
@@ -59,13 +58,22 @@ public class Dipendente {
 	public void setIdManager(Manager idManager) {
 		this.idManager = idManager;
 	}
-	@JoinTable(name="DIPENDENTI_TICKET",joinColumns = {@JoinColumn(name="TICKET_ID")},
-			inverseJoinColumns = {@JoinColumn(name="DIPENDENTE_ID")})
-	@ManyToMany
-	public Set<Ticket> getTickets() {
-		return tickets;
-	}
-	public void setTickets(Set<Ticket> tickets) {
-		this.tickets = tickets;
-	}
+//	@ManyToMany(mappedBy = "idDipendente")
+//	public Set<Ticket> getIdTickets() {
+//		return idTickets;
+//	}
+//	public void setIdTickets(Set<Ticket> idTickets) {
+//		this.idTickets = idTickets;
+//	}
+	
+	
+//	@JoinTable(name="DIPENDENTI_TICKET",joinColumns = {@JoinColumn(name="TICKET_ID")},
+//			inverseJoinColumns = {@JoinColumn(name="DIPENDENTE_ID")})
+//	@ManyToMany
+//	public Set<Ticket> getTickets() {
+//		return tickets;
+//	}
+//	public void setTickets(Set<Ticket> tickets) {
+//		this.tickets = tickets;
+//	}
 }

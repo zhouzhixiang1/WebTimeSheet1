@@ -1,10 +1,7 @@
 package com.timesheet.service;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,14 +23,15 @@ public class DipendenteService {
 	@Transactional(readOnly = true)
 	public Dipendente get(Integer idDipendente) {
 		return dipendenteRepository.findOne(idDipendente);
-		
 	}
+	
 	
 	//modifica dipendente
 	@Transactional
 	public void put(Dipendente dipendente) {
 		dipendenteRepository.saveAndFlush(dipendente);
 	}
+	
 	//controllo login
 	public Dipendente dipendenteLogin(Integer idDipendente,String nomeDipendente,String passwordDipendente) {
 		Dipendente dipendente = this.get(idDipendente);

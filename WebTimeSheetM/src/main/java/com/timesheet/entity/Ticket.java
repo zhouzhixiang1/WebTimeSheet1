@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -41,16 +42,16 @@ public class Ticket {
 //	private TipologiaTicket tipologiaTicket;
 	
 	
-	private Set<Dipendente> dipendenti = new HashSet<>();
+//	private Set<Dipendente> idDipendente = new HashSet<>();
 
 	
-	@ManyToMany(mappedBy = "tickets")
-	public Set<Dipendente> getDipendenti() {
-		return dipendenti;
-	}
-	public void setDipendenti(Set<Dipendente> dipendenti) {
-		this.dipendenti = dipendenti;
-	}
+//	@ManyToMany(mappedBy = "tickets")
+//	public Set<Dipendente> getDipendenti() {
+//		return dipendenti;
+//	}
+//	public void setDipendenti(Set<Dipendente> dipendenti) {
+//		this.dipendenti = dipendenti;
+//	}
 	
 	@GeneratedValue
 	@Id
@@ -151,6 +152,18 @@ public class Ticket {
 	public void setIdManager(Manager idManager) {
 		this.idManager = idManager;
 	}
+	
+//	@JoinTable(name="DIPENDENTI_TICKET",joinColumns = {@JoinColumn(name="idDipendente")},
+//			inverseJoinColumns = {@JoinColumn(name="idTicket")})
+//	@ManyToMany
+//	public Set<Dipendente> getIdDipendente() {
+//		return idDipendente;
+//	}
+//	public void setIdDipendente(Set<Dipendente> idDipendente) {
+//		this.idDipendente = idDipendente;
+//	}
+//
+//	
 
 	
 	

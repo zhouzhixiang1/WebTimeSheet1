@@ -1,6 +1,8 @@
 package com.timesheet.handler;
 
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.timesheet.entity.Dipendente;
 import com.timesheet.entity.Ticket;
 import com.timesheet.repository.TicketRepository;
 
@@ -36,10 +39,27 @@ public class TicketHandler {
 			}
 		};
 		Pageable pageable = new PageRequest(0, 5);
-		Page<Ticket> tpage = this.ticketRepository.findAll(spec, pageable);
+		Page<Ticket> tpage = this.ticketRepository.findAll(spec,pageable);
 		map.put("tpage",tpage);
 		return "listTicket";
 		
 	}
+	
+//	@RequestMapping(value="/ticketsD/{idDipendente}")
+//	public String TicketlistByIdD(@PathVariable(value="idDipendente")Integer idDipendente,Map<String, Object> map) {
+//		
+//		Specification<Ticket> spec = new Specification<Ticket>() {
+//
+//			@Override
+//			public Predicate toPredicate(Root<Ticket> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+//				return cb.equal(root.get("idDipendente"),idDipendente);
+//			}
+//		};
+//		Pageable pageable = new PageRequest(0, 5);
+//		Page<Ticket> tpage = this.ticketRepository.findAll(spec, pageable);
+//		map.put("tpage",tpage);
+//		return "listTicket";
+//		
+//	}
 
 }

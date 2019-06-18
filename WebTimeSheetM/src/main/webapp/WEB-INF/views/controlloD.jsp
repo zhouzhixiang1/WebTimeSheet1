@@ -13,7 +13,7 @@
 		<c:if test="${not empty dipendente }">
 			Benvenuto,&nbsp;${dipendente.nomeDipendente}&nbsp;<br>	
 			<a href="logoutD" style=" text-decoration: none">logout</a><br>
-			<a href="" style=" text-decoration: none">visualizza ticket</a><br>
+			<a href="ticketsD/${dipendente.idDipendente}" style=" text-decoration: none">visualizza ticket</a><br>
 			<a href="" style=" text-decoration: none">visualizza dati</a>
 		</c:if>
 		
