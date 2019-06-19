@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<title>Home-TS</title>
 		<style type="text/css">
-		<%@ include file="/css/stile.css" %>
+			<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
 	<body>

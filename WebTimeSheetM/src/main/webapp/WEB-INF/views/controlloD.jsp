@@ -21,7 +21,7 @@
 				<a href="">
 					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
 				</a>
-				<a href="home.jsp">
+				<a href="../../home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 			</p>
@@ -32,7 +32,7 @@
 			<form>
 				<div>
 					<a href="ticketsD/${dipendente.idDipendente}" style=" text-decoration: none">
-						<button class="split" type="button" style="background-image: url(images/manager2.jpg);">ticket</button>
+						<button class="split" type="button" style="background-image: url(images/ticket.jpg);">ticket</button>
 					</a>
 				</div>
 				<div>

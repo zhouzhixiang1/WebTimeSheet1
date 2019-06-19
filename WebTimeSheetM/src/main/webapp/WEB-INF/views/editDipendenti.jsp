@@ -7,10 +7,24 @@
 
 	<head>
 		<meta charset="ISO-8859-1">
-		<link rel="stylesheet" href="css/stile.css" type = "text / css">
+		<style type="text/css">
+			<%@ include file="/css/stile.css" %>
+		</style>
 		<title></title>
 	</head>
 	<body>
+		<!-- NAVBAR -->
+		<div class="navbar">
+			<p style=" margin-top: 0px; padding: 16px;">
+				<a href="">
+					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
+				</a>
+				<a href="../../home.jsp">
+					<button class="button" type="button">Home</button>
+				</a>
+			</p>
+		</div>
+		<!-- ^NAVBAR^ -->
 		<form:form method="POST"
 			action="${pageContext.request.contextPath }/dipen/${idDipendente}"
 			modelAttribute="dipendente">

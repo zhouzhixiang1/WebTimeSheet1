@@ -9,6 +9,10 @@
   background-color: #729aff !important;
 }
 
+.zero {
+  margin-top: zero;
+}
+
 .button {
   width: 80px;
   height: 30px;
@@ -93,29 +97,27 @@ a{
 }
 
 table {
-  padding: 6px;
+  width: 40vw;
+  padding: 8px;
   margin: 16px;
   width: responsive;
   text-align: center;
   font-weight:lighter;
-  border: 1px solid gray;
-}
-
-th {
-  padding-left: 5px;
-  padding-right: 5px;
+  border-collapse: collapse;
 
 }
 
+.bold {
+  paddig: 3px;
+  font-weight: bold;
+}
 
+.light {
+  font-weight: lighter;
+}
 
+.bg {
+  color: white;
+  background-color: #a0baff; 
+}
 
-
-
-
-
-
-  
-  
-  
-  
