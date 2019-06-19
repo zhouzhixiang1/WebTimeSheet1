@@ -28,8 +28,8 @@
 		<form:form method="POST"
 			action="${pageContext.request.contextPath }/dipen/${idDipendente}"
 			modelAttribute="dipendente">
-			<form:hidden path="idDipendente" />
 			<form:hidden path="idManager.idManager" />
+			<form:hidden path="idDipendente" />
 			<form:hidden path="passwordDipendente" />
 			<input type="hidden" name="_method" value="PUT" />
 			<table>

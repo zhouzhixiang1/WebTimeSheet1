@@ -92,16 +92,17 @@ public class ManagerHandler {
 		return "managerTicket";
 		
 	}
-	
+	//go to add ticket page
 	@RequestMapping(value="/listTicketM",method = RequestMethod.GET)
-	public String addTicket(Map<String , Object>map) {
+	public String addTicket(Map<String , Object>map){
 		map.put("managers", managerService.getAll());
 		map.put("ticket", new Ticket());
 		return "addTicket";
 		
 	}
+	//add ticket and return listTicket
 	@RequestMapping(value="/listTicketM",method = RequestMethod.POST)
-	public String save(Ticket ticket) {
+	public String save(Ticket ticket){
 		ticketService.save(ticket);
 		return "redirect:/ticketsM";
 		

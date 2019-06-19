@@ -89,8 +89,14 @@ public class DipendenteHandler {
 	@RequestMapping(value = "/dipen/{idDipendente}", method = RequestMethod.PUT)
 	public String update(Dipendente dipendente) {
 		dipendenteService.put(dipendente);
-		return "redirect:/dipens";
+		
+		return "redirect:/success";
 	}
+	@RequestMapping(value="/success")
+	public String success() {
+		return "modificaDSuccess";
+	}
+	
 
 	// select dipendete by id 
 	@RequestMapping(value = "/dipen/{idDipendente}", method = RequestMethod.GET)
@@ -98,7 +104,6 @@ public class DipendenteHandler {
 		Dipendente dipendente = dipendenteService.get(idDipendente);
 		map.put("dipendente", dipendente);
 		return "editDipendenti";
-
 	}
 	
 	//select table dipendente by idManager

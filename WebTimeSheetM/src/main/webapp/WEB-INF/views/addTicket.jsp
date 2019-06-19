@@ -11,7 +11,7 @@
 <body>
 
 	<form:form method="POST"
-		action="${pageContext.request.contextPath }/listTicketM"
+		action="${pageContext.request.contextPath }/listTicketM/${idManager}"
 		modelAttribute="ticket">
 		<table>
 			<tr>
