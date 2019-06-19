@@ -21,6 +21,9 @@
 				<a href="home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
+				<c:if test="${not empty manager }"><a href="logout">
+					<button class="button" type="button">logout</button>
+				</a></c:if>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
