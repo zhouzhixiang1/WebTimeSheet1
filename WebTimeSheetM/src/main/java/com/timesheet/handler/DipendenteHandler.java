@@ -111,10 +111,9 @@ public class DipendenteHandler {
 				return cb.equal(root.get("idManager"), idManager);
 			}
 		};
-		Pageable pageable = new PageRequest(0, 3);
-		Page<Dipendente> page = this.dipendenteRepository.findAll(spec, pageable);
-		map.put("page", page);
-		
+//		Pageable pageable = new PageRequest(0, 3);
+		List<Dipendente> listd = this.dipendenteRepository.findAll(spec);
+		map.put("listd", listd);
 		return"listDipendenti";
 	}
 	

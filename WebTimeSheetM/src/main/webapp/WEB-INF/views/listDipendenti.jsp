@@ -17,7 +17,7 @@
 				<th>modifica</th>
 				
 			</tr>
-			<c:forEach items="${page.content}"  var="d" >
+			<c:forEach items="${listd}"  var="d" >
 				<tr>
 					<th>${d.idDipendente}</th>
 					<th>${d.nomeDipendente}</th>

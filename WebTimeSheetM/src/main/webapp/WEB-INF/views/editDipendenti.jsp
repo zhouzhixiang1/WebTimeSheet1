@@ -15,16 +15,19 @@
 			action="${pageContext.request.contextPath }/dipen/${idDipendente}"
 			modelAttribute="dipendente">
 			<form:hidden path="idDipendente" />
+			<form:hidden path="idManager.idManager" />
+			<form:hidden path="passwordDipendente" />
 			<input type="hidden" name="_method" value="PUT" />
 			<table>
 				<tr>
 					<td>NOME DIPENDENTE: </td>
-					<td><label>${dipendente.nomeDipendente}</label></td>
+					<td><label>${dipendente.nomeDipendente}<form:hidden path="nomeDipendente" /></label></td>
 				</tr>
 				<tr>
 					<td>ORE LAVORATE</td>
 					<td><form:input type="number" path="oreLavorate" /></td>
 				</tr>
+				
 				<tr>
 					<td><input type="submit" value="Modifica Ore"></td>
 				</tr>
