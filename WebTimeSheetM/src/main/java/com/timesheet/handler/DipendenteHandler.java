@@ -44,9 +44,14 @@ public class DipendenteHandler {
 	@Autowired
 	private TicketRepository ticketRepository;
 	
-
 	
-	// to login 
+
+	/**
+	 * dipendente(login , logout)
+	 * @return
+	 */
+	
+	//go to login page 
 	@RequestMapping(value="/loginD",method = RequestMethod.GET)
 	public String tologinD() {
 		return "loginD";
@@ -71,18 +76,18 @@ public class DipendenteHandler {
 		return "loginD";
 	}
 	
-//	// find all dipendenti
-//	@RequestMapping(value = "/dipens", method = RequestMethod.GET)
-//	public String input(Map<String, Object> map) {
-//		List<Dipendente> listD = dipendenteService.findAll();
-//		map.put("list", listD);
-//		return "listDipendenti";
-//
-//	}
+	
+	
+	/**
+	 * manager ----> dipendente (find , update)
+	 * @param idManager
+	 * @param dipendente
+	 * @return
+	 */
 	
 	//update dipendente
 	@RequestMapping(value = "/dipen/{idDipendente}", method = RequestMethod.PUT)
-	public String update(@PathVariable(value="idManager")Integer idManager,Dipendente dipendente) {
+	public String update(Dipendente dipendente) {
 		dipendenteService.put(dipendente);
 		return "redirect:/dipens";
 	}
@@ -95,6 +100,7 @@ public class DipendenteHandler {
 		return "editDipendenti";
 
 	}
+	
 	//select table dipendente by idManager
 	@RequestMapping("/dipens/{idManager}")
 	public String listById(@PathVariable(value="idManager")Integer idManager, Map<String, Object> map) {
@@ -105,13 +111,23 @@ public class DipendenteHandler {
 				return cb.equal(root.get("idManager"), idManager);
 			}
 		};
-		Pageable pageable = new PageRequest(0, 5);
+		Pageable pageable = new PageRequest(0, 3);
 		Page<Dipendente> page = this.dipendenteRepository.findAll(spec, pageable);
 		map.put("page", page);
 		
 		return"listDipendenti";
 	}
 	
+	
+	
+	/**
+	 * dipendente ----> ticket (find , add hours)
+	 * @param idDipendente
+	 * @param map
+	 * @return
+	 */
+	
+	//select table ticket by idDipendente
 	@RequestMapping(value="/ticketsD/{idDipendente}")
 	public String TicketlistById(@PathVariable(value="idDipendente")Integer idDipendente,Map<String,Object>map) {
 		Specification<DipendenteTicket> spec = new Specification<DipendenteTicket>() {
@@ -127,14 +143,6 @@ public class DipendenteHandler {
 		
 	}
 	
-//	//select table ticket by idDipendente
-//	@RequestMapping(value="/ticketsD/{idDipendente}", method = RequestMethod.GET)
-//	public String getTicketById(@PathVariable(value="idDipendente") Integer idDipendente,Map<String ,Object> map) {
-//		List<DipendenteTicket> tlist = dipendenteTicketRepository.getTicketByIdDipendente(idDipendente);
-//		map.put("tlist", tlist);
-//		return "listTicket2";	
-//	}
-	
 	//select ticket by idTicket
 	@RequestMapping(value="/listTicket/{idTicket}",method = RequestMethod.GET)
 	public String findOneTicket(@PathVariable Integer idTicket,Map <String, Object> map) {
@@ -145,6 +153,16 @@ public class DipendenteHandler {
 	}
 	
 	
+//	//select table ticket by idDipendente
+//	@RequestMapping(value="/ticketsD/{idDipendente}", method = RequestMethod.GET)
+//	public String getTicketById(@PathVariable(value="idDipendente") Integer idDipendente,Map<String ,Object> map) {
+//		List<DipendenteTicket> tlist = dipendenteTicketRepository.getTicketByIdDipendente(idDipendente);
+//		map.put("tlist", tlist);
+//		return "listTicket2";	
+//	}
+	
+	
+//  //select all dipendente (pageable)
 //	@RequestMapping("/dipens")
 //	public String list(@RequestParam(value = "pageNo", required = false, defaultValue = "1") String pageNoStr,
 //			Map<String, Object> map) {
@@ -156,12 +174,21 @@ public class DipendenteHandler {
 //				pageNo = 1;
 //			}
 //		} catch (Exception e) {
-//			// TODO: handle exception
 //		}
 //		Page<Dipendente> page = dipendenteService.getPage(pageNo, 5);
 //
 //		map.put("page", page);
 //
+//		return "listDipendenti";
+//
+//	}
+	
+	
+//	// find all dipendenti
+//	@RequestMapping(value = "/dipens", method = RequestMethod.GET)
+//	public String input(Map<String, Object> map) {
+//		List<Dipendente> listD = dipendenteService.findAll();
+//		map.put("list", listD);
 //		return "listDipendenti";
 //
 //	}

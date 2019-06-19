@@ -33,7 +33,7 @@
 					</a>
 				</div>
 				<div>
-					<a href="tickets/${manager.idManager }" style=" text-decoration: none">
+					<a href="ticketsM/${manager.idManager }" style=" text-decoration: none">
 						<button class="split" type="button" style="background-image: url(images/code.jpg);">tickets</button>
 					</a>
 				</div>

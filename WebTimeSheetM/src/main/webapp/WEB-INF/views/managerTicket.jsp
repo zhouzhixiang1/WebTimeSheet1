@@ -12,61 +12,61 @@
 
 	<form:form method="POST"
 		action="${pageContext.request.contextPath }/ticket/${idTicket}"
-		modelAttribute="dticket">
+		modelAttribute="mticket">
 		<form:hidden path="idTicket" />
 		<!-- <input type="hidden" name="_method" value="PUT" /> -->
 		<table border="1">
 			<tr>
 				<td>Cliente</td>
-				<td><label>${dticket.cliente}</label></td>
+				<td><label>${mticket.cliente}</label></td>
 			</tr>
 			<tr>
 				<td>Commessa</td>
-				<td><label>${dticket.commessa}</label></td>
+				<td><label>${mticket.commessa}</label></td>
 			</tr>
 			<tr>
 				<td>Sorgente</td>
-				<td><label>${dticket.sorgenteTicket}</label></td>
+				<td><label>${mticket.sorgenteTicket}</label></td>
 			</tr>
 			<tr>
 				<td>Stato Ticket</td>
-				<td><label>${dticket.statoTicket}</label></td>
+				<td><label>${mticket.statoTicket}</label></td>
 			</tr>
 			<tr>
 				<td>Priorita</td>
-				<td><label>${dticket.priorita}</label></td>
+				<td><label>${mticket.priorita}</label></td>
 			</tr>
 			<tr>
 				<td>Tipologia</td>
-				<td><label>${dticket.tipologia}</label></td>
+				<td><label>${mticket.tipologia}</label></td>
 			</tr>
 			<tr>
 				<td>Data Inserimento</td>
-				<td><label>${dticket.dataInserimento}</label></td>
+				<td><label>${mticket.dataInserimento}</label></td>
 			</tr>
 			<tr>
 				<td>Data Rilascio</td>
-				<td><label>${dticket.dataRilascio}</label></td>
+				<td><label>${mticket.dataRilascio}</label></td>
 			</tr>
 			<tr>
 				<td>Applicazione Riferimento</td>
-				<td><label>${dticket.applicazioneRiferimento}</label></td>
+				<td><label>${mticket.applicazioneRiferimento}</label></td>
 			</tr>
 			<tr>
 				<td>Stima</td>
-				<td><label>${dticket.stima}</label></td>
+				<td><label>${mticket.stima}</label></td>
 			</tr>
 			<tr>
 				<td>Descrizione</td>
-				<td><label>${dticket.descrizione}</label></td>
+				<td><label>${mticket.descrizione}</label></td>
 			</tr>
 			<tr>
 				<td>Totale Ore Lavorate</td>
-				<td><label>${dticket.totOreLavorate}</label></td>
+				<td><label>${mticket.totOreLavorate}</label></td>
 			</tr>
 			<tr>
 				<td>Note</td>
-				<td><label>${dticket.note}</label></td>
+				<td><label>${mticket.note}</label></td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="Aggiungi Ore"></td>
