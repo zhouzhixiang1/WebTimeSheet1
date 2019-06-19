@@ -4,38 +4,56 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-		<table border="1" cellpadding="10" cellspacing="0">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<style type="text/css">
+			<%@ include file="/css/stile.css" %>
+		</style>
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<div class="navbar">
+			<p style=" margin-top: 0px; padding: 16px;">
+				<a href="">
+					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
+				</a>
+				<a href="home.jsp">
+					<button class="button" type="button">Home</button>
+				</a>
+			</p>
+		</div>
+		<!-- ^NAVBAR^ -->
+		<table>
 			<tr>
-				<th>IdDipendente</th>
-				<th>NomeDipendente</th>
-				<th>OreLavorate</th>
-				<th>modifica</th>
-				
+				<th>Id Dipendente</th>
+				<th>Nome Dipendente</th>
+				<th>Ore Lavorate</th>
+				<th>modifica</th>			
 			</tr>
-		<c:forEach items="${page.content}"  var="d" >
-			<tr>
-				<th>${d.idDipendente}</th>
-				<th>${d.nomeDipendente}</th>
-				<th>${d.oreLavorate}</th>
-				<th><a href="${pageContext.request.contextPath }/dipen/${d.idDipendente}">modifica</a></th>
-			</tr>
-		</c:forEach>
-		<tr>
-				<td colspan="8">
-					TotalEmps${page.totalElements }&nbsp;&nbsp;
-					TotalPages${page.totalPages } &nbsp;&nbsp;
-					CurrentPage${page.number + 1 } &nbsp;&nbsp;
-					<a href="?pageNo=${page.number + 1 - 1 }">Previous</a>&nbsp;&nbsp;
-					<a href="?pageNo=${page.number + 1 + 1 }">Next</a>
-				</td>
-			</tr>
+			<c:forEach items="${page.content}"  var="d" >
+				<tr>
+					<th>${d.idDipendente}</th>
+					<th>${d.nomeDipendente}</th>
+					<th>${d.oreLavorate}</th>
+					<th>
+						<a href="${pageContext.request.contextPath }/dipen/${d.idDipendente}">
+							<button class="button">modifica</button>
+						</a>
+					</th>
+				</tr>
+			</c:forEach>
 		</table>
-</body>
-
-
+		<div style=" margin-left: 16px;">
+			Dipendenti: ${page.totalElements }&nbsp;&nbsp;
+			Pagine totali: ${page.totalPages } &nbsp;&nbsp;
+			Pagina ${page.number + 1 } &nbsp;&nbsp;
+			<a href="?pageNo=${page.number + 1 - 1 }">
+				<button class="button">Previous</button>
+			</a>
+			<a href="?pageNo=${page.number + 1 + 1 }">
+				<button class="button">Next</button>
+			</a>
+		</div>
+	</body>
 </html>

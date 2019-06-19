@@ -9,9 +9,8 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Dipendente-TS</title>
-		<link rel="shortcut icon" type="image/png" href="zero.png"/>
 		<style type="text/css">
-		<%@ include file="/css/stile.css" %>
+			<%@ include file="/css/stile.css" %>
 		</style>
 		
 	</head>

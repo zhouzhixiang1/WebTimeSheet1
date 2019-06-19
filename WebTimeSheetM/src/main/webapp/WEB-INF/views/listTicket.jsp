@@ -6,9 +6,9 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Tickets-TS</title>
+		<title>Tickets-TS</title> <!-- lista ticket per manager  -->
 		<style type="text/css">
-		<%@ include file="/css/stile.css" %>
+			<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
 	<body>
@@ -42,26 +42,26 @@
 				<th>note</th>
 				<th>Modifica</th>
 			</tr>
-		<c:forEach items="${tpage.content}"  var="t" >
+			<c:forEach items="${tpage.content}"  var="t" >
+				<tr>
+					<th>${t.idTicket}</th>
+					<th>${t.cliente}</th>
+					<th>${t.sorgenteTicket}</th>
+					<th>${t.tipologia}</th>
+					<th>${t.dataInserimento}</th>
+					<th>${t.dataRilascio}</th>
+					<th>${t.applicazioneRiferimento}</th>
+					<th>${t.priorita}</th>
+					<th>${t.statoTicket}</th>
+					<th>${t.stima}</th>
+					<th>${t.descrizione}</th>
+					<th>${t.totOreLavorate}</th>
+					<th>${t.commessa}</th>
+					<th>${t.note}</th>
+					<th><a href="">Modifica</a></th>
+				</tr>
+			</c:forEach>
 			<tr>
-				<th>${t.idTicket}</th>
-				<th>${t.cliente}</th>
-				<th>${t.sorgenteTicket}</th>
-				<th>${t.tipologia}</th>
-				<th>${t.dataInserimento}</th>
-				<th>${t.dataRilascio}</th>
-				<th>${t.applicazioneRiferimento}</th>
-				<th>${t.priorita}</th>
-				<th>${t.statoTicket}</th>
-				<th>${t.stima}</th>
-				<th>${t.descrizione}</th>
-				<th>${t.totOreLavorate}</th>
-				<th>${t.commessa}</th>
-				<th>${t.note}</th>
-				<th><a href="">Modifica</a></th>
-			</tr>
-		</c:forEach>
-		<tr>
 				<td colspan="16">
 					TotalEmps${tpage.totalElements }&nbsp;&nbsp;
 					TotalPages${tpage.totalPages } &nbsp;&nbsp;
