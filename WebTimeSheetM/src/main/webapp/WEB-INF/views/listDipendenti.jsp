@@ -17,23 +17,6 @@
 				<th>modifica</th>
 				
 			</tr>
-		<c:forEach items="${page.content}"  var="page" >
-			<tr>
-				<th>${page.idDipendente}</th>
-				<th>${page.nomeDipendente}</th>
-				<th>${page.oreLavorate}</th>
-				<th><a href="${pageContext.request.contextPath }/dipen/${page.idDipendente}">modifica</a></th>
-			</tr>
-		</c:forEach>
-		<tr>
-				<td colspan="8">
-					TotalEmps${page.totalElements }&nbsp;&nbsp;
-					TotalPages${page.totalPages } &nbsp;&nbsp;
-					CurrentPage${page.number + 1 } &nbsp;&nbsp;
-					<a href="?pageNo=${page.number + 1 - 1 } ">Previous</a>&nbsp;&nbsp;
-					<a href="?pageNo=${page.number + 1 + 1 }">Next</a>
-				</td>
-			</tr>
 			<c:forEach items="${page.content}"  var="d" >
 				<tr>
 					<th>${d.idDipendente}</th>
@@ -46,6 +29,15 @@
 					</th>
 				</tr>
 			</c:forEach>
+				<!--  <tr>
+				<td colspan="8">
+					TotalEmps${page.totalElements }&nbsp;&nbsp;
+					TotalPages${page.totalPages } &nbsp;&nbsp;
+					CurrentPage${page.number + 1 } &nbsp;&nbsp;
+					<a href="?pageNo=${page.number + 1 - 1 } ">Previous</a>&nbsp;&nbsp;
+					<a href="?pageNo=${page.number + 1 + 1 }">Next</a>
+				</td>
+			</tr>-->
 		</table>
 </body>
 
