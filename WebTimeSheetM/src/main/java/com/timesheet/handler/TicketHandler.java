@@ -15,16 +15,22 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.timesheet.entity.Ticket;
 import com.timesheet.repository.TicketRepository;
+import com.timesheet.service.TicketService;
 
 @Controller
 public class TicketHandler {
 	
-	@Autowired
-	private TicketRepository ticketRepository;
 	
+	
+	
+	
+//	@Autowired
+//	private TicketRepository ticketRepository;
+//	
 //	@RequestMapping(value="/tickets/{idManager}")
 //	public String TicketlistById(@PathVariable(value="idManager")Integer idManager,Map<String, Object> map) {
 //		

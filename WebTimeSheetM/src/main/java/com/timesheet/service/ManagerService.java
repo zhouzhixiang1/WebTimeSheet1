@@ -1,7 +1,10 @@
 package com.timesheet.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.timesheet.entity.Manager;
 import com.timesheet.repository.ManagerRepository;
@@ -25,5 +28,10 @@ public class ManagerService {
 			return manager;
 		}
 		return null;
+	}
+	//find all manager
+	@Transactional(readOnly = true)
+	public List<Manager>getAll(){
+		return managerRepository.findAll();
 	}
 }

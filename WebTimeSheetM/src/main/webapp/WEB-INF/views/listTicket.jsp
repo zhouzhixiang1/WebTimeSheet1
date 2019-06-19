@@ -22,6 +22,9 @@
 			</a> <a href="home.jsp">
 				<button class="button" type="button">Home</button>
 			</a>
+			<a href="${pageContext.request.contextPath}/listTicketM">
+				<button class="button" type="button">Add Ticket</button>
+			</a>
 		</p>
 	</div>
 	<!-- ^NAVBAR^ -->
@@ -32,7 +35,7 @@
 			<c:forEach items="${tlistM}" var="tlm">
 				<tr>
 					<th>${tlm.idTicket}</th>
-					<th><a href="/WebTimeSheetM/listTicketM/${tlm.idTicket}">visualizza</a></th>
+					<th><a href="${pageContext.request.contextPath }/listTicketM/${tlm.idTicket}">visualizza</a></th>
 				</tr>
 			</c:forEach>
 	</table>

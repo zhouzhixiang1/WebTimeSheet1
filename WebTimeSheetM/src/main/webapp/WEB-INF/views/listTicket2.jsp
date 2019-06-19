@@ -33,7 +33,7 @@
 				<tr>
 					<th>${tl.idTicket.idTicket}</th>
 					<th>
-						<a href="/WebTimeSheetM/listTicket/${tl.idTicket.idTicket}">visualizza</a>
+						<a href="${pageContext.request.contextPath }/listTicket/${tl.idTicket.idTicket}">visualizza</a>
 					</th>
 				</tr>
 			</c:forEach>

@@ -22,6 +22,7 @@ import com.timesheet.entity.Manager;
 import com.timesheet.entity.Ticket;
 import com.timesheet.repository.TicketRepository;
 import com.timesheet.service.ManagerService;
+import com.timesheet.service.TicketService;
 
 @Controller
 public class ManagerHandler {
@@ -31,6 +32,13 @@ public class ManagerHandler {
 
 	@Autowired
 	private TicketRepository ticketRepository;
+	
+	@Autowired
+	private TicketService ticketService;
+	
+	
+	
+	
 	/**
 	 * manager(login , logut)
 	 * @return
@@ -84,5 +92,20 @@ public class ManagerHandler {
 		return "managerTicket";
 		
 	}
+	
+	@RequestMapping(value="/listTicketM",method = RequestMethod.GET)
+	public String addTicket(Map<String , Object>map) {
+		map.put("managers", managerService.getAll());
+		map.put("ticket", new Ticket());
+		return "addTicket";
+		
+	}
+	@RequestMapping(value="/listTicketM",method = RequestMethod.POST)
+	public String save(Ticket ticket) {
+		ticketService.save(ticket);
+		return "redirect:/ticketsM";
+		
+	}
+	
 
 }

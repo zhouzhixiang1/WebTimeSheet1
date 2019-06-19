@@ -11,6 +11,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Table(name="WEB_TICKET")
 @Entity
 public class Ticket {
@@ -18,17 +20,25 @@ public class Ticket {
 	
 	private Integer idTicket ;
 	private String cliente;
+	
 	private String sorgenteTicket;
 	private String statoTicket;
 	private String priorita;
+	
 	private String tipologia;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dataInserimento;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dataRilascio;
 	private String applicazioneRiferimento;
+	
 	private Double stima;
 	private String descrizione;
+	
 	private Integer totOreLavorate;
 	private String commessa;
+	
 	private String note;
 	private Manager idManager;
 	
