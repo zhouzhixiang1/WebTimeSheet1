@@ -1,6 +1,4 @@
 
-
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -8,13 +6,12 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Dipendente-TS</title>
+		<title>Manager-TS</title>
 		<style type="text/css">
 			<%@ include file="/css/stile.css" %>
 		</style>
-		
 	</head>
-	<body style=" font-family: calibri; font-size: 16;">
+	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
@@ -27,25 +24,25 @@
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
-		<c:if test="${not empty dipendente }">
-<!-- 		Benvenuto,&nbsp;${dipendente.nomeDipendente}&nbsp;<br> -->
+		<c:if test="${not empty manager }">
+<!-- 		Benvenuto,&nbsp;${manager.managerName}&nbsp;<br> -->
 			<form>
 				<div>
-					<a href="ticketsD/${dipendente.idDipendente}" style=" text-decoration: none">
-						<button class="split" type="button" style="background-image: url(images/manager2.jpg);">ticket</button>
+					<a href="dipens/${manager.idManager }" style=" text-decoration: none">
+						<button class="split" type="button" style="background-image: url(images/manager2.jpg);">dipendenti</button>
 					</a>
 				</div>
 				<div>
-					<a href="" style=" text-decoration: none">
-						<button class="split" type="button" style="background-image: url(images/code.jpg);">visualizza dati</button>
+					<a href="tickets/${manager.idManager }" style=" text-decoration: none">
+						<button class="split" type="button" style="background-image: url(images/code.jpg);">tickets</button>
 					</a>
 				</div>
 			</form>
 		</c:if>
 		
-		<c:if test="${empty dipendente }">
+		<c:if test="${empty manager }">
 			Error login in ,Please 
-			<a href="loginD.jsp">try again</a>
+			<a href="login.jsp">try again</a>
 		</c:if>
 	</body>
 </html>

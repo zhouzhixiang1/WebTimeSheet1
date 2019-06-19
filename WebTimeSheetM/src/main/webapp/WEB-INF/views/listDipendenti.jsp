@@ -34,6 +34,18 @@
 					<a href="?pageNo=${page.number + 1 + 1 }">Next</a>
 				</td>
 			</tr>
+			<c:forEach items="${page.content}"  var="d" >
+				<tr>
+					<th>${d.idDipendente}</th>
+					<th>${d.nomeDipendente}</th>
+					<th>${d.oreLavorate}</th>
+					<th>
+						<a href="${pageContext.request.contextPath }/dipen/${d.idDipendente}">
+							<button class="button">modifica</button>
+						</a>
+					</th>
+				</tr>
+			</c:forEach>
 		</table>
 </body>
 
