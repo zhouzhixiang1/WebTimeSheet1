@@ -5,16 +5,39 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
-		<link rel="stylesheet" href="css/stile.css" type = "text/css">
+		<title>Manager-TS</title>
+		<link rel="shortcut icon" type="image/png" href="zero.png"/>
+		<style type="text/css">
+		<%@ include file="/css/stile.css" %>
+		</style>
 	</head>
 	<body>
-		<jsp:include page="../../scripts/navbar.html"></jsp:include>
+		<!-- NAVBAR -->
+		<div class="navbar">
+			<p style=" margin-top: 0px; padding: 16px;">
+				<a href="">
+					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
+				</a>
+				<a href="home.jsp">
+					<button class="button" type="button">Home</button>
+				</a>
+			</p>
+		</div>
+		<!-- ^NAVBAR^ -->
 		<c:if test="${not empty manager }">
-			Benvenuto,&nbsp;${manager.managerName}&nbsp;<br>	
-			<a href="logout" style=" text-decoration: none">logout</a><br>
-			<a href="dipens/${manager.idManager }" style=" text-decoration: none">tabella dipendente</a><br>
-			<a href="tickets/${manager.idManager }" style=" text-decoration: none">tabella ticket</a>
+<!-- 		Benvenuto,&nbsp;${manager.managerName}&nbsp;<br> -->
+			<form>
+				<div>
+					<a href="dipens/${manager.idManager }" style=" text-decoration: none">
+						<button class="split" type="button" style="background-image: url(images/manager2.jpg);">dipendenti</button>
+					</a>
+				</div>
+				<div>
+					<a href="tickets/${manager.idManager }" style=" text-decoration: none">
+						<button class="split" type="button" style="background-image: url(images/code.jpg);">tickets</button>
+					</a>
+				</div>
+			</form>
 		</c:if>
 		
 		<c:if test="${empty manager }">
