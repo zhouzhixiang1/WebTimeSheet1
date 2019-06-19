@@ -6,7 +6,6 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Manager-TS</title>
-		<link rel="shortcut icon" type="image/png" href="zero.png"/>
 		<style type="text/css">
 		<%@ include file="/css/stile.css" %>
 		</style>
@@ -18,7 +17,7 @@
 				<a href="">
 					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
 				</a>
-				<a href="home.jsp">
+				<a href="../../home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 				<c:if test="${not empty manager }"><a href="logout">

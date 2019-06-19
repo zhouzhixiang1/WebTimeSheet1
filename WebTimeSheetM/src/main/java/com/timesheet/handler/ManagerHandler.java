@@ -50,7 +50,7 @@ public class ManagerHandler {
 		return "login";
 	}
 	// login utente
-	@RequestMapping(value = "/managerLogin")
+	@RequestMapping(value = "/managerLogin", method = RequestMethod.POST)
 	public String login(@RequestParam Integer idManager, @RequestParam String managerName,
 			@RequestParam String managerPassword,HttpSession session,Model m) {
 		Manager manager = managerService.loginManager(idManager, managerName, managerPassword);

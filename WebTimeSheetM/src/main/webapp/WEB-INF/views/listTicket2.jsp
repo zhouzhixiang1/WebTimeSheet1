@@ -18,22 +18,28 @@
 				<a href="">
 					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
 				</a>
-				<a href="home.jsp">
+				<a href="../../home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
-		<table border="0.5" cellpadding="10">
+		<table border="0.5" cellpadding="10" style=" width: 20vw">
 			<tr>
-				<th>idTicket</th>
-				<th>visualizza</th>
+				<th class="bg">Ticket</th>
+				<th class="bg"></th>
 			</tr>
 			<c:forEach items="${tlist}"  var="tl" >
-				<tr>
+				<tr class="light">
 					<th>${tl.idTicket.idTicket}</th>
 					<th>
+<<<<<<< HEAD
 						<a href="${pageContext.request.contextPath }/listTicket/${tl.idTicket.idTicket}">visualizza</a>
+=======
+						<a href="/WebTimeSheetM/listTicket/${tl.idTicket.idTicket}">
+							<button class="button" type="button">visualizza</button>
+						</a>
+>>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 					</th>
 				</tr>
 			</c:forEach>
