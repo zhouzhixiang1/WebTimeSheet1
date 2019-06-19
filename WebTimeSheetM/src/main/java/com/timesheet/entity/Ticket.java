@@ -22,6 +22,10 @@ public class Ticket {
 	
 	private Integer idTicket ;
 	private String cliente;
+	private String sorgenteTicket;
+	private String statoTicket;
+	private String priorita;
+	private String tipologia;
 	private Date dataInserimento;
 	private Date dataRilascio;
 	private String applicazioneRiferimento;
@@ -30,10 +34,6 @@ public class Ticket {
 	private Integer totOreLavorate;
 	private String commessa;
 	private String note;
-	private String sorgenteTicket;
-	private String statoTicket;
-	private String priorita;
-	private String tipologia;
 	private Manager idManager;
 	
 //	private Priorita priorita;

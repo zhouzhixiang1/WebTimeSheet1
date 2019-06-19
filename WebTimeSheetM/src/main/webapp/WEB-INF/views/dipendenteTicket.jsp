@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,46 +9,72 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<table border="1" cellpadding="10" cellspacing="0">
+
+	<form:form method="POST"
+		action="${pageContext.request.contextPath }/ticket/${idTicket}"
+		modelAttribute="dticket">
+		<form:hidden path="idTicket" />
+		<!-- <input type="hidden" name="_method" value="PUT" /> -->
+		<table border="1">
 			<tr>
-				<th>idTicket</th>
-				<th>Cliente</th>
-				<th>Sorgente Ticket</th>
-				<th>Tipologia</th>
-				<th>Data Inserimento</th>
-				<th>Data Rilascio</th>
-				<th>Applicazione Riferimento</th>
-				<th>Priorita</th>
-				<th>Stato Ticket</th>
-				<th>Stima</th>
-				<th>Descrizione</th>
-				<th>Totale Ore Lavorate</th>
-				<th>Commessa</th>
-				<th>note</th>
-				<th>Modifica</th>
+				<td>Cliente:</td>
+				<td><label>${dticket.cliente}</label></td>
 			</tr>
-		<c:forEach items="${dticket}"  var="t" >
 			<tr>
-				<th>${t.idTicket}</th>
-				<th>${t.cliente}</th>
-				<th>${t.sorgenteTicket}</th>
-				<th>${t.tipologia}</th>
-				<th>${t.dataInserimento}</th>
-				<th>${t.dataRilascio}</th>
-				<th>${t.applicazioneRiferimento}</th>
-				<th>${t.priorita}</th>
-				<th>${t.statoTicket}</th>
-				<th>${t.stima}</th>
-				<th>${t.descrizione}</th>
-				<th>${t.totOreLavorate}</th>
-				<th>${t.commessa}</th>
-				<th>${t.note}</th>
-				<th><a href="">Modifica</a></th>
+				<td>Commessa</td>
+				<td><label>${dticket.commessa}</label></td>
 			</tr>
-		</c:forEach>
-	
+			<tr>
+				<td>Sorgente</td>
+				<td><label>${dticket.sorgenteTicket}</label></td>
+			</tr>
+			<tr>
+				<td>Stato Ticket</td>
+				<td><label>${dticket.statoTicket}</label></td>
+			</tr>
+			<tr>
+				<td>Priorita</td>
+				<td><label>${dticket.priorita}</label></td>
+			</tr>
+			<tr>
+				<td>Tipologia</td>
+				<td><label>${dticket.tipologia}</label></td>
+			</tr>
+			<tr>
+				<td>Data Inserimento</td>
+				<td><label>${dticket.dataInserimento}</label></td>
+			</tr>
+			<tr>
+				<td>Data Rilascio</td>
+				<td><label>${dticket.dataRilascio}</label></td>
+			</tr>
+			<tr>
+				<td>Applicazione Riferimento</td>
+				<td><label>${dticket.applicazioneRiferimento}</label></td>
+			</tr>
+			<tr>
+				<td>Stima</td>
+				<td><label>${dticket.stima}</label></td>
+			</tr>
+			<tr>
+				<td>Descrizione</td>
+				<td><label>${dticket.descrizione}</label></td>
+			</tr>
+			<tr>
+				<td>Totale Ore Lavorate</td>
+				<td><label>${dticket.totOreLavorate}</label></td>
+			</tr>
+			<tr>
+				<td>Note</td>
+				<td><label>${dticket.note}</label></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Aggiungi Ore"></td>
+			</tr>
 		</table>
+	</form:form>
+
+
+
 </body>
-
-
 </html>

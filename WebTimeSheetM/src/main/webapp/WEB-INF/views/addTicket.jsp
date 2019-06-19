@@ -18,7 +18,7 @@
 		<table>
 			<tr>
 				<td>NOME DIPENDENTE</td>
-				<td><form:input type="readonly" path="nomeDipendente" /></td>
+				<td><label for="nomeDipendente"></label></td>
 			</tr>
 			<tr>
 				<td>ORE LAVORATE</td>

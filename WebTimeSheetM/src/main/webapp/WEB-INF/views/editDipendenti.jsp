@@ -18,15 +18,15 @@
 			<input type="hidden" name="_method" value="PUT" />
 			<table>
 				<tr>
-					<td>NOME DIPENDENTE</td>
-					<td><form:input type="displayonly" path="nomeDipendente"  contenteditable="false"/></td>
+					<td>NOME DIPENDENTE: </td>
+					<td><label>${dipendente.nomeDipendente}</label></td>
 				</tr>
 				<tr>
 					<td>ORE LAVORATE</td>
-					<td><form:input type="text" path="oreLavorate" /></td>
+					<td><form:input type="number" path="oreLavorate" /></td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="editsave"></td>
+					<td><input type="submit" value="Modifica Ore"></td>
 				</tr>
 			</table>
 		</form:form>
