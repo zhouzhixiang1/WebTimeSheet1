@@ -86,7 +86,7 @@ td {
 					<td><label>${dticket.note}</label></td>
 				</tr>
 			</table>
+			<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Aggiungi Ore</button>
 		</form:form>
-		<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Aggiungi Ore</button>
 	</body>
 </html>
