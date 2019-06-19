@@ -17,7 +17,7 @@
 				<a href="">
 					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
 				</a>
-				<a href="../../home.jsp">
+				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 			</p>
@@ -34,10 +34,10 @@
 				<p class="txt">Password 
 					<input class="instxt" type="password" name="managerPassword" required>
 				</p>
+				<button class="button">login</button>
 				<a href="home.jsp">
 					<button class="button" type="button">Annulla</button>
 				</a>
-				<button class="button">login</button>
 			</form>
 		</div>
 	</body>

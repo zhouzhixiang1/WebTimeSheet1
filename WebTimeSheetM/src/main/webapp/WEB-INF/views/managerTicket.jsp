@@ -21,7 +21,7 @@ td {
 				<a href="">
 					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
 				</a>
-				<a href="../../home.jsp">
+				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 			</p>
