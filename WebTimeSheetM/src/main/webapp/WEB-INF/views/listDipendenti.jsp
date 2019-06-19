@@ -36,7 +36,8 @@ th {
 				<th class="bg">Ore Lavorate</th>
 				<th class="bg"></th> <!-- colonna per modifica -->	
 			</tr>
-			<c:forEach items="${page.content}"  var="d">
+
+			<c:forEach items="${listd}"  var="d" >
 				<tr>
 					<th class="light">${d.idDipendente}</th>
 					<th class="light">${d.nomeDipendente}</th>

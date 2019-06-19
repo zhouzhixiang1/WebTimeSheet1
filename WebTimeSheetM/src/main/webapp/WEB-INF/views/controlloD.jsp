@@ -45,7 +45,7 @@
 		
 		<c:if test="${empty dipendente }">
 			Error login in ,Please 
-			<a href="loginD.jsp">try again</a>
+			<a href="loginD">try again</a>
 		</c:if>
 	</body>
 </html>
