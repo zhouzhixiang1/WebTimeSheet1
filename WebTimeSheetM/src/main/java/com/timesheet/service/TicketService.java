@@ -17,6 +17,11 @@ public class TicketService {
 	private TicketRepository ticketRepository;
 	
 	@Transactional
+	public void deleteT(Integer idTicket) {
+		ticketRepository.delete(idTicket);
+	}
+	
+	@Transactional
 	public void save(Ticket ticket) {
 		ticket.setDataInserimento(new Date());
 		ticketRepository.saveAndFlush(ticket);

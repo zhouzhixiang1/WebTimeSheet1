@@ -73,6 +73,14 @@ public class ManagerHandler {
 		
 	}
 	
+	//delete ticket by id ticket
+	@RequestMapping(value="/ticketsM/{idTicket}",method = RequestMethod.DELETE)
+	public String deleteTicketById(@PathVariable("idTicket")Integer idTicket) {
+		ticketService.deleteT(idTicket);
+		return "redirect:/main";
+		
+	}
+	
 	//select table ticket by idManager
 	@RequestMapping(value="/ticketsM/{idManager}")
 	public String TicketlistByIdM(@PathVariable(value="idManager")Integer idManager,Map<String,Object>map) {

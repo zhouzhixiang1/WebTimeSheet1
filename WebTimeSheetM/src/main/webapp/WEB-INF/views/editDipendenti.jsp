@@ -40,7 +40,7 @@
 				</tr>
 				
 				<tr>
-					<td><input type="submit" value="Modifica Ore"></td>
+					<td><input type="submit" value="Modifica"></td>
 				</tr>
 			</table>
 		</form:form>

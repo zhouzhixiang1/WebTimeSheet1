@@ -44,7 +44,6 @@
 					<td><form:input type="number" path="oreLavorate" defaultValue="0" /></td>
 				</tr>
 				
-
 			</table>
 			<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">Aggiungi</button>
 		</form:form>
