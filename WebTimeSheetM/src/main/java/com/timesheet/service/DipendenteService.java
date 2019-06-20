@@ -41,6 +41,14 @@ public class DipendenteService {
 		}
 		return null;
 	}
+	@Transactional
+	public void delete(Integer idDipendente) {
+		dipendenteRepository.delete(idDipendente);
+	}
+	@Transactional
+	public void save(Dipendente dipendente) {
+		dipendenteRepository.saveAndFlush(dipendente);
+	}
 	//findAll dipendente PAGE
 //	@Transactional(readOnly = true)
 //	public Page<Dipendente> getPage(int PageNo,int PageSize){

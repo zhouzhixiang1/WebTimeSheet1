@@ -7,6 +7,8 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Dettaglio ticket-TS</title>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/delete2.js"></script>
 		<style type="text/css">
 td {
   border-bottom: 0.5px solid gray;
@@ -17,7 +19,11 @@ td {
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
+<<<<<<< HEAD
 			<p style=" margin-top: 0px;">
+=======
+			<p style=" margin-top: 0px; padding: 16px;">
+>>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="naBu" type="button">Home</button>
 				</a>
@@ -25,10 +31,10 @@ td {
 		</div>
 		<!-- ^NAVBAR^ -->
 		<form:form method="POST"
-			action="${pageContext.request.contextPath }/ticket/${idTicket}"
-			modelAttribute="mticket">
+			action=""
+			modelAttribute="mticket" id="_form">
 			<form:hidden path="idTicket" />
-			<!-- <input type="hidden" name="_method" value="PUT" /> -->
+			<input type="hidden"  id="_method" name="_method" />
 			<table style=" text-align: left;">
 				<tr>
 					<td>Cliente</td>
@@ -84,6 +90,10 @@ td {
 				</tr>	
 			</table>
 		</form:form>
-		<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Aggiungi Ore</button>
+		<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Modifica</button>
+		<a href="${pageContext.request.contextPath }/ticketsM/${idTicket}" class="delete">
+		<button class="button" style=" width: 120px; margin-left: 16px;">Cancella</button>
+		</a>
+		<input type="hidden" value="${mticket.commessa}">
 	</body>
 </html>

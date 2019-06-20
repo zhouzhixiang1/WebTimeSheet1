@@ -68,8 +68,16 @@ public class ManagerHandler {
 	//logout
 	@RequestMapping(value="/logout")
 	public String logout(HttpSession session) {
-		session.invalidate();
+		session.removeAttribute("manager");
 		return "redirect:/loginM";
+		
+	}
+	
+	//delete ticket by id ticket
+	@RequestMapping(value="/ticketsM/{idTicket}",method = RequestMethod.DELETE)
+	public String deleteTicketById(@PathVariable("idTicket")Integer idTicket) {
+		ticketService.deleteT(idTicket);
+		return "redirect:/main";
 		
 	}
 	
@@ -98,9 +106,11 @@ public class ManagerHandler {
 		
 	}
 	//go to add ticket page
-	@RequestMapping(value="/listTicketM",method = RequestMethod.GET)
-	public String addTicket(Map<String , Object>map){
-		map.put("managers", managerService.getAll());
+	@RequestMapping(value="/listTicketMt/{idManager}",method = RequestMethod.GET)
+	public String addTicket(@PathVariable Integer idManager,Map<String , Object>map){
+//		map.put("managers", managerService.getAll());
+		Ticket ticketm = ticketRepository.findOne(idManager);
+		map.put("ticketm",ticketm);
 		map.put("ticket", new Ticket());
 		return "addTicket";
 		

@@ -29,9 +29,9 @@ public class ManagerService {
 		}
 		return null;
 	}
-	//find all manager
-	@Transactional(readOnly = true)
-	public List<Manager>getAll(){
-		return managerRepository.findAll();
-	}
+//	//find all manager
+//	@Transactional(readOnly = true)
+//	public List<Manager>getAll(){
+//		return managerRepository.findAll();
+//	}
 }

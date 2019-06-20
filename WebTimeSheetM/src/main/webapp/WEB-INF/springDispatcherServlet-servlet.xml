@@ -25,5 +25,12 @@
 	
 	<mvc:annotation-driven></mvc:annotation-driven>
 	
+	<!-- <mvc:interceptors>
+ 	<mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.timesheet.intercepter.LoginIntercepter"/>
+        </mvc:interceptor>
+    </mvc:interceptors> -->
+	
 
 </beans>

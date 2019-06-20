@@ -12,11 +12,17 @@
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
+<<<<<<< HEAD
 			<p style=" margin-top: 0px;">
+=======
+			<p style=" margin-top: 0px; padding: 16px;">
+>>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 				<a href="home.jsp">
 					<button class="naBu" type="button">Home</button>
 				</a>
-			</p>
+				</p>
+				<h1>WEB TIMESHEET</h1>
+			
 		</div>
 		<!-- ^NAVBAR^ -->
 		<form>

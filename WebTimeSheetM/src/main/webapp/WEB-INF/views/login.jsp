@@ -23,7 +23,11 @@ h5{
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
+<<<<<<< HEAD
 			<p style=" margin-top: 0px;">
+=======
+			<p style=" margin-top: 0px; padding: 16px;">
+>>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="naBu" type="button">Home</button>
 				</a>
@@ -44,8 +48,9 @@ h5{
 					<label for="managerPassword">Password</label>
 					<input class="instxt" type="password" name="managerPassword" id="managerPassword">
 				</p>
+				<h5>${msg2}</h5>
 				<h5>${msg}</h5>
-				<button class="button">login</button>
+				<button class="button" type="submit">login</button>
 				
 				<a href="home.jsp">
 					<button class="button" type="button">Annulla</button>
