@@ -38,7 +38,7 @@
 					</a>
 				</div>
 				<div>
-					<a href="" style=" text-decoration: none">
+					<a href="" style="text-decoration: none">
 						<button class="split" type="button" style="background-image: url(images/code.jpg);">visualizza dati</button>
 					</a>
 				</div>

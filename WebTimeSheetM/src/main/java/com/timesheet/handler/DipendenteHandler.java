@@ -85,12 +85,33 @@ public class DipendenteHandler {
 	 * @param dipendente
 	 * @return
 	 */
-	
+	//aggiunde dipendente
+	@RequestMapping(value="/addDipen/{idManager}",method = RequestMethod .GET)
+	public String saveDipen(@PathVariable Integer idManager,Map <String ,Object>map) {
+		Dipendente adipendente = dipendenteRepository.findOne(idManager);
+		map.put("adipendente", adipendente);
+		map.put("dipendente",new Dipendente());
+		return "addDipendente";
+		
+	}
+	//add dipendente and return main 
+	@RequestMapping(value="/addDipen",method = RequestMethod.POST)
+	public String saveDipen(Dipendente dipendente) {
+		dipendenteService.save(dipendente);
+		return "redirect:/main";
+		
+	}
+	//delete by id dipendente
+	@RequestMapping(value="/dipen/{idDipendente}",method = RequestMethod.DELETE)
+	public String delete(@PathVariable("idDipendente")Integer idDipendente) {
+		dipendenteService.delete(idDipendente);
+		return "redirect:/main";
+		
+	}
 	//update dipendente
 	@RequestMapping(value = "/dipen/{idDipendente}", method = RequestMethod.PUT)
 	public String update(Dipendente dipendente) {
 		dipendenteService.put(dipendente);
-		
 		return "redirect:/main";
 	}
 //	@RequestMapping(value="/success")
@@ -156,6 +177,8 @@ public class DipendenteHandler {
 		return "dipendenteTicket";
 		
 	}
+	
+
 	
 	
 //	//select table ticket by idDipendente

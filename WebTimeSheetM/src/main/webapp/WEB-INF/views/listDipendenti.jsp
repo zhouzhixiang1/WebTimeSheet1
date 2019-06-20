@@ -7,14 +7,17 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Insert title here</title>
-		<style type="text/css">
 		
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/delete.js"></script>
+
+<style type="text/css">s
 th {
   padding-left: 5px;
   padding-right: 5px;	
 }	
 	<%@ include file="/css/stile.css" %>
-		</style>
+</style>
 	</head>
 	<body>
 		<!-- NAVBAR -->
@@ -23,15 +26,22 @@ th {
 				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
+				<a href="${pageContext.request.contextPath}/addDipen/${idManager}">
+					<button class="button" type="button">Add Dipen</button>
+				</a>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
-		<table cellpadding="10">
+		<form action="" method="POST" id="_form">
+		<input type="hidden"  id="_method" name="_method" />
+		</form>
+		<table cellpadding="10" border=1>
 			<tr>
 				<th class="bg">Id Dipendente</th>
 				<th class="bg">Nome Dipendente</th>
 				<th class="bg">Ore Lavorate</th>
 				<th class="bg"></th> <!-- colonna per modifica -->	
+				<th class="bg"></th>
 			</tr>
 
 			<c:forEach items="${listd}"  var="d" >
@@ -43,6 +53,12 @@ th {
 						<a href="${pageContext.request.contextPath }/dipen/${d.idDipendente}">
 							<button class="button">modifica</button>
 						</a>
+					</th>
+					<th class="light">
+						<a href="${pageContext.request.contextPath }/dipen/${d.idDipendente}" class="delete" >
+							<button class="button">cancella</button>
+						</a>
+						<input type="hidden" value="${d.nomeDipendente}">
 					</th>
 				</tr>
 			</c:forEach>

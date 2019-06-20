@@ -84,6 +84,7 @@ td {
 				</tr>	
 			</table>
 		</form:form>
-		<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Aggiungi Ore</button>
+		<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Modifica</button>
+		<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Cancella</button>
 	</body>
 </html>
