@@ -90,12 +90,12 @@ public class DipendenteHandler {
 	public String update(Dipendente dipendente) {
 		dipendenteService.put(dipendente);
 		
-		return "redirect:/success";
+		return "redirect:/loginM";
 	}
-	@RequestMapping(value="/success")
-	public String success() {
-		return "modificaDSuccess";
-	}
+//	@RequestMapping(value="/success")
+//	public String success() {
+//		return "modificaDSuccess";
+//	}
 	
 
 	// select dipendete by id 

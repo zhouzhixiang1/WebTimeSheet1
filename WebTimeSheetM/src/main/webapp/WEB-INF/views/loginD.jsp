@@ -4,8 +4,14 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Login-TS</title>		
+		<title>Login-TS</title>	
+		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="scripts/validate.js"></script>	
 		<style type="text/css">
+		.error{
+	color:red;
+}
 			<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
@@ -23,15 +29,18 @@
 		</div>
 		<!-- ^NAVBAR^ -->
 		<div class="txtbox">
-			<form method="post" action="dipendenteLogin">
-			<p class="txt">Codice Dipendente
-					<input class="instxt" type="number" min="2001" max="2100"name="idDipendente" required>
+			<form method="post" id="signupFormD" action="dipendenteLogin">
+			<p class="txt">
+					<label for="idDipendente">Codice Dipendente</label>
+					<input class="instxt" type="number" min="2001" max="2100"name="idDipendente" id="idDipendente">
 		  		</p>
-		  		<p class="txt">Nome Dipendente 
-					<input class="instxt" type="text" name="nomeDipendente" required>
+		  		<p class="txt">
+		  			<label for="nomeDipendente">Nome Dipendente</label>
+					<input class="instxt" type="text" name="nomeDipendente" id="nomeDipendente" >
 				</p>
-				<p class="txt">Password 
-					<input class="instxt" type="password" name="passwordDipendente" required>
+				<p class="txt">
+					<label for="passwordDipendente">Password</label> 
+					<input class="instxt" type="password" name="passwordDipendente" id="passwordDipendente">
 				</p>
 				<button class="button">login</button>
 				<a href="home.jsp">
