@@ -73,7 +73,7 @@ public class DipendenteHandler {
 	//logout
 	@RequestMapping(value="/logoutD",method=RequestMethod.GET)
 	public String logoutD(HttpSession session) {
-		session.removeAttribute("dipendente");
+		session.invalidate();
 		return "loginD";
 	}
 	

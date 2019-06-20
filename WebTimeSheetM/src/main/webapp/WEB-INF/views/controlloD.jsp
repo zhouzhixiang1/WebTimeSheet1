@@ -18,17 +18,19 @@
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-				</a>
 				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
+				<c:if test="${not empty dipendente }"><a href="logoutD">
+					<button class="button" type="button">logout</button>
+				</a>
+			
+					</c:if>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
 		<c:if test="${not empty dipendente }">
-<!-- 		Benvenuto,&nbsp;${dipendente.nomeDipendente}&nbsp;<br> -->
+	<!-- <h2>Benvenuto,&nbsp;${dipendente.nomeDipendente}&nbsp;</h2> -->
 			<form>
 				<div>
 					<a href="ticketsD/${dipendente.idDipendente}" style=" text-decoration: none">
@@ -46,6 +48,6 @@
 		<c:if test="${empty dipendente }">
 			Error login in ,Please 
 			<a href="loginD">try again</a>
-		</c:if>
+		</c:if> -->
 	</body>
 </html>

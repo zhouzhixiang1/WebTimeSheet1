@@ -15,13 +15,10 @@
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style="margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- con il login fatto -->
-				</a>
 				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
-				<a href="${pageContext.request.contextPath}/listTicketM">
+				<a href="${pageContext.request.contextPath}/listTicketMt/${idManager}">
 				<button class="button" type="button">Add Ticket</button>
 			</a>
 			</p>

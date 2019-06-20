@@ -13,13 +13,12 @@
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-				</a>
 				<a href="home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
-			</p>
+				</p>
+				<h1>WEB TIMESHEET</h1>
+			
 		</div>
 		<!-- ^NAVBAR^ -->
 		<form>

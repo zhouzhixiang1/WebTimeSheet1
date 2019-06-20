@@ -16,9 +16,6 @@
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-				</a>
 				<a href="home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
@@ -28,14 +25,19 @@
 		<form:form method="POST"
 			action="${pageContext.request.contextPath }/listTicketM"
 			modelAttribute="ticket">
+	
 			<table >
-				<tr>
+				<!--  <tr>
 					<td>Id Manager</td>
 					<td>
 						<form:select path="idManager.idManager" items="${managers}"
 						itemLabel="managerName" itemValue="idManager">
 						</form:select>
 					</td>
+				</tr>-->
+				<tr>
+					<td class="bold">Id Manager</td>
+					<td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td>
 				</tr>
 				<tr>
 					<td class="bold">Cliente</td>

@@ -22,9 +22,6 @@
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-				</a>
 				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
@@ -46,7 +43,7 @@
 					<input class="instxt" type="password" name="passwordDipendente" id="passwordDipendente">
 				</p>
 				<h5>${msg}</h5>
-				<button class="button">login</button>
+				<button class="button" type="submit">login</button>
 				<a href="home.jsp">
 					<button class="button" type="button">Annulla</button>
 				</a>
