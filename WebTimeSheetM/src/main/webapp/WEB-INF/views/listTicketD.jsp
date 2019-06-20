@@ -24,7 +24,7 @@
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
-		<table border="1" cellpadding="10" style=" width: 20vw">
+		<table cellpadding="10" style=" width: 20vw">
 			<tr>
 				<th class="bg">Ticket</th>
 				<th class="bg"></th>

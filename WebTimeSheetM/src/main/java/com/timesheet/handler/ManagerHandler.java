@@ -80,7 +80,7 @@ public class ManagerHandler {
 		};
 		List<Ticket> tlistM =this.ticketRepository.findAll(spec);
 		map.put("tlistM", tlistM);
-		return "listTicket";
+		return "listTicketM";
 		
 	}
 	

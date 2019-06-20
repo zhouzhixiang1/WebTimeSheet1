@@ -143,7 +143,7 @@ public class DipendenteHandler {
 		};
 		List<DipendenteTicket> tlist = this.dipendenteTicketRepository.findAll(spec);
 		map.put("tlist", tlist);
-		return "listTicket2";
+		return "listTicketD";
 		
 	}
 	

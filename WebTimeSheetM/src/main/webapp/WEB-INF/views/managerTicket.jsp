@@ -32,7 +32,7 @@ td {
 			modelAttribute="mticket">
 			<form:hidden path="idTicket" />
 			<!-- <input type="hidden" name="_method" value="PUT" /> -->
-			<table border="1">
+			<table style=" text-align: left;">
 				<tr>
 					<td>Cliente</td>
 					<td><label>${mticket.cliente}</label></td>
