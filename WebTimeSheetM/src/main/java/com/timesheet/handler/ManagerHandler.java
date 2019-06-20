@@ -56,15 +56,20 @@ public class ManagerHandler {
 		Manager manager = managerService.loginManager(idManager, managerName, managerPassword);
 		if(manager != null) {
 			session.setAttribute("manager", manager);
-			return "controlloM";
+			return "redirect:/main";
 		}
-		return "controlloM";
-	}
-	//logout
-	@RequestMapping(value="/logout",method = RequestMethod.GET)
-	public String logout(HttpSession session) {
-		session.removeAttribute("manager");
+		m.addAttribute("msg","Nome Manager o password errato!");
 		return "login";
+	}
+	 @RequestMapping(value = "/main")
+	    public String toMain(){
+	        return "controlloM";
+	    }
+	//logout
+	@RequestMapping(value="/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/loginM";
 		
 	}
 	
@@ -104,7 +109,7 @@ public class ManagerHandler {
 	@RequestMapping(value="/listTicketM",method = RequestMethod.POST)
 	public String save(Ticket ticket){
 		ticketService.save(ticket);
-		return "redirect:/ticketsM";
+		return "redirect:/main";
 		
 	}
 	

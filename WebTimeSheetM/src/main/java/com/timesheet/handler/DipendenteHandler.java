@@ -66,7 +66,8 @@ public class DipendenteHandler {
 			session.setAttribute("dipendente", dipendente);
 			return "controlloD";
 		}
-		return "controlloD";
+		m.addAttribute("msg","Nome Dipendente o password errato!");
+		return "loginD";
 		
 	}
 	//logout
@@ -90,7 +91,7 @@ public class DipendenteHandler {
 	public String update(Dipendente dipendente) {
 		dipendenteService.put(dipendente);
 		
-		return "redirect:/loginM";
+		return "redirect:/main";
 	}
 //	@RequestMapping(value="/success")
 //	public String success() {

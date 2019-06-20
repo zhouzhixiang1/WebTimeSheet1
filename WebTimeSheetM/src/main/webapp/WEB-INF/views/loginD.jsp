@@ -9,6 +9,9 @@
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="scripts/validate.js"></script>	
 		<style type="text/css">
+		h5{
+		color:red;}
+		
 		.error{
 	color:red;
 }
@@ -42,6 +45,7 @@
 					<label for="passwordDipendente">Password</label> 
 					<input class="instxt" type="password" name="passwordDipendente" id="passwordDipendente">
 				</p>
+				<h5>${msg}</h5>
 				<button class="button">login</button>
 				<a href="home.jsp">
 					<button class="button" type="button">Annulla</button>

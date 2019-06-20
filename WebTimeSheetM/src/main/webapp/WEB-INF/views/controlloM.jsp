@@ -41,8 +41,8 @@
 				</div>
 			</form>
 		</c:if>
-		
-		<c:if test="${empty manager }">
+
+		<c:if test="${empty manager}">
 			Error login in ,Please 
 			<a href="loginM">try again</a>
 		</c:if>

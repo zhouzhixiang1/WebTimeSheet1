@@ -12,6 +12,10 @@
 	<script type="text/javascript" src="scripts/validate.js"></script>
 
 	<style>
+	
+	h5{
+	color:red;
+	}
 	.error{
 		color:red;
 	}
@@ -47,6 +51,7 @@
 					<label for="managerPassword">Password</label>
 					<input class="instxt" type="password" name="managerPassword" id="managerPassword">
 				</p>
+				<h5>${msg}</h5>
 				<button class="button">login</button>
 				
 				<a href="home.jsp">
