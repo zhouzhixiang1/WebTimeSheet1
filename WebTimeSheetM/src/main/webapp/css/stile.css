@@ -4,9 +4,30 @@
   left: 0px;
   right: 0px;
   width: 100%;
-  bottom: 16px;
+  bottom: 16xp;
   height: 120px;
   background-color: #729aff !important;
+}
+
+.naBu {
+  top: 16px;
+  width: 100vw;
+  color: white;
+  padding: 0px;
+  border: none;
+  height: 34px;
+  font-size: 2rem;
+  position: center;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #729aff;
+  filter: alpha(opacity=100);
+}
+
+.naBu:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80); 
 }
 
 .zero {
@@ -22,7 +43,7 @@
   font-weight: bold;
   text-align: center;
   border-radius:20px;
-  border: 2px solid white;
+  border: 2px solid #eff0ff;
   -moz-border-radius: 20px;
   background-color: #729aff;
   filter: alpha(opacity=100);
@@ -90,6 +111,7 @@ body {
   font-size: 18;
   font-weight: 300;
   font-family: calibri;
+  background-color: #eff0ff !important;
 }
 
 a{
@@ -104,7 +126,6 @@ table {
   text-align: center;
   font-weight:lighter;
   border-collapse: collapse;
-
 }
 
 .bold {
@@ -119,5 +140,11 @@ table {
 .bg {
   color: white;
   background-color: #a0baff; 
+}
+
+.alR {
+  width: 170px;
+  text-align: left;
+  margin: 10px;
 }
 

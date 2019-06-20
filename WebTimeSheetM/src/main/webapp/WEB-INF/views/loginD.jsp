@@ -6,27 +6,25 @@
 		<meta charset="UTF-8">
 		<title>Login-TS</title>	
 		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
-	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="scripts/validate.js"></script>	
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="scripts/validate.js"></script>	
 		<style type="text/css">
-		h5{
-		color:red;}
+h5{
+  color:red;
+  }
 		
-		.error{
-	color:red;
+.error{
+  color:red;
 }
-			<%@ include file="/css/stile.css" %>
+		<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-				</a>
+			<p style=" margin-top: 0px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="button" type="button">Home</button>
+					<button class="naBu" type="button">Home</button>
 				</a>
 			</p>
 		</div>

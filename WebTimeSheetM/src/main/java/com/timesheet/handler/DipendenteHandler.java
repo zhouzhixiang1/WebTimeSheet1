@@ -64,7 +64,7 @@ public class DipendenteHandler {
 		Dipendente dipendente = dipendenteService.dipendenteLogin(idDipendente, nomeDipendente, passwordDipendente);
 		if(dipendente != null) {
 			session.setAttribute("dipendente", dipendente);
-			return "controlloD";
+			return "listTicketD";
 		}
 		m.addAttribute("msg","Nome Dipendente o password errato!");
 		return "loginD";

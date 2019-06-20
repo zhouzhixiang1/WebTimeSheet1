@@ -14,17 +14,14 @@
 		</style>
 		
 	</head>
-	<body style=" font-family: calibri; font-size: 16;">
+	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
+			<h1 style=" margin-top: 0px;">
+				<a href="home.jsp">
+					<button class="naBu" type="button">Home</button>
 				</a>
-				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="button" type="button">Home</button>
-				</a>
-			</p>
+			</h1>
 		</div>
 		<!-- ^NAVBAR^ -->
 		<c:if test="${not empty dipendente }">
@@ -33,11 +30,6 @@
 				<div>
 					<a href="ticketsD/${dipendente.idDipendente}" style=" text-decoration: none">
 						<button class="split" type="button" style="background-image: url(images/ticket.jpg);">ticket</button>
-					</a>
-				</div>
-				<div>
-					<a href="" style=" text-decoration: none">
-						<button class="split" type="button" style="background-image: url(images/code.jpg);">visualizza dati</button>
 					</a>
 				</div>
 			</form>

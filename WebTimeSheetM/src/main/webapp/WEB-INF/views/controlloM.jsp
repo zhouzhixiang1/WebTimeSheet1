@@ -7,21 +7,18 @@
 		<meta charset="ISO-8859-1">
 		<title>Manager-TS</title>
 		<style type="text/css">
-		<%@ include file="/css/stile.css" %>
+			<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-				</a>
+			<p style=" margin-top: 0px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="button" type="button">Home</button>
+					<button class="naBu" type="button">Home</button>
 				</a>
 				<c:if test="${not empty manager }"><a href="logout">
-					<button class="button" type="button">logout</button>
+					<button class="naBu" type="button">logout</button>
 				</a></c:if>
 			</p>
 		</div>

@@ -14,15 +14,12 @@
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style="margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- con il login fatto -->
-				</a>
+			<p style="margin-top: 0px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="button" type="button">Home</button>
+					<button class="naBu" type="button">Home</button>
 				</a>
 				<a href="${pageContext.request.contextPath}/listTicketM">
-				<button class="button" type="button">Add Ticket</button>
+				<button class="naBu" type="button">Add Ticket</button>
 			</a>
 			</p>
 		</div>

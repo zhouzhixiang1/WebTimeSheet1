@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -14,12 +13,9 @@
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-				</a>
+			<p style=" margin-top: 0px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="button" type="button">Home</button>
+					<button class="naBu" type="button">Home</button>
 				</a>
 			</p>
 		</div>

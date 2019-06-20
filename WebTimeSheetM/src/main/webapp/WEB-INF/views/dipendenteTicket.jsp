@@ -11,18 +11,19 @@
 td {
   border-bottom: 0.5px solid gray;
 }
+
+label {
+  font-weight: lighter;
+}
 			<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="">
-					<button class="button" type="button">Tickets</button> <!-- solo se si è fatto il login -->
-				</a>
+			<p style=" margin-top: 0px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="button" type="button">Home</button>
+					<button class="naBu" type="button">Home</button>
 				</a>
 			</p>
 		</div>
