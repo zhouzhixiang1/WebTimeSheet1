@@ -16,7 +16,7 @@
   padding: 0px;
   border: none;
   height: 34px;
-  font-size: 2rem;
+  font-size: 1rem;
   position: center;
   font-weight: bold;
   text-align: center;
@@ -48,6 +48,7 @@
   background-color: #729aff;
   filter: alpha(opacity=100);
   -webkit-border-radius: 20px;
+  
 }
 
 .button:hover {

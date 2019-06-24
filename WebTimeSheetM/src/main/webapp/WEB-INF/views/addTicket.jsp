@@ -7,7 +7,7 @@
 
 	<head>
 	<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Add Ticket-TS</title>
 		<style type="text/css">
 td {
   margin: 10px;
@@ -23,9 +23,9 @@ form {
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px;">
+			<p style=" margin-top: 0px; padding: 16px;">
 				<a href="home.jsp">
-					<button class="naBu" type="button">Home</button>
+					<button class="button" type="button">Home</button>
 				</a>
 			</p>
 		</div>
@@ -34,17 +34,12 @@ form {
 			<table style=" text-align: left;">
 				<tr>
 					<td class="bold">Id Manager</td>
-				<tr>
-					<td>Id Manager</td>
 					<td>
-						<form:select path="idManager.idManager" items="${managers}"
+						<form:select style="width: 173px;" path="idManager.idManager" items="${managers}"
 						itemLabel="managerName" itemValue="idManager">
 						</form:select>
 					</td>
-				</tr>
-				<tr>
-					<td class="bold">Id Manager</td>
-					<td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td>
+					
 				</tr>
 				<tr>
 					<td class="bold">Cliente</td>

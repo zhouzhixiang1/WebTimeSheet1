@@ -13,12 +13,12 @@
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px;">
+			<p style=" margin-top: 0px; padding: 16px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="naBu" type="button">Home</button>
+					<button class="button" type="button">Home</button>
 				</a>
 				<c:if test="${not empty manager }"><a href="logout">
-					<button class="naBu" type="button">logout</button>
+					<button class="button" type="button">logout</button>
 				</a></c:if>
 			</p>
 		</div>

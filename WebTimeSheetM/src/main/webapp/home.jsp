@@ -12,9 +12,9 @@
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px;">
+			<p style=" margin-top: 0px; padding: 16px;">
 				<a href="home.jsp">
-					<button class="naBu" type="button">Home</button>
+					<button class="button" type="button">Home</button>
 				</a>
 			</p>
 		</div>

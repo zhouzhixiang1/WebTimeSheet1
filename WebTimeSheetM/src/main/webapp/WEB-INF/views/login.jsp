@@ -23,9 +23,9 @@ h5{
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px;">
+			<p style=" margin-top: 0px; padding: 16px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="naBu" type="button">Home</button>
+					<button class="button" type="button">Home</button>
 				</a>
 			</p>
 		</div>
@@ -34,15 +34,15 @@ h5{
 			<form method="post" id="signupFormM" action="managerLogin">
 				<p class="txt">
 					<label for="idManager">Codice Manager</label>
-					<input class="instxt" type="number" min="1001" max="1003"name="idManager" id="idManager">
+					<input class="instxt" type="number" min="1001" max="1003"name="idManager" id="idManager" autofocus autocomplete="off">
 		  		</p>
 		  		<p class="txt"> 
 		  			<label for="managerName">Nome Manager</label>
-					<input class="instxt" type="text" name="managerName" id="managerName">
+					<input class="instxt" type="text" name="managerName" id="managerName" autocomplete="off">
 				</p>
 				<p class="txt"> 
 					<label for="managerPassword">Password</label>
-					<input class="instxt" type="password" name="managerPassword" id="managerPassword">
+					<input class="instxt" type="password" name="managerPassword" id="managerPassword" autocomplete="off">
 				</p>
 				<h5>${msg2}</h5>
 				<h5>${msg}</h5>

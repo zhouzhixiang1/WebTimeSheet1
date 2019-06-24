@@ -22,9 +22,9 @@ h5{
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px;">
+			<p style=" margin-top: 0px; padding: 16px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="naBu" type="button">Home</button>
+					<button class="button" type="button">Home</button>
 				</a>
 			</p>
 		</div>
@@ -33,15 +33,15 @@ h5{
 			<form method="post" id="signupFormD" action="dipendenteLogin">
 			<p class="txt">
 					<label for="idDipendente">Codice Dipendente</label>
-					<input class="instxt" type="number" min="2001" max="2100"name="idDipendente" id="idDipendente">
+					<input class="instxt" type="number" min="2001" max="2100"name="idDipendente" id="idDipendente" autofocus autocomplete="off">
 		  		</p>
 		  		<p class="txt">
 		  			<label for="nomeDipendente">Nome Dipendente</label>
-					<input class="instxt" type="text" name="nomeDipendente" id="nomeDipendente" >
+					<input class="instxt" type="text" name="nomeDipendente" id="nomeDipendente" autocomplete="off">
 				</p>
 				<p class="txt">
 					<label for="passwordDipendente">Password</label> 
-					<input class="instxt" type="password" name="passwordDipendente" id="passwordDipendente">
+					<input class="instxt" type="password" name="passwordDipendente" id="passwordDipendente" autocomplete="off">
 				</p>
 				<h5>${msg}</h5>
 				<button class="button" type="submit">login</button>

@@ -15,9 +15,9 @@
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-			<p style=" margin-top: 0px;">
+			<p style=" margin-top: 0px; padding: 16px;">
 				<a href="${pageContext.request.contextPath}/home.jsp">
-					<button class="naBu" type="button">Home</button>
+					<button class="button" type="button">Home</button>
 				</a>
 			</p>
 		</div>
@@ -29,18 +29,23 @@
 			<form:hidden path="idDipendente" />
 			<form:hidden path="passwordDipendente" />
 			<input type="hidden" name="_method" value="PUT" />
-			<table>
+			<table class="table">
 				<tr>
-					<td>NOME DIPENDENTE: </td>
-					<td><label>${dipendente.nomeDipendente}<form:hidden path="nomeDipendente" /></label></td>
-				</tr>
-				<tr>
-					<td>ORE LAVORATE</td>
-					<td><form:input type="number" path="oreLavorate" /></td>
+					<td class="bold" style="padding: 10px;">Dipendente:</td>
+					<td class="alR"><label>${dipendente.nomeDipendente}<form:hidden path="nomeDipendente" /></label></td>
 				</tr>
 				
 				<tr>
-					<td><input type="submit" value="Modifica"></td>
+					<td class="bold" style="padding: 10px;">Ore lavrate:</td>
+					<td class="alR"><form:input type="number" path="oreLavorate" /></td>
+				</tr>
+				
+				<tr>
+					<td>
+						<a>
+							<button class="button">modifica</button>
+						</a>
+					</td>
 				</tr>
 			</table>
 		</form:form>
