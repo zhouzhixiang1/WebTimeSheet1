@@ -14,22 +14,13 @@
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-<<<<<<< HEAD
 			<p style="margin-top: 0px;">
-=======
-			<p style="margin-top: 0px; padding: 16px;">
->>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="naBu" type="button">Home</button>
 				</a>
-<<<<<<< HEAD
-				<a href="${pageContext.request.contextPath}/listTicketM">
-				<button class="naBu" type="button">Add Ticket</button>
-=======
 				<a href="${pageContext.request.contextPath}/listTicketMt/${idManager}">
-				<button class="button" type="button">Add Ticket</button>
->>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
-			</a>
+					<button class="button" type="button">Add Ticket</button>
+				</a>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->

@@ -23,36 +23,25 @@ form {
 	<body>
 		<!-- NAVBAR -->
 		<div class="navbar">
-<<<<<<< HEAD
 			<p style=" margin-top: 0px;">
-=======
-			<p style=" margin-top: 0px; padding: 16px;">
->>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 				<a href="home.jsp">
 					<button class="naBu" type="button">Home</button>
 				</a>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
-		<form:form method="POST"
-			action="${pageContext.request.contextPath }/listTicketM"
-			modelAttribute="ticket">
-<<<<<<< HEAD
+		<form:form method="POST" action="${pageContext.request.contextPath }/listTicketM" modelAttribute="ticket">
 			<table style=" text-align: left;">
 				<tr>
 					<td class="bold">Id Manager</td>
-=======
-	
-			<table >
-				<!--  <tr>
+				<tr>
 					<td>Id Manager</td>
->>>>>>> branch 'master' of https://github.com/zhouzhixiang1/WebTimeSheet1.git
 					<td>
 						<form:select path="idManager.idManager" items="${managers}"
 						itemLabel="managerName" itemValue="idManager">
 						</form:select>
 					</td>
-				</tr>-->
+				</tr>
 				<tr>
 					<td class="bold">Id Manager</td>
 					<td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td>
