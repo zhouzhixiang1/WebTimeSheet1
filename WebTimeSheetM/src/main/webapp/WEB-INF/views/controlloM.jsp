@@ -28,17 +28,17 @@
 			<form>
 				<div>
 					<a href="dipens/${manager.idManager }" style=" text-decoration: none">
-						<button class="split" type="button" style="background-image: url(images/manager2.jpg);">dipendenti</button>
+						<button class="splitIn3" type="button" style="background-image: url(images/manager2.jpg);">dipendenti</button>
 					</a>
 				</div>
 				<div>
 					<a href="ticketsM/${manager.idManager }" style=" text-decoration: none">
-						<button class="split" type="button" style="background-image: url(images/code.jpg);">tickets</button>
+						<button class="splitIn3" type="button" style="background-image: url(images/ticket.jpg);">tickets</button>
 					</a>				
 				</div>
 				<div>
 				<a href="listDipenTicket" style=" text-decoration: none">
-						<button class="split" type="button" style="background-image: url(images/code.jpg);">Dipendente-Tickets</button>
+						<button class="splitIn3" type="button" style="background-image: url(images/code.jpg);">Dipendente-Tickets</button>
 					</a>
 				</div>
 			</form>

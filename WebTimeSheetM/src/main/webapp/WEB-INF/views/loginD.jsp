@@ -45,7 +45,7 @@ h5{
 				</p>
 				<p class="txt">
 		  			<label for="ruolo">Ruolo</label>
-					<select  name="ruolo" id="ruolo">
+					<select name="ruolo" id="ruolo">
 						<option value="M">M</option>
 						<option value="D">D</option>
 					</select>

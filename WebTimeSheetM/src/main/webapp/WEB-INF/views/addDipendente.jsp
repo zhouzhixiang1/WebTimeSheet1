@@ -22,31 +22,24 @@
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
+		<div class="txtbox">
 		<form:form method="POST"
-			action="${pageContext.request.contextPath }/addDipen"
-			modelAttribute="dipendente">
-	
-			<table >
-				<tr>
-					<td class="bold">Id Manager</td>
-					<td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td>
-				</tr>
-				<tr>
-					<td class="bold">Nome Dipendente</td>
-					<td><form:input type="text" path="nomeDipendente"/></td>
-				</tr>
-				<tr>
-					<td class="bold">Password Dipendente</td>
-					<td><form:input type="text" path="passwordDipendente" /></td>
-				</tr>
-				<tr>
-					<td class="bold">Ore Lavorate</td>
-					<td><form:input type="number" path="oreLavorate" defaultValue="0" /></td>
-				</tr>
-				
-			</table>
-			<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">Aggiungi</button>
-		</form:form>
+			action="${pageContext.request.contextPath }/addDipen" modelAttribute="dipendente">
+				<p class="txt">Id Manager
+					<form:input class="instxt" type="hidden" path="idManager.idManager" value="${idManager}"/>
+				</p>
+				<p class="txt">Nome Dipendente
+					<form:input class="instxt" type="text" path="nomeDipendente"/>
+				</p>
+				<p class="txt">Password Dipendente
+					<form:input class="instxt" type="text" path="passwordDipendente" />
+				</p>
+				<p class="txt">Ore Lavorate
+					<form:input class="instxt" type="number" path="oreLavorate" defaultValue="0" />
+				</p>
+				<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">Aggiungi</button>
+			</form:form>
+		</div>
 	</body>
 
 </html>

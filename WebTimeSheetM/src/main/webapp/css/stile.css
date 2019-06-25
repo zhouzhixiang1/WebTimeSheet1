@@ -107,6 +107,27 @@
   background-repeat: no-repeat;
 }
 
+.splitIn3:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.splitIn3 {
+  color: white;
+  border: none;
+  width: 100vw;
+  opacity: 1.0;
+  font-size: 50px;
+  position: center;
+  font-weight: bold;
+  text-decoration: none;
+  background-size: cover;
+  text-transform: uppercase;
+  height: calc(33.333333vh - 40px);
+  filter: alpha(opacity=100);
+  background-repeat: no-repeat;
+}
+
 body {
   margin: 0px;
   font-size: 18;
