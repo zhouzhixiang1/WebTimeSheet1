@@ -23,7 +23,7 @@
 		</div>
 		<!-- ^NAVBAR^ -->
 		<form:form method="POST"
-			action="${pageContext.request.contextPath }/dipen/${idDipendente}"
+			action="${pageContext.request.contextPath }/dipen2/${idDipendente}"
 			modelAttribute="dipendente">
 			<form:hidden path="idManager.idManager" />
 			<form:hidden path="idDipendente" />
@@ -44,7 +44,7 @@
 				<tr>
 					<td>
 						<a>
-							<button class="button">modifica</button>
+							<button class="button">aggiungi</button>
 						</a>
 					</td>
 				</tr>
