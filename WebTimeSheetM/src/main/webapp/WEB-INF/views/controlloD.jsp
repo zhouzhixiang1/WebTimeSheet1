@@ -33,14 +33,14 @@
 		<c:if test="${not empty dipendente}">
 	<!-- <h2>Benvenuto,&nbsp;${dipendente.nomeDipendente}&nbsp;</h2> -->
 			<form>
-			<c:if test="${dipendente.privilegi == 'NO'}">
+			<c:if test="${dipendente.ruolo == 'D'}">
 				<div>
 					<a href="ticketsD/${dipendente.idDipendente}" style=" text-decoration: none">
 						<button class="split" type="button" style="background-image: url(images/ticket.jpg);">ticket</button>
 					</a>
 				</div>
 			</c:if>
-			<c:if test="${dipendente.privilegi == 'SI'}">
+			<c:if test="${dipendente.ruolo == 'M'}">
 				<div>
 					<a href="ticketsD2/${dipendente.idDipendente}" style=" text-decoration: none">
 						<button class="split" type="button" style="background-image: url(images/ticket.jpg);">ticket</button>

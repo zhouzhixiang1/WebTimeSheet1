@@ -44,10 +44,10 @@ h5{
 					<input class="instxt" type="password" name="passwordDipendente" id="passwordDipendente">
 				</p>
 				<p class="txt">
-		  			<label for="nomeDipendente">Privilegi</label>
-					<select  name="privilegi" id="privilegi">
-						<option value="SI">SI</option>
-						<option value="NO">NO</option>
+		  			<label for="ruolo">Ruolo</label>
+					<select  name="ruolo" id="ruolo">
+						<option value="M">M</option>
+						<option value="D">D</option>
 					</select>
 				</p>
 				<h5>${msg}</h5>

@@ -69,8 +69,8 @@ public class DipendenteHandler {
 	//login
 	@RequestMapping(value="/dipendenteLogin", method = RequestMethod.POST)
 	public String loginD(@RequestParam Integer idDipendente,@RequestParam String nomeDipendente,@RequestParam String passwordDipendente,
-			@RequestParam String privilegi, HttpSession session,Model m) {
-		Dipendente dipendente = dipendenteService.dipendenteLogin(idDipendente, nomeDipendente, passwordDipendente, privilegi);
+			@RequestParam String ruolo, HttpSession session,Model m) {
+		Dipendente dipendente = dipendenteService.dipendenteLogin(idDipendente, nomeDipendente, passwordDipendente, ruolo);
 		if(dipendente != null) {
 			session.setAttribute("dipendente", dipendente);
 			return "redirect:/main1";
