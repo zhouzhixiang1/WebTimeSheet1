@@ -40,15 +40,18 @@
 					<td class="bold" style="padding: 10px;">Ore lavrate:</td>
 					<td class="alR"><form:input type="number" path="oreLavorate" /></td>
 				</tr>
-				
 				<tr>
 					<td>
 						<a>
 							<button class="button">modifica</button>
 						</a>
+						<a href="${pageContext.request.contextPath}/dipens/${dipendente.idManager.idManager}">
+							<button class="button" type="button">annulla</button>
+						</a>
 					</td>
 				</tr>
 			</table>
+			
 		</form:form>
 	</body>
 </html>

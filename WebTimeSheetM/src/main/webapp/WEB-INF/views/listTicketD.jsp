@@ -37,5 +37,8 @@
 				</tr>
 			</c:forEach>
 		</table>
+		<a href="${pageContext.request.contextPath }/main1">
+				<button class="button" type="button" style=" width: 120px; margin-left: 16px;">back</button>
+			</a>
 	</body>
 </html>

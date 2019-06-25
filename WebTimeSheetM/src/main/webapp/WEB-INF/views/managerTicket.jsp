@@ -94,5 +94,9 @@ td {
 			<button class="button" style=" width: 120px; margin-left: 16px;">Cancella</button>
 		</a>
 		<input type="hidden" value="${mticket.commessa}">
+		
+		<a href="${pageContext.request.contextPath }/ticketsM/${mticket.idManager.idManager}">
+			<button class="button" type="button" style=" width: 120px; margin-left: 16px;">back</button>
+		</a>
 	</body>
 </html>

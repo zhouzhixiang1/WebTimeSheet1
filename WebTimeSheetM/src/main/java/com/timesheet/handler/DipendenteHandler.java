@@ -253,7 +253,7 @@ public class DipendenteHandler {
 				map.put("ticket",ticket);
 			}
 		}
-		
+		// select dipendete by id (Dipendente)
 		@RequestMapping(value="/datiDipen/{idDipendente}",method = RequestMethod.GET)
 		public String getOneD(@PathVariable("idDipendente") Integer idDipendente,Map<String, Object>map) {
 			Dipendente dipendente = dipendenteService.get(idDipendente);
@@ -261,7 +261,7 @@ public class DipendenteHandler {
 			return "datiDipen";
 			
 		}
-		// select dipendete by id (Dipendente)
+		// select modifica ore dipendete by id (Dipendente)
 		@RequestMapping(value = "/dipen2/{idDipendente}", method = RequestMethod.GET)
 		public String input2(@PathVariable("idDipendente") Integer idDipendente, Map<String, Object> map) {
 			Dipendente dipendente = dipendenteService.get(idDipendente);

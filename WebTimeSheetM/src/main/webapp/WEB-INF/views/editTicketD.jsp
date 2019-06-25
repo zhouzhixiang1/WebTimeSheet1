@@ -127,8 +127,16 @@ form {
 						<form:textarea path="note" />
 					</td>
 				</tr>
+				<tr>
+				<td>
+			<button class="button" type="submit">modifica</button>
+			<a href="${pageContext.request.contextPath}/listTicket2/${ticket.idTicket}">
+						<button class="button" type="button">annulla</button>
+			</a>
+			</td>
+			</tr>
 			</table>
-			<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">modifica</button>
+			
 		</form:form>
 	</body>
 </html>

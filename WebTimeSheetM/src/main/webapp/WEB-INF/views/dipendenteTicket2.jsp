@@ -92,6 +92,9 @@
 			<a href="${pageContext.request.contextPath }/listTicketDt/${idTicket}">
 				<button class="button" type="button" style=" width: 120px; margin-left: 16px;">modifica</button>
 			</a>
+			<a href="${pageContext.request.contextPath }/main1">
+				<button class="button" type="button" style=" width: 120px; margin-left: 16px;">back</button>
+			</a>
 		</form:form>
 	</body>
 </html>

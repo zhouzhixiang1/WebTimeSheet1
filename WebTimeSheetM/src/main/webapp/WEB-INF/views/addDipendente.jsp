@@ -16,7 +16,7 @@
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="home.jsp">
+				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 			</p>
@@ -25,9 +25,8 @@
 		<div class="txtbox">
 		<form:form method="POST"
 			action="${pageContext.request.contextPath }/addDipen" modelAttribute="dipendente">
-				<p class="txt">Id Manager
+				<h3>Aggiunge Dipendente</h3>
 					<form:input class="instxt" type="hidden" path="idManager.idManager" value="${idManager}"/>
-				</p>
 				<p class="txt">Nome Dipendente
 					<form:input class="instxt" type="text" path="nomeDipendente"/>
 				</p>
@@ -37,7 +36,16 @@
 				<p class="txt">Ore Lavorate
 					<form:input class="instxt" type="number" path="oreLavorate" defaultValue="0" />
 				</p>
-				<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">Aggiungi</button>
+				<p class="txt">Ruolo
+					<form:select path="ruolo" >
+				  		<option value="M">M</option>
+				 		<option value="D">D</option>
+		  			</form:select>
+				</p>
+				<button class="button" type="submit">aggiungi</button>
+				<a href="${pageContext.request.contextPath }/dipens/${idManager}">
+				<button class="button" type="button">annulla</button>
+			</a>
 			</form:form>
 		</div>
 	</body>

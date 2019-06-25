@@ -24,7 +24,7 @@ form {
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="home.jsp">
+				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 			</p>
@@ -36,11 +36,8 @@ form {
 			<form:hidden path="idTicket"/>
 			<form:hidden path="idManager.idManager"/>
 			<input type="hidden" name="_method" value="PUT"/>
+				<h3>Aggiungi Ticket</h3>
 				<table style=" text-align: left;">
-				<tr>
-					<td class="bold">Aggiungi Ticket</td>
-					<!-- <td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td> -->
-				</tr>
 				<tr>
 					<td class="bold">Cliente</td>
 					<td>
@@ -127,8 +124,14 @@ form {
 						<form:textarea path="note" />
 					</td>
 				</tr>
+				<tr>
+				<td><button class="button" type="submit">modifica</button>
+				<a href="${pageContext.request.contextPath}/listTicketM/${ticket.idTicket}">
+							<button class="button" type="button">annulla</button>
+				</a></td>
+				</tr>
 			</table>
-			<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">modifica</button>
+			
 		</form:form>
 	</body>
 </html>

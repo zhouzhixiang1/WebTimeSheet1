@@ -47,7 +47,10 @@
 				<tr>
 					<td>
 						<a href="${pageContext.request.contextPath}/dipen2/${dipendente.idDipendente}">
-							<button class="button" type=button>Aggiungi Ore</button>
+							<button class="button" type=button>Add ore</button>
+						</a>
+						<a href="${pageContext.request.contextPath}/main1">
+							<button class="button" type=button>back</button>
 						</a>
 					</td>
 				</tr>

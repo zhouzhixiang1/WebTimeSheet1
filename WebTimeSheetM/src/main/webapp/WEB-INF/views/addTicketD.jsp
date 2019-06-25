@@ -128,8 +128,15 @@ form {
 						<form:textarea path="note" />
 					</td>
 				</tr>
+				<tr>
+				<td><button class="button" type="submit">Aggiungi</button>
+				<a href="${pageContext.request.contextPath}/main1">
+					<button class="button" type="button">annulla</button>
+				</a></td>
+				</tr>
 			</table>
-			<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">Aggiungi</button>
+			
 		</form:form>
+		
 	</body>
 </html>

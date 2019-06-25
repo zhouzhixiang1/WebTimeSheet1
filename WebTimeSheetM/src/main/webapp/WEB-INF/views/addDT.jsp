@@ -34,23 +34,32 @@
 			<table >
 				<tr>
 					<td class="bold">Id Ticket</td>
+				</tr>
+				<tr>	
 					<td>
 						<form:select path="idTicket.idTicket" items="${tickets}"
 						itemLabel="Commessa" itemValue="idTicket">
 						</form:select>
 					</td>
+					
 				</tr>
 				<tr>
 					<td class="bold">Id Dipendente</td>
+				</tr>
+				<tr>	
 					<td>
 						<form:select path="idDipendente.idDipendente" items="${dipendenti}"
 						itemLabel="nomeDipendente" itemValue="idDipendente">
 						</form:select>
 					</td>
 				</tr>
+				<tr>
+				<td><button class="button" type="submit">Aggiungi</button>
+				<a href="${pageContext.request.contextPath}/listDipenTicket">
+					<button class="button" type="button">annulla</button>
+				</a></td>
+				</tr>
 			</table>
-			<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">Aggiungi</button>
-			
 		</form:form>
 	</body>
 
