@@ -11,7 +11,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/delete.js"></script>
 
-<style type="text/css">s
+<style type="text/css">
 th {
   padding-left: 5px;
   padding-right: 5px;	

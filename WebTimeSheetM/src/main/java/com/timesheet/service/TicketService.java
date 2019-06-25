@@ -1,6 +1,7 @@
 package com.timesheet.service;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,5 +33,9 @@ public class TicketService {
 	public Ticket get(Integer idTicket) {
 		return ticketRepository.findOne(idTicket);
 		
+	}
+	@Transactional
+	public List<Ticket> getAllT(){
+		return ticketRepository.findAll();
 	}
 }

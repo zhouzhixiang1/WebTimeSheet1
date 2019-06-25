@@ -19,9 +19,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.timesheet.entity.DipendenteTicket;
 import com.timesheet.entity.Manager;
 import com.timesheet.entity.Ticket;
 import com.timesheet.repository.TicketRepository;
+import com.timesheet.service.DipendenteService;
+import com.timesheet.service.DipendenteTicketService;
 import com.timesheet.service.ManagerService;
 import com.timesheet.service.TicketService;
 
@@ -36,6 +39,12 @@ public class ManagerHandler {
 	
 	@Autowired
 	private TicketService ticketService;
+	
+	@Autowired
+	private DipendenteTicketService dipendenteTicketService;
+	
+	@Autowired
+	private DipendenteService dipendenteService;
 	
 	
 	
@@ -130,7 +139,7 @@ public class ManagerHandler {
 		map.put("ticket",ticket);
 		return "editTicket";
 	}
-	//delete ticket and return listTicket
+	//edit ticket and return listTicket
 		@RequestMapping(value="/listTicketM/{idTicket}",method = RequestMethod.PUT)
 		public String edit(Ticket ticket){
 			ticketService.save(ticket);
@@ -145,6 +154,53 @@ public class ManagerHandler {
 			map.put("ticket",ticket);
 		}
 	}
+	//find all dipendete-ticket
+	@RequestMapping(value="/listDipenTicket",method = RequestMethod.GET)
+	public String findAll(Map<String, Object>map){
+		List<DipendenteTicket> listDT = dipendenteTicketService.getAll();
+		map.put("listDT", listDT);
+		return "listDipendenteTicket";
+		
+	}
 	
+	//go to page add dipendente-ticket
+	@RequestMapping(value="/addDipenTicket",method = RequestMethod.GET)
+	public String addDT(Map<String, Object>map) {
+		map.put("tickets",ticketService.getAllT());
+		map.put("dipendenti", dipendenteService.getAllD());
+		map.put("listDT", new DipendenteTicket());
+		return "addDT";
+		
+	}
+	//add dipendete-ticket and return main
+	@RequestMapping(value="/addDipenTicket",method = RequestMethod.POST)
+	public String saveDT(DipendenteTicket dipendenteTicket){
+		dipendenteTicketService.saveDT(dipendenteTicket);
+		return "redirect:/main";
+				
+			}
+	// go to page edit dipendente ticket
+	@RequestMapping(value="editDipenTicket/{id}", method = RequestMethod.GET)
+	public String inputDT(@PathVariable("id")Integer id, Map<String , Object>map) {
+		DipendenteTicket listDT = dipendenteTicketService.getOneDT(id);
+		map.put("tickets",ticketService.getAllT());
+		map.put("dipendenti", dipendenteService.getAllD());
+		map.put("listDT",listDT);
+		return "addDT";
+	}
+	//edit dipendete-ticket and return main
+	@RequestMapping(value="/editDipenTicket/{id}",method = RequestMethod.PUT)
+	public String editDT(DipendenteTicket dipendenteTicket){
+		dipendenteTicketService.saveDT(dipendenteTicket);
+		return "redirect:/main";
+					
+			}
+	//delete dipendente-ticket by id 
+		@RequestMapping(value="/deleteDipenTicket/{id}",method = RequestMethod.DELETE)
+		public String deleteDT(@PathVariable("id")Integer id) {
+			dipendenteTicketService.deleteDT(id);
+			return "redirect:/main";
+			
+		}	
 
 }

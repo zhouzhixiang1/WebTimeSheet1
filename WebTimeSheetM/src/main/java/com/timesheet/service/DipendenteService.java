@@ -1,6 +1,8 @@
 package com.timesheet.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,14 +45,24 @@ public class DipendenteService {
 		}
 		return null;
 	}
+	//elimina dipendente
 	@Transactional
 	public void delete(Integer idDipendente) {
 		dipendenteRepository.delete(idDipendente);
 	}
+	//modifica dipendente
 	@Transactional
 	public void save(Dipendente dipendente) {
 		dipendenteRepository.saveAndFlush(dipendente);
 	}
+	
+	//find all dipendente
+	@Transactional
+	public List<Dipendente> getAllD(){
+		return dipendenteRepository.findAll();
+	}
+	
+	
 	//findAll dipendente PAGE
 //	@Transactional(readOnly = true)
 //	public Page<Dipendente> getPage(int PageNo,int PageSize){
