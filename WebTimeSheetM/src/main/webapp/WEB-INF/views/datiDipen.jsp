@@ -23,28 +23,31 @@
 		</div>
 		<!-- ^NAVBAR^ -->
 		<form:form method="POST"
-			action="${pageContext.request.contextPath }/dipen/${idDipendente}"
+			action=""
 			modelAttribute="dipendente">
-			<form:hidden path="idManager.idManager" />
 			<form:hidden path="idDipendente" />
-			<form:hidden path="passwordDipendente" />
-			<form:hidden path="ruolo" />
-			<input type="hidden" name="_method" value="PUT" />
 			<table class="table">
 				<tr>
 					<td class="bold" style="padding: 10px;">Dipendente:</td>
 					<td class="alR"><label>${dipendente.nomeDipendente}<form:hidden path="nomeDipendente" /></label></td>
 				</tr>
-				
-				<tr>
-					<td class="bold" style="padding: 10px;">Ore lavrate:</td>
-					<td class="alR"><form:input type="number" path="oreLavorate" /></td>
+					<tr>
+					<td class="bold" style="padding: 10px;">Password:</td>
+					<td class="alR"><label>${dipendente.passwordDipendente}<form:hidden path="passwordDipendente" /></label></td>
 				</tr>
 				
 				<tr>
+					<td class="bold" style="padding: 10px;">Ore lavrate:</td>
+					<td class="alR"><label>${dipendente.oreLavorate}<form:hidden path="oreLavorate" /></label></td>
+				</tr>
+				<tr>
+					<td class="bold" style="padding: 10px;">Ruolo:</td>
+					<td class="alR"><label>${dipendente.ruolo}<form:hidden path="ruolo" /></label></td>
+				</tr>
+				<tr>
 					<td>
-						<a>
-							<button class="button">modifica</button>
+						<a href="${pageContext.request.contextPath}/dipen2/${dipendente.idDipendente}">
+							<button class="button" type=button>Aggiungi Ore</button>
 						</a>
 					</td>
 				</tr>

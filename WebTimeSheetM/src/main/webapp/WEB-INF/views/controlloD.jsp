@@ -47,11 +47,11 @@
 					</a>
 				</div>
 			</c:if>
-				<!-- <div>
-					<a href="" style="text-decoration: none">
-						<button class="split" type="button" style="background-image: url(images/code.jpg);">visualizza dati</button>
-					</a>
-				</div> -->
+			<div>
+				<a href="datiDipen/${dipendente.idDipendente}" style="text-decoration: none">
+					<button class="split" type="button" style="background-image: url(images/code.jpg);">visualizza dati</button>
+				</a>
+			</div>
 			</form>
 		</c:if>
 		
