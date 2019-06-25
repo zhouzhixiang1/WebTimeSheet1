@@ -32,11 +32,14 @@ form {
 		<!-- ^NAVBAR^ -->
 		
 
-		<form:form method="POST" action="${pageContext.request.contextPath }/listTicketM" modelAttribute="ticket">
-			<table style=" text-align: left;">
+		<form:form method="POST" action="${pageContext.request.contextPath }/listTicketD/${idTicket}" modelAttribute="ticket">
+			<form:hidden path="idTicket"/>
+			<form:hidden path="idManager.idManager"/>
+			<input type="hidden" name="_method" value="PUT"/>
+				<table style=" text-align: left;">
 				<tr>
 					<td class="bold">Aggiungi Ticket</td>
-					<td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td>
+					<!-- <td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td> -->
 				</tr>
 				<tr>
 					<td class="bold">Cliente</td>
@@ -125,7 +128,7 @@ form {
 					</td>
 				</tr>
 			</table>
-			<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">Aggiungi</button>
+			<button class="button" type="submit" style=" width: 120px; margin-left: 16px;">modifica</button>
 		</form:form>
 	</body>
 </html>

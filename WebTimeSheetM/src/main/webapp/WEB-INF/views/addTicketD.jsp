@@ -32,11 +32,15 @@ form {
 		<!-- ^NAVBAR^ -->
 		
 
-		<form:form method="POST" action="${pageContext.request.contextPath }/listTicketM" modelAttribute="ticket">
+		<form:form method="POST" action="${pageContext.request.contextPath }/listTicketD" modelAttribute="ticket">
 			<table style=" text-align: left;">
 				<tr>
-					<td class="bold">Aggiungi Ticket</td>
-					<td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td>
+					<td>Id Manager</td>
+					<td>
+						<form:select path="idManager.idManager" items="${managers}"
+						itemLabel="managerName" itemValue="idManager">
+						</form:select>
+					</td>
 				</tr>
 				<tr>
 					<td class="bold">Cliente</td>

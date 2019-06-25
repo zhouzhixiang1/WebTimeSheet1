@@ -34,17 +34,16 @@ h5{
 			<form method="post" id="signupFormM" action="managerLogin">
 				<p class="txt">
 					<label for="idManager">Codice Manager</label>
-					<input class="instxt" type="number" min="1001" max="1003"name="idManager" id="idManager" autofocus autocomplete="off">
+					<input class="instxt" type="number" min="1001" max="1003"name="idManager" id="idManager" >
 		  		</p>
 		  		<p class="txt"> 
 		  			<label for="managerName">Nome Manager</label>
-					<input class="instxt" type="text" name="managerName" id="managerName" autocomplete="off">
+					<input class="instxt" type="text" name="managerName" id="managerName" >
 				</p>
 				<p class="txt"> 
 					<label for="managerPassword">Password</label>
-					<input class="instxt" type="password" name="managerPassword" id="managerPassword" autocomplete="off">
+					<input class="instxt" type="password" name="managerPassword" id="managerPassword" >
 				</p>
-				<h5>${msg2}</h5>
 				<h5>${msg}</h5>
 				<button class="button" type="submit">login</button>
 				

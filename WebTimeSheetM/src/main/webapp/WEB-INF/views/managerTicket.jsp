@@ -86,9 +86,12 @@ td {
 				</tr>	
 			</table>
 		</form:form>
-		<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Modifica</button>
+		<a href="${pageContext.request.contextPath }/listTicketMt2/${idTicket}">
+			<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Modifica</button>
+		</a>
+		
 		<a href="${pageContext.request.contextPath }/ticketsM/${idTicket}" class="delete">
-		<button class="button" style=" width: 120px; margin-left: 16px;">Cancella</button>
+			<button class="button" style=" width: 120px; margin-left: 16px;">Cancella</button>
 		</a>
 		<input type="hidden" value="${mticket.commessa}">
 	</body>

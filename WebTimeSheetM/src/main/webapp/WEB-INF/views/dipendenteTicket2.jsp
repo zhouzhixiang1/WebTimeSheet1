@@ -7,16 +7,18 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Dettaglio ticket-TS</title>
-		<style type="text/css">
-td {
-  border-bottom: 0.5px solid gray;
-}
+		
 
-label {
-  font-weight: lighter;
-}
+	<style type="text/css">
+			td {
+			  border-bottom: 0.5px solid gray;
+			}
+			
+			label {
+			  font-weight: lighter;
+			}
 			<%@ include file="/css/stile.css" %>
-		</style>
+	</style>
 	</head>
 	<body>
 		<!-- NAVBAR -->
@@ -29,10 +31,9 @@ label {
 		</div>
 		<!-- ^NAVBAR^ -->
 		<form:form method="POST"
-			action="${pageContext.request.contextPath }/ticket/${idTicket}"
+			action=""
 			modelAttribute="dticket">
 			<form:hidden path="idTicket" />
-			<!-- <input type="hidden" name="_method" value="PUT" /> -->
 			<table style=" text-align: left;">
 				<tr>
 					<td class="bold">Cliente:</td>
@@ -88,7 +89,9 @@ label {
 				</tr>
 			</table>
 			<!-- <button class="button" type="button" style=" width: 120px; margin-left: 16px;">Aggiungi Ore</button> -->
-			<button class="button" type="button" style=" width: 120px; margin-left: 16px;">back</button>
+			<a href="${pageContext.request.contextPath }/listTicketDt/${idTicket}">
+				<button class="button" type="button" style=" width: 120px; margin-left: 16px;">modifica</button>
+			</a>
 		</form:form>
 	</body>
 </html>

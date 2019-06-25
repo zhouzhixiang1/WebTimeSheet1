@@ -9,10 +9,7 @@ import com.timesheet.repository.DipendenteTicketRepository;
 @Service
 public class DipendenteTicketService {
 	
-	@Autowired
-	private DipendenteTicketRepository dipendenteTicketRepository;
 
-	
 	}
 	
 

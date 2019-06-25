@@ -33,15 +33,22 @@ h5{
 			<form method="post" id="signupFormD" action="dipendenteLogin">
 			<p class="txt">
 					<label for="idDipendente">Codice Dipendente</label>
-					<input class="instxt" type="number" min="2001" max="2100"name="idDipendente" id="idDipendente" autofocus autocomplete="off">
+					<input class="instxt" type="number" min="2001" max="2100"name="idDipendente" id="idDipendente" >
 		  		</p>
 		  		<p class="txt">
 		  			<label for="nomeDipendente">Nome Dipendente</label>
-					<input class="instxt" type="text" name="nomeDipendente" id="nomeDipendente" autocomplete="off">
+					<input class="instxt" type="text" name="nomeDipendente" id="nomeDipendente" >
 				</p>
 				<p class="txt">
 					<label for="passwordDipendente">Password</label> 
-					<input class="instxt" type="password" name="passwordDipendente" id="passwordDipendente" autocomplete="off">
+					<input class="instxt" type="password" name="passwordDipendente" id="passwordDipendente">
+				</p>
+				<p class="txt">
+		  			<label for="nomeDipendente">Privilegi</label>
+					<select  name="privilegi" id="privilegi">
+						<option value="SI">SI</option>
+						<option value="NO">NO</option>
+					</select>
 				</p>
 				<h5>${msg}</h5>
 				<button class="button" type="submit">login</button>

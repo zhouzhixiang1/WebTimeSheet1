@@ -20,6 +20,7 @@ public class Dipendente {
 	private String passwordDipendente;
 	private Integer oreLavorate;
 	private Manager idManager;
+	private String privilegi;
 	
 //	private Set<Ticket> idTickets = new HashSet<>();
 
@@ -58,6 +59,14 @@ public class Dipendente {
 	public void setIdManager(Manager idManager) {
 		this.idManager = idManager;
 	}
+	public String getPrivilegi() {
+		return privilegi;
+	}
+	public void setPrivilegi(String privilegi) {
+		this.privilegi = privilegi;
+	}
+	
+	
 //	@ManyToMany(mappedBy = "idDipendente")
 //	public Set<Ticket> getIdTickets() {
 //		return idTickets;

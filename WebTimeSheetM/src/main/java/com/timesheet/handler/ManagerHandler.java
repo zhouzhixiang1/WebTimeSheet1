@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -121,6 +122,28 @@ public class ManagerHandler {
 		ticketService.save(ticket);
 		return "redirect:/main";
 		
+	}
+	//select ticket by id (per modificare)
+	@RequestMapping(value="listTicketMt2/{idTicket}", method = RequestMethod.GET)
+	public String input(@PathVariable("idTicket")Integer idTicket, Map<String , Object>map) {
+		Ticket ticket = ticketService.get(idTicket);
+		map.put("ticket",ticket);
+		return "editTicket";
+	}
+	//delete ticket and return listTicket
+		@RequestMapping(value="/listTicketM/{idTicket}",method = RequestMethod.PUT)
+		public String edit(Ticket ticket){
+			ticketService.save(ticket);
+			return "redirect:/main";
+			
+		}
+	@ModelAttribute
+	public void getTicket(@RequestParam(value="idTicket",required=false)Integer idTicket,
+			Map<String, Object>map) {
+		if(idTicket != null) {
+			Ticket ticket = ticketService.get(idTicket);
+			map.put("ticket",ticket);
+		}
 	}
 	
 

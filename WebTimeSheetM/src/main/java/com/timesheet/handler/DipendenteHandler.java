@@ -16,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,6 +29,8 @@ import com.timesheet.repository.DipendenteRepository;
 import com.timesheet.repository.DipendenteTicketRepository;
 import com.timesheet.repository.TicketRepository;
 import com.timesheet.service.DipendenteService;
+import com.timesheet.service.ManagerService;
+import com.timesheet.service.TicketService;
 
 @Controller
 public class DipendenteHandler {
@@ -43,6 +46,12 @@ public class DipendenteHandler {
 	
 	@Autowired
 	private TicketRepository ticketRepository;
+	
+	@Autowired
+	private ManagerService managerService;
+	
+	@Autowired
+	private TicketService ticketService;
 	
 	
 
@@ -60,24 +69,28 @@ public class DipendenteHandler {
 	//login
 	@RequestMapping(value="/dipendenteLogin", method = RequestMethod.POST)
 	public String loginD(@RequestParam Integer idDipendente,@RequestParam String nomeDipendente,@RequestParam String passwordDipendente,
-						HttpSession session,Model m) {
-		Dipendente dipendente = dipendenteService.dipendenteLogin(idDipendente, nomeDipendente, passwordDipendente);
+			@RequestParam String privilegi, HttpSession session,Model m) {
+		Dipendente dipendente = dipendenteService.dipendenteLogin(idDipendente, nomeDipendente, passwordDipendente, privilegi);
 		if(dipendente != null) {
 			session.setAttribute("dipendente", dipendente);
-			return "listTicketD";
+			return "redirect:/main1";
 		}
+		
 		m.addAttribute("msg","Nome Dipendente o password errato!");
 		return "loginD";
 		
 	}
+	 @RequestMapping(value = "/main1")
+	    public String toMain(){
+	        return "controlloD";
+	    }
 	//logout
 	@RequestMapping(value="/logoutD",method=RequestMethod.GET)
 	public String logoutD(HttpSession session) {
 		session.invalidate();
 		return "loginD";
 	}
-	
-	
+
 	
 	/**
 	 * manager ----> dipendente (find , update)
@@ -168,6 +181,21 @@ public class DipendenteHandler {
 		return "listTicketD";
 		
 	}
+	//select table ticket by idDipendente
+		@RequestMapping(value="/ticketsD2/{idDipendente}")
+		public String TicketlistById2(@PathVariable(value="idDipendente")Integer idDipendente,Map<String,Object>map) {
+			Specification<DipendenteTicket> spec = new Specification<DipendenteTicket>() {
+
+				@Override
+				public Predicate toPredicate(Root<DipendenteTicket> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+					return cb.equal(root.get("idDipendente"), idDipendente);
+				}
+			};
+			List<DipendenteTicket> tlist = this.dipendenteTicketRepository.findAll(spec);
+			map.put("tlist", tlist);
+			return "listTicketD2";
+			
+		}
 	
 	//select ticket by idTicket
 	@RequestMapping(value="/listTicket/{idTicket}",method = RequestMethod.GET)
@@ -177,6 +205,64 @@ public class DipendenteHandler {
 		return "dipendenteTicket";
 		
 	}
+	
+	//select ticket by idTicket
+		@RequestMapping(value="/listTicket2/{idTicket}",method = RequestMethod.GET)
+		public String findOneTicket2(@PathVariable Integer idTicket,Map <String, Object> map) {
+			Ticket dticket = ticketRepository.findOne(idTicket);
+			map.put("dticket", dticket);
+			return "dipendenteTicket2";
+			
+		}
+		
+		//go to add ticket page
+		@RequestMapping(value="/listTicketDt",method = RequestMethod.GET)
+		public String addTicket(Map<String , Object>map){
+			map.put("managers", managerService.getAll());
+			map.put("ticket", new Ticket());
+			return "addTicketD";	
+		}
+		
+		//add ticket and return listTicket
+		@RequestMapping(value="/listTicketD",method = RequestMethod.POST)
+		public String save(Ticket ticket){
+			ticketService.save(ticket);
+			return "redirect:/main1";
+			
+		}
+		//select ticket by id (per modificare)
+		@RequestMapping(value="listTicketDt/{idTicket}", method = RequestMethod.GET)
+		public String inputD(@PathVariable("idTicket")Integer idTicket, Map<String , Object>map) {
+			Ticket ticket = ticketService.get(idTicket);
+			map.put("ticket",ticket);
+			return "editTicketD";
+		}
+		
+		//delete ticket and return listTicket
+		@RequestMapping(value="/listTicketD/{idTicket}",method = RequestMethod.PUT)
+		public String edit(Ticket ticket){
+			ticketService.save(ticket);
+			return "redirect:/main1";	
+				}
+		//data inserimento != null
+		@ModelAttribute
+		public void getTicket(@RequestParam(value="idTicket",required=false)Integer idTicket,
+				Map<String, Object>map) {
+			if(idTicket != null) {
+				Ticket ticket = ticketService.get(idTicket);
+				map.put("ticket",ticket);
+			}
+		}
+		
+		
+//		//delete ticket by id ticket
+//		@RequestMapping(value="/ticketsD/{idTicket}",method = RequestMethod.DELETE)
+//		public String deleteTicketByIdD(@PathVariable("idTicket")Integer idTicket) {
+//			ticketService.deleteT(idTicket);
+//			return "redirect:/main1";
+//			
+//		}
+//		
 	
 
 	

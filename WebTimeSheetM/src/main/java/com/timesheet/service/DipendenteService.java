@@ -33,10 +33,12 @@ public class DipendenteService {
 	}
 	
 	//controllo login
-	public Dipendente dipendenteLogin(Integer idDipendente,String nomeDipendente,String passwordDipendente) {
+	public Dipendente dipendenteLogin(Integer idDipendente,String nomeDipendente,String passwordDipendente,String privilegi) {
 		Dipendente dipendente = this.get(idDipendente);
 		if(dipendente != null && dipendente.getNomeDipendente().equals(nomeDipendente)
-				&& dipendente.getPasswordDipendente().equals(passwordDipendente)) {
+				&& dipendente.getPasswordDipendente().equals(passwordDipendente)
+				&& dipendente.getPrivilegi().equals(privilegi)){
+			
 			return dipendente;
 		}
 		return null;

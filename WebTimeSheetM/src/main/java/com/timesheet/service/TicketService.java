@@ -23,7 +23,14 @@ public class TicketService {
 	
 	@Transactional
 	public void save(Ticket ticket) {
-		ticket.setDataInserimento(new Date());
+		if(ticket.getIdTicket() == null) {
+			ticket.setDataInserimento(new Date());
+		}
 		ticketRepository.saveAndFlush(ticket);
+	}
+	@Transactional(readOnly = true)
+	public Ticket get(Integer idTicket) {
+		return ticketRepository.findOne(idTicket);
+		
 	}
 }
