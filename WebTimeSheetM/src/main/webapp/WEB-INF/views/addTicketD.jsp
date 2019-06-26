@@ -8,6 +8,9 @@
 	<head>
 	<meta charset="ISO-8859-1">
 		<title>Add Ticket-TS</title>
+		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="scripts/validateTicket.js"></script>
 		<style type="text/css">
 td {
   margin: 10px;
@@ -34,8 +37,12 @@ form {
 
 		<form:form method="POST" action="${pageContext.request.contextPath }/listTicketD" modelAttribute="ticket">
 			<table style=" text-align: left;">
+			<tr>
+				<td><h1>Aggiungi ticket</h1></td>
+				</tr>
 				<tr>
-					<td>Id Manager</td>
+				<tr>
+					<td class="bold">Id Manager</td>
 					<td>
 						<form:select path="idManager.idManager" items="${managers}"
 						itemLabel="managerName" itemValue="idManager">
