@@ -89,12 +89,12 @@ td {
 		<a href="${pageContext.request.contextPath }/listTicketMt2/${idTicket}">
 			<button class="button" type="button" style=" width: 120px; margin-left: 16px;">Modifica</button>
 		</a>
-		
+		<c:if test="${mticket.statoTicket == 'chiuso'}">
 		<a href="${pageContext.request.contextPath }/ticketsM/${idTicket}" class="delete">
 			<button class="button" style=" width: 120px; margin-left: 16px;">Cancella</button>
 		</a>
 		<input type="hidden" value="${mticket.commessa}">
-		
+		</c:if>
 		<a href="${pageContext.request.contextPath }/ticketsM/${mticket.idManager.idManager}">
 			<button class="button" type="button" style=" width: 120px; margin-left: 16px;">back</button>
 		</a>

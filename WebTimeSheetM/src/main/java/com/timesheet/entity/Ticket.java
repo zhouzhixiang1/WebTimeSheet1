@@ -137,7 +137,6 @@ public class Ticket {
 	public void setPriorita(String priorita) {
 		this.priorita = priorita;
 	}
-
 	public String getTipologia() {
 		return tipologia;
 	}

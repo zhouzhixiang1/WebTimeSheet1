@@ -1,5 +1,6 @@
 package com.timesheet.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -24,7 +25,7 @@ public class DipendenteTicket {
 		this.id = id;
 	}
 	@JoinColumn(name="idDipendente")
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	public Dipendente getIdDipendente() {
 		return idDipendente;
 	}
@@ -32,7 +33,7 @@ public class DipendenteTicket {
 		this.idDipendente = idDipendente;
 	}
 	@JoinColumn(name="idTicket")
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	public Ticket getIdTicket() {
 		return idTicket;
 	}

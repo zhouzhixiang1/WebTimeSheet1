@@ -36,18 +36,18 @@
 				<th class="bg">Id Ticket</th>
 				<th class="bg">Id Dipendente</th>
 				<th class="bg"></th>
-				<th class="bg"></th>
+			
 			</tr>
 			<c:forEach items="${listDT}"  var="tdt" >
 				<tr class="light">
 				<th>${tdt.id}</th>
 				<th>${tdt.idTicket.idTicket}</th>
 				<th>${tdt.idDipendente.idDipendente}</th>
-					<th>
+					<!-- <th>
 						<a href="${pageContext.request.contextPath}/editDipenTicket/${tdt.id}">
 							<button class="button" type="button">modifica</button>
 						</a>
-					</th>
+					</th> -->
 					<th>
 						<a href="${pageContext.request.contextPath}/deleteDipenTicket/${tdt.id}" class="delete">
 							<button class="button" type="button">cancella</button>

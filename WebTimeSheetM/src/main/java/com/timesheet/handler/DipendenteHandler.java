@@ -29,6 +29,7 @@ import com.timesheet.repository.DipendenteRepository;
 import com.timesheet.repository.DipendenteTicketRepository;
 import com.timesheet.repository.TicketRepository;
 import com.timesheet.service.DipendenteService;
+import com.timesheet.service.DipendenteTicketService;
 import com.timesheet.service.ManagerService;
 import com.timesheet.service.TicketService;
 
@@ -43,6 +44,9 @@ public class DipendenteHandler {
 	
 	@Autowired
 	private DipendenteTicketRepository dipendenteTicketRepository;
+	
+	@Autowired
+	private DipendenteTicketService dipendenteTicketService;
 	
 	@Autowired
 	private TicketRepository ticketRepository;
@@ -98,7 +102,7 @@ public class DipendenteHandler {
 	 * @param dipendente
 	 * @return
 	 */
-	//aggiunde dipendente
+	//pagina aggiungi dipendente
 	@RequestMapping(value="/addDipen/{idManager}",method = RequestMethod .GET)
 	public String saveDipen(@PathVariable Integer idManager,Map <String ,Object>map) {
 		Dipendente adipendente = dipendenteRepository.findOne(idManager);
@@ -238,7 +242,7 @@ public class DipendenteHandler {
 			return "editTicketD";
 		}
 		
-		//delete ticket and return listTicket
+		//update ticket and return listTicket
 		@RequestMapping(value="/listTicketD/{idTicket}",method = RequestMethod.PUT)
 		public String edit(Ticket ticket){
 			ticketService.save(ticket);

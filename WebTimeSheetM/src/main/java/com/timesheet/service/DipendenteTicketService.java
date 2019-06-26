@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.timesheet.entity.Dipendente;
 import com.timesheet.entity.DipendenteTicket;
 import com.timesheet.repository.DipendenteTicketRepository;
 
@@ -35,6 +36,7 @@ public class DipendenteTicketService {
 	public void deleteDT(Integer id) {
 		dipendenteTicketRepository.delete(id);
 	}
+	
 	
 
 	}
