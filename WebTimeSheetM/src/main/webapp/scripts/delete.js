@@ -1,7 +1,7 @@
 $(function(){
 	$(".delete").click(function(){
 		var label = $(this).next(":hidden").val();
-		var flag = confirm("sei sicuro di cancellare dipendente: " + label + "?");
+		var flag = confirm("Sei sicuro di voler cancellare il dipendente " + label + "?");
 		if(flag){
 			var url = $(this).attr("href");
 			
