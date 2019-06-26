@@ -33,55 +33,55 @@ td {
 			<input type="hidden"  id="_method" name="_method" />
 			<table style=" text-align: left;">
 				<tr>
-					<td>Cliente</td>
+					<td class="bold">Cliente</td>
 					<td><label>${mticket.cliente}</label></td>
 				</tr>
 				<tr>
-					<td>Commessa</td>
+					<td class="bold">Commessa</td>
 					<td><label>${mticket.commessa}</label></td>
 				</tr>
 				<tr>
-					<td>Sorgente</td>
+					<td class="bold">Sorgente</td>
 					<td><label>${mticket.sorgenteTicket}</label></td>
 				</tr>
 				<tr>
-					<td>Stato Ticket</td>
+					<td class="bold">Stato Ticket</td>
 					<td><label>${mticket.statoTicket}</label></td>
 				</tr>
 				<tr>
-					<td>Priorita</td>
+					<td class="bold">Priorita</td>
 					<td><label>${mticket.priorita}</label></td>
 				</tr>
 				<tr>
-					<td>Tipologia</td>
+					<td class="bold">Tipologia</td>
 					<td><label>${mticket.tipologia}</label></td>
 				</tr>
 				<tr>
-					<td>Data Inserimento</td>
+					<td class="bold">Data Inserimento</td>
 					<td><label>${mticket.dataInserimento}</label></td>
 				</tr>
 				<tr>
-					<td>Data Rilascio</td>
+					<td class="bold">Data Rilascio</td>
 					<td><label>${mticket.dataRilascio}</label></td>
 				</tr>
 				<tr>
-					<td>Applicazione Riferimento</td>
+					<td class="bold">Applicazione Riferimento</td>
 					<td><label>${mticket.applicazioneRiferimento}</label></td>
 				</tr>
 				<tr>
-					<td>Stima</td>
+					<td class="bold">Stima</td>
 					<td><label>${mticket.stima}</label></td>
 				</tr>
 				<tr>
-					<td>Descrizione</td>
+					<td class="bold">Descrizione</td>
 					<td><label>${mticket.descrizione}</label></td>
 				</tr>
 				<tr>
-					<td>Totale Ore Lavorate</td>
+					<td class="bold">Totale Ore Lavorate</td>
 					<td><label>${mticket.totOreLavorate}</label></td>
 				</tr>
 				<tr>
-					<td>Note</td>
+					<td class="bold">Note</td>
 					<td><label>${mticket.note}</label></td>
 				</tr>	
 			</table>
