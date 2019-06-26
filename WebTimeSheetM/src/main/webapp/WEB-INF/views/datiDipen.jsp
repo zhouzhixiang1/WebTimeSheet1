@@ -8,6 +8,9 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<style type="text/css">
+td {
+  border-bottom: 0.5px solid gray;
+}
 			<%@ include file="/css/stile.css" %>
 		</style>
 		<title></title>
@@ -26,35 +29,31 @@
 			action=""
 			modelAttribute="dipendente">
 			<form:hidden path="idDipendente" />
-			<table class="table">
+			<table style=" text-align: left; width: 20vw;">
 				<tr>
 					<td class="bold" style="padding: 10px;">Dipendente:</td>
-					<td class="alR"><label>${dipendente.nomeDipendente}<form:hidden path="nomeDipendente" /></label></td>
+					<td><label>${dipendente.nomeDipendente}<form:hidden path="nomeDipendente" /></label></td>
 				</tr>
 					<tr>
 					<td class="bold" style="padding: 10px;">Password:</td>
-					<td class="alR"><label>${dipendente.passwordDipendente}<form:hidden path="passwordDipendente" /></label></td>
+					<td><label>${dipendente.passwordDipendente}<form:hidden path="passwordDipendente" /></label></td>
 				</tr>
 				
 				<tr>
 					<td class="bold" style="padding: 10px;">Ore lavrate:</td>
-					<td class="alR"><label>${dipendente.oreLavorate}<form:hidden path="oreLavorate" /></label></td>
+					<td><label>${dipendente.oreLavorate}<form:hidden path="oreLavorate" /></label></td>
 				</tr>
 				<tr>
 					<td class="bold" style="padding: 10px;">Ruolo:</td>
-					<td class="alR"><label>${dipendente.ruolo}<form:hidden path="ruolo" /></label></td>
-				</tr>
-				<tr>
-					<td>
-						<a href="${pageContext.request.contextPath}/dipen2/${dipendente.idDipendente}">
-							<button class="button" type=button>Add ore</button>
-						</a>
-						<a href="${pageContext.request.contextPath}/main1">
-							<button class="button" type=button>back</button>
-						</a>
-					</td>
+					<td><label>${dipendente.ruolo}<form:hidden path="ruolo" /></label></td>
 				</tr>
 			</table>
+			<a href="${pageContext.request.contextPath}/dipen2/${dipendente.idDipendente}">
+				<button class="button" type=button>Add ore</button>
+			</a>
+			<a href="${pageContext.request.contextPath}/main1">
+				<button class="button" type=button>back</button>
+			</a>
 		</form:form>
 	</body>
 </html>
