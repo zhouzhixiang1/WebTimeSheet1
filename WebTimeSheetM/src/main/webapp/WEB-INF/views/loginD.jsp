@@ -16,7 +16,7 @@ h5{
 .error{
   color:red;
 }
-		<%@ include file="/css/stile.css" %>
+			<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
 	<body>
@@ -45,7 +45,7 @@ h5{
 				</p>
 				<p class="txt">
 		  			<label for="ruolo">Ruolo</label>
-					<select name="ruolo" id="ruolo">
+					<select class="instxt" name="ruolo" id="ruolo">
 						<option value="M">M</option>
 						<option value="D">D</option>
 					</select>

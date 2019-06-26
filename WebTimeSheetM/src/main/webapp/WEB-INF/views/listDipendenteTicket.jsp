@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Tickets-TS</title> <!-- lista ticket per dipendenti  -->
+		<title>Assegnazione tickets-TS</title> <!-- lista ticket per dipendenti  -->
 	<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/delete3.js"></script>
 		

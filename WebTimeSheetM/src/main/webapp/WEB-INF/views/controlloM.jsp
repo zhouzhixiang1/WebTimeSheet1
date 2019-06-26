@@ -38,7 +38,7 @@
 				</div>
 				<div>
 				<a href="listDipenTicket" style=" text-decoration: none">
-						<button class="splitIn3" type="button" style="background-image: url(images/code.jpg);">Dipendente-Tickets</button>
+						<button class="splitIn3" type="button" style="background-image: url(images/code.jpg);">Assegnazione tickets</button>
 					</a>
 				</div>
 			</form>

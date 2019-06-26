@@ -7,7 +7,7 @@
 
 	<head>
 	<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Modifica assegnazione-TS</title>
 		<style type="text/css">
 			<%@ include file="/css/stile.css" %>
 		</style>
@@ -16,12 +16,13 @@
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="home.jsp">
+				<a href="${pageContext.request.contextPath }/home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
+		<div class="txtbox">
 		<c:set value="${pageContext.request.contextPath }/addDipenTicket" var="url"></c:set>
 	<c:if test ="${listDT.id != null}">
 		<c:set value="${pageContext.request.contextPath }/editDipenTicket/${listDT.id }" var="url"></c:set>
@@ -31,36 +32,25 @@
 				<form:hidden path="id" />
 				<input type="hidden" name="_method" value="PUT"/>
 		</c:if>
-			<table >
-				<tr>
-					<td class="bold">Id Ticket</td>
-				</tr>
-				<tr>	
-					<td>
-						<form:select path="idTicket.idTicket" items="${tickets}"
+				<p class="txt">Id Ticket
+					<form:select class="instxt" path="idTicket.idTicket" items="${tickets}"
 						itemLabel="Commessa" itemValue="idTicket">
-						</form:select>
-					</td>
-					
-				</tr>
-				<tr>
-					<td class="bold">Id Dipendente</td>
-				</tr>
-				<tr>	
-					<td>
-						<form:select path="idDipendente.idDipendente" items="${dipendenti}"
+					</form:select>		
+				</p>
+				<p class="txt">Id Dipendente
+					<form:select class="instxt" path="idDipendente.idDipendente" items="${dipendenti}"
 						itemLabel="nomeDipendente" itemValue="idDipendente">
-						</form:select>
-					</td>
-				</tr>
-				<tr>
-				<td><button class="button" type="submit">Aggiungi</button>
-				<a href="${pageContext.request.contextPath}/listDipenTicket">
-					<button class="button" type="button">annulla</button>
-				</a></td>
-				</tr>
-			</table>
-		</form:form>
+					</form:select>
+				</p>
+				<p>
+					<button class="button" type="submit">Aggiungi</button>
+					<a href="${pageContext.request.contextPath}/listDipenTicket">
+						<button class="button" type="button">Annulla</button>
+					</a>
+				</p>
+			</form:form>
+		</div>
 	</body>
-
 </html>
+
+

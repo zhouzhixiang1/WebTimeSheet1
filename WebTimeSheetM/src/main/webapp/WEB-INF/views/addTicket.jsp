@@ -24,114 +24,75 @@ form {
 		<!-- NAVBAR -->
 		<div class="navbar">
 			<p style=" margin-top: 0px; padding: 16px;">
-				<a href="home.jsp">
+				<a href="../../home.jsp">
 					<button class="button" type="button">Home</button>
 				</a>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
 		
-
-		<form:form method="POST" action="${pageContext.request.contextPath }/listTicketM" modelAttribute="ticket">
-			<table style=" text-align: left;">
-				<tr>
-					<td class="bold">Aggiungi Ticket</td>
-					<td><form:input type="hidden" path="idManager.idManager" value="${idManager}"/></td>
-				</tr>
-				<tr>
-					<td class="bold">Cliente</td>
-					<td>
-						<form:input type="text" path="cliente"/>
-					</td>
-				</tr>
-				<tr>
-					<td class="bold">Sorgente Ticket</td>
-					<td>
-						<form:input type="text" path="sorgenteTicket" />
-					</td>
-				</tr>
-				<tr>
-					<td class="bold">Stato Ticket</td>
-					<td>
-						<form:select path="statoTicket">
-				  			<option value="aperto">aperto</option>
-				 			<option value="chiuso">chiuso</option>
-				  			<option value="in lavorazione">in lavorazione</option>
-				  			<option value="Rilasciato">Rilasciato</option>
-				  			<option value="in attesa di riscontro">in attesa di riscontro</option>
-		  				</form:select>
-	  				</td>
-				</tr>
-				<tr>
-					<td class="bold">Priorita</td>
-					<td>
-						<form:select path="priorita">
-				  			<option value="alto">alto</option>
-				 			<option value="medio">medio</option>
-				  			<option value="basso">basso</option>
-		  				</form:select>
-		  			</td>
-				</tr>
-				<tr>
-					<td class="bold">Tipologia</td>
-					<td>
-						<form:select path="tipologia">
-	  						<option value="correttiva">correttiva</option>
-	 						<option value="evolutiva">evolutiva</option>
-	  						<option value="nuovo sviluppo">nuovo sviluppo</option>
-	  					</form:select>
-	  				</td>
-				</tr>
-				<tr>
-					<td class="bold">Data Rilascio</td>
-					<td>
-						<form:input type="date" path="dataRilascio" />
-					</td>
-				</tr>
-				<tr>
-					<td class="bold">Stima</td>
-					<td>
-						<form:input type="number" path="stima" />
-					</td>
-				</tr>
-				<tr>
-					<td class="bold">Applicazione Riferimento</td>
-					<td>
-						<form:input type="text" path="applicazioneRiferimento" />
-					</td>
-				</tr>
-				<tr>
-					<td class="bold">Descrizione</td>
-					<td>
-						<form:textarea path="descrizione" />
-					</td>
-				</tr>
-				<tr>
-					<td class="bold">Totale Ore Lavorate</td>
-					<td>
-						<form:input type="number" path="totOreLavorate" />
-					</td>
-				</tr>
-				<tr>
-					<td class="bold">Commessa</td>
-					<td>
-						<form:input type="text" path="commessa" />
-					</td>
-				</tr>
-				<tr>
-					<td class="bold">Note</td>
-					<td>
-						<form:textarea path="note" />
-					</td>
-				</tr>
-				<tr>
-				<td><button class="button" type="submit">Aggiungi</button>
-				<a href="${pageContext.request.contextPath}/ticketsM/${idManager}">
-					<button class="button" type="button">annulla</button>
-				</a></td>
-				</tr>
-			</table>
-			
-		</form:form>
+		<div class="txtbox">
+			<form:form method="POST" action="${pageContext.request.contextPath }/listTicketM" modelAttribute="ticket">
+				<p class="txt bold">Riempi i campi
+					<form:input class="instxt" type="hidden" path="idManager.idManager" value="${idManager}"/></td>
+				</p>
+				<p class="txt">Cliente
+					<form:input class="instxt" type="text" path="cliente"/>
+				</p>
+				<p class="txt">Sorgente Ticket
+					<form:input class="instxt" type="text" path="sorgenteTicket" />
+				</p>
+				<p class="txt">Stato Ticket
+					<form:select class="instxt" path="statoTicket">
+				  		<option value="aperto">aperto</option>
+			 			<option value="chiuso">chiuso</option>
+				 		<option value="in lavorazione">in lavorazione</option>
+				 		<option value="Rilasciato">Rilasciato</option>
+				  		<option value="in attesa di riscontro">in attesa di riscontro</option>
+		  			</form:select>
+				</p>
+				<p class="txt">Priorita
+					<form:select class="instxt" path="priorita">
+				  		<option value="alto">alto</option>
+						<option value="medio">medio</option>
+			  			<option value="basso">basso</option>
+	  				</form:select>
+				</p>
+				<p class="txt">Tipologia
+					<form:select class="instxt" path="tipologia">
+	  					<option value="correttiva">correttiva</option>
+	 					<option value="evolutiva">evolutiva</option>
+	  					<option value="nuovo sviluppo">nuovo sviluppo</option>
+	  				</form:select>
+				</p>
+				<p class="txt">Data Rilascio
+						<form:input class="instxt" type="date" path="dataRilascio" />
+				</p>
+				<p class="txt">Stima
+					<form:input class="instxt" type="number" path="stima" />
+				</p>
+				<p class="txt">Applicazione Riferimento
+					<form:input class="instxt" type="text" path="applicazioneRiferimento" />
+				</p>
+				<p class="txt">Descrizione
+					<form:textarea class="instxt" path="descrizione" />
+				</p>
+				<p class="txt">Totale Ore Lavorate
+					<form:input class="instxt" type="number" path="totOreLavorate" />
+				</p>
+				<p class="txt">Commessa
+					<form:input class="instxt" type="text" path="commessa" />
+				</p>
+				<p class="txt">Note
+					<form:textarea class="instxt" path="note" />
+				</p>
+				<p>
+					<button class="button" type="submit">Aggiungi</button>
+					<a href="${pageContext.request.contextPath}/ticketsM/${idManager}">
+						<button class="button" type="button">annulla</button>
+					</a>
+				</p>
+			</form:form>
+		</div>
 	</body>
 </html>

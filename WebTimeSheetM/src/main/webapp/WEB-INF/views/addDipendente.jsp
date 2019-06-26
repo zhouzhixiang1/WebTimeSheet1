@@ -37,15 +37,15 @@
 					<form:input class="instxt" type="number" path="oreLavorate" defaultValue="0" />
 				</p>
 				<p class="txt">Ruolo
-					<form:select path="ruolo" >
+					<form:select  class="instxt" path="ruolo" >
 				  		<option value="M">M</option>
 				 		<option value="D">D</option>
 		  			</form:select>
 				</p>
-				<button class="button" type="submit">aggiungi</button>
+					<button class="button" type="submit">Aggiungi</button>
 				<a href="${pageContext.request.contextPath }/dipens/${idManager}">
-				<button class="button" type="button">annulla</button>
-			</a>
+					<button class="button" type="button">Annulla</button>
+				</a>
 			</form:form>
 		</div>
 	</body>
