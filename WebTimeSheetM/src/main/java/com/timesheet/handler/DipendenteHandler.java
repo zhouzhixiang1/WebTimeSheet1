@@ -34,6 +34,7 @@ import com.timesheet.service.ManagerService;
 import com.timesheet.service.TicketService;
 
 @Controller
+
 public class DipendenteHandler {
 
 	@Autowired
@@ -70,7 +71,7 @@ public class DipendenteHandler {
 		return "loginD";
 		
 	}
-	//login
+	//login----> pagina controllo
 	@RequestMapping(value="/dipendenteLogin", method = RequestMethod.POST)
 	public String loginD(@RequestParam Integer idDipendente,@RequestParam String nomeDipendente,@RequestParam String passwordDipendente,
 			@RequestParam String ruolo, HttpSession session,Model m) {
@@ -80,7 +81,7 @@ public class DipendenteHandler {
 			return "redirect:/main1";
 		}
 		
-		m.addAttribute("msg","Nome Dipendente o password errato!");
+		m.addAttribute("msg","Nome, password o ruolo errato!");
 		return "loginD";
 		
 	}

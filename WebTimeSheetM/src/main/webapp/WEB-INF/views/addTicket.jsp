@@ -38,7 +38,8 @@ form {
 				</tr>
 				<tr>
 					<td>
-						<form:input type="hidden" path="idManager.idManager" value="${idManager}"/>
+						<form:hidden path="idManager.idManager" value="${idManager}"/>
+						<form:hidden path="totOreLavorate" value="0" />
 					</td>
 				</tr>
 				<tr>
@@ -109,12 +110,12 @@ form {
 						<form:textarea path="descrizione" />
 					</td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<td class="bold">Totale Ore Lavorate</td>
 					<td>
 						<form:input type="number" path="totOreLavorate" />
 					</td>
-				</tr>
+				</tr> -->
 				<tr>
 					<td class="bold">Commessa</td>
 					<td>

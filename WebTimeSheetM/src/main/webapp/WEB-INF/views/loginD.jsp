@@ -7,16 +7,15 @@
 		<title>Login-TS</title>	
 		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
 		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="scripts/validate.js"></script>	
+		<script type="text/javascript" src="scripts/validate2.js"></script>	
 		<style type="text/css">
-h5{
-  color:red;
-  }
-		
-.error{
-  color:red;
-}
-			<%@ include file="/css/stile.css" %>
+			h5{
+			  color:red;
+			  }
+			.error{
+			  color:red;
+			}
+		<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
 	<body>
@@ -47,13 +46,14 @@ h5{
 				<p class="txt">
 		  			<label for="ruolo">Ruolo</label>
 					<select class="instxt" name="ruolo" id="ruolo">
+						<option value="default">-select-</option>
 						<option value="M">M</option>
 						<option value="D">D</option>
 					</select>
 				</p>
 				<h5>${msg}</h5>
 				<button class="button" type="submit">login</button>
-				<a href="home.jsp">
+				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Annulla</button>
 				</a>
 			</form>

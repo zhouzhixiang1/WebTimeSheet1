@@ -7,7 +7,7 @@
 		<title>Login-TS</title>	
 		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
 		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="scripts/validate.js"></script>
+		<script type="text/javascript" src="scripts/validateM.js"></script>
 		<style type="text/css">
 h5{
   color:red;
@@ -48,7 +48,7 @@ h5{
 				<h5>${msg}</h5>
 				<button class="button" type="submit">login</button>
 				
-				<a href="home.jsp">
+				<a href="${pageContext.request.contextPath}/home.jsp">
 					<button class="button" type="button">Annulla</button>
 				</a>
 			</form>

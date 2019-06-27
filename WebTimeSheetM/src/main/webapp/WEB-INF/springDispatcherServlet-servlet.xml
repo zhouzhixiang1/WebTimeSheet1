@@ -25,12 +25,21 @@
 	
 	<mvc:annotation-driven></mvc:annotation-driven>
 	
-	<!-- <mvc:interceptors>
- 	<mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <bean class="com.timesheet.intercepter.LoginIntercepter"/>
-        </mvc:interceptor>
-    </mvc:interceptors> -->
+	 <mvc:interceptors>
+	 <mvc:interceptor>
+	 	<mvc:mapping path="manager/**"/>
+	 	 <bean class="com.timesheet.intercepter.LoginIntercepter"/>
+	 </mvc:interceptor>
+	<!--   <mvc:interceptor>
+	 <mvc:mapping path=""/>
+	 	 <bean class="com.timesheet.intercepter.LoginIntercepterD"/>
+	 </mvc:interceptor> -->
+	 <mvc:interceptor>
+		 <mvc:mapping path="/**"/>
+	 	<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+	 </mvc:interceptor>
+ 			
+    </mvc:interceptors>
 	
 
 </beans>

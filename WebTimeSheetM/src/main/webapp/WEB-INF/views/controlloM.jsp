@@ -7,6 +7,9 @@
 		<meta charset="ISO-8859-1">
 		<title>Manager-TS</title>
 		<style type="text/css">
+		h2 {
+    margin-left: 20px;
+}
 			<%@ include file="/css/stile.css" %>
 		</style>
 	</head>
@@ -19,12 +22,13 @@
 				</a>
 				<c:if test="${not empty manager }"><a href="logout">
 					<button class="button" type="button">logout</button>
-				</a></c:if>
+				</a>
+					<h2>Benvenuto,&nbsp;${manager.managerName}&nbsp;</h2>
+				</c:if>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
-		<c:if test="${not empty manager }">
-<!-- 		Benvenuto,&nbsp;${manager.managerName}&nbsp;<br> -->
+		
 			<form>
 				<div>
 					<a href="dipens/${manager.idManager }" style=" text-decoration: none">
@@ -42,7 +46,7 @@
 					</a>
 				</div>
 			</form>
-		</c:if>
+
 
 		<c:if test="${empty manager}">
 			Error login in ,Please 

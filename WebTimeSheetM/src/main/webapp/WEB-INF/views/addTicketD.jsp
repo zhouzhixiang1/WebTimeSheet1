@@ -39,8 +39,8 @@ form {
 			<table style=" text-align: left;">
 			<tr>
 				<td><h1>Aggiungi ticket</h1></td>
+				<form:hidden path="totOreLavorate" value="0" />
 				</tr>
-				<tr>
 				<tr>
 					<td class="bold">Id Manager</td>
 					<td>
@@ -117,12 +117,12 @@ form {
 						<form:textarea path="descrizione" />
 					</td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<td class="bold">Totale Ore Lavorate</td>
 					<td>
 						<form:input type="number" path="totOreLavorate" />
 					</td>
-				</tr>
+				</tr> -->
 				<tr>
 					<td class="bold">Commessa</td>
 					<td>
@@ -142,7 +142,6 @@ form {
 				</a></td>
 				</tr>
 			</table>
-			
 		</form:form>
 		
 	</body>

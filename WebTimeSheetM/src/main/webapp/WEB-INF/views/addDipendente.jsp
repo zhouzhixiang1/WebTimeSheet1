@@ -7,7 +7,10 @@
 
 	<head>
 	<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Add Dipendente</title>
+		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/validateAD.js"></script>	
 		<style type="text/css">
 			<%@ include file="/css/stile.css" %>
 		</style>
@@ -23,19 +26,20 @@
 		</div>
 		<!-- ^NAVBAR^ -->
 		<div class="txtbox">
-		<form:form method="POST"
+		<form:form method="POST" id="signupFormAD"
 			action="${pageContext.request.contextPath }/addDipen" modelAttribute="dipendente">
 				<h3>Aggiunge Dipendente</h3>
-					<form:input class="instxt" type="hidden" path="idManager.idManager" value="${idManager}"/>
+					<form:hidden class="instxt" path="idManager.idManager" value="${idManager}"/>
+					<form:hidden class="instxt" path="oreLavorate" value="0" />
 				<p class="txt">Nome Dipendente
 					<form:input class="instxt" type="text" path="nomeDipendente"/>
 				</p>
 				<p class="txt">Password Dipendente
 					<form:input class="instxt" type="text" path="passwordDipendente" />
 				</p>
-				<p class="txt">Ore Lavorate
+				<!-- <p class="txt">Ore Lavorate
 					<form:input class="instxt" type="number" path="oreLavorate" defaultValue="0" />
-				</p>
+				</p> -->
 				<p class="txt">Ruolo
 					<form:select  class="instxt" path="ruolo" >
 				  		<option value="M">M</option>

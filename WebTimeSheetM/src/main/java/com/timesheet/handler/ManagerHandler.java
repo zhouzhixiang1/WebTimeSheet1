@@ -29,6 +29,7 @@ import com.timesheet.service.ManagerService;
 import com.timesheet.service.TicketService;
 
 @Controller
+@RequestMapping(value="/manager")
 public class ManagerHandler {
 	
 	@Autowired
@@ -57,7 +58,7 @@ public class ManagerHandler {
 	// va alla pagina login
 	@RequestMapping(value = "/loginM", method = RequestMethod.GET)
 	public String toLogin() {
-		return "login";
+		return "/login";
 	}
 	// login utente
 	@RequestMapping(value = "/managerLogin", method = RequestMethod.POST)
@@ -66,7 +67,7 @@ public class ManagerHandler {
 		Manager manager = managerService.loginManager(idManager, managerName, managerPassword);
 		if(manager != null) {
 			session.setAttribute("manager", manager);
-			return "redirect:/main";
+			return "redirect:/manager/main";
 		}
 		m.addAttribute("msg","Nome Manager o password errato!");
 		return "login";

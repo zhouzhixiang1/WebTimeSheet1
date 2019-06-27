@@ -11,6 +11,9 @@
 		<title>Dipendente-TS</title>
 		<style type="text/css">
 			<%@ include file="/css/stile.css" %>
+				h2 {
+   			 margin-left: 20px;
+					}
 		</style>
 		
 	</head>
@@ -25,13 +28,12 @@
 					<a href="logoutD">
 						<button class="button" type="button">logout</button>
 					</a>
+					<h2>Benvenuto,&nbsp;${dipendente.nomeDipendente}&nbsp;</h2>
 				</c:if>
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
 		
-		<c:if test="${not empty dipendente}">
-	<!-- <h2>Benvenuto,&nbsp;${dipendente.nomeDipendente}&nbsp;</h2> -->
 			<form>
 			<c:if test="${dipendente.ruolo == 'D'}">
 				<div>
@@ -53,7 +55,7 @@
 				</a>
 			</div>
 			</form>
-		</c:if>
+
 		
 		<c:if test="${empty dipendente }">
 			Error login in ,Please 

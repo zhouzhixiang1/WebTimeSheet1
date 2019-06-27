@@ -21,7 +21,7 @@
 		<!-- ^NAVBAR^ -->
 		<form>
 		<div>
-			<a href="loginM">
+			<a href="manager/loginM">
 				<button class="split" type="button" style="background-image: url(images/manager2.jpg);">manager</button>
 			</a>
 		</div>	
