@@ -16,6 +16,9 @@ label {
   font-weight: lighter;
 }
 			<%@ include file="/css/stile.css" %>
+			h2 {
+    margin-left: 200px;
+}
 		</style>
 	</head>
 	<body>
@@ -33,6 +36,7 @@ label {
 			modelAttribute="dticket">
 			<form:hidden path="idTicket" />
 			<!-- <input type="hidden" name="_method" value="PUT" /> -->
+			<h2>Dettaglio Ticket</h2>
 			<table style=" text-align: left; width: 20vw">
 				<tr>
 					<td class="bold">Cliente:</td>

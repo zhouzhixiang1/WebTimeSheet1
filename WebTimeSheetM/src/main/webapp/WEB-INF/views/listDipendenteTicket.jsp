@@ -12,6 +12,9 @@
 		
 		<style type="text/css">
 			<%@ include file="/css/stile.css" %>
+						h2 {
+    margin-left: 15px;
+}
 		</style>
 	</head>
 	<body>
@@ -30,6 +33,7 @@
 		<form action="" method="POST" id="_form">
 		<input type="hidden"  id="_method" name="_method" />
 		</form>
+		<h2>Tabella Assegnazione</h2>
 		<table cellpadding="10" style=" width: 20vw">
 			<tr>
 				<th class="bg">ID</th>

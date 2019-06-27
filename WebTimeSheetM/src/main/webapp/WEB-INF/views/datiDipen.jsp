@@ -11,6 +11,8 @@
 td {
   border-bottom: 0.5px solid gray;
 }
+h2{ margin-left:18px;
+}
 			<%@ include file="/css/stile.css" %>
 		</style>
 		<title></title>
@@ -29,6 +31,7 @@ td {
 			action=""
 			modelAttribute="dipendente">
 			<form:hidden path="idDipendente" />
+			<h2>Dati dipendente</h2>
 			<table style=" text-align: left; width: 20vw;">
 				<tr>
 					<td class="bold" style="padding: 10px;">Dipendente:</td>

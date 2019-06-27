@@ -12,10 +12,13 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/delete.js"></script>
 
 <style type="text/css">
-th {
-  padding-left: 5px;
-  padding-right: 5px;	
-}	
+	th {
+	  padding-left: 5px;
+	  padding-right: 5px;	
+	}	
+	h3 {
+	    margin-left: 200px;
+	}
 	<%@ include file="/css/stile.css" %>
 </style>
 	</head>
@@ -35,6 +38,7 @@ th {
 		<form action="" method="POST" id="_form">
 		<input type="hidden"  id="_method" name="_method" />
 		</form>
+		<h3>Tabella Dipendenti</h3>
 		<table cellpadding="10">
 			<tr>
 				<th class="bg">Id Dipendente</th>
@@ -62,7 +66,7 @@ th {
 					</th>
 				</tr>
 			</c:forEach>
-				<!--  <tr>
+				<!-- <tr>
 				<td colspan="8">
 					TotalEmps${page.totalElements }&nbsp;&nbsp;
 					TotalPages${page.totalPages } &nbsp;&nbsp;
@@ -70,7 +74,7 @@ th {
 					<a href="?pageNo=${page.number + 1 - 1 } ">Previous</a>&nbsp;&nbsp;
 					<a href="?pageNo=${page.number + 1 + 1 }">Next</a>
 				</td>
-			</tr>-->
+			</tr> -->
 		</table>
 		<a href="${pageContext.request.contextPath }/main">
 				<button class="button" type="button" style=" width: 120px; margin-left: 16px;">back</button>

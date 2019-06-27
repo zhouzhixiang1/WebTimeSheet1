@@ -32,6 +32,7 @@ h5{
 		<!-- ^NAVBAR^ -->
 		<div class="txtbox">
 			<form method="post" id="signupFormM" action="managerLogin">
+			<h1>Login Manager</h1>
 				<p class="txt">
 					<label for="idManager">Codice Manager</label>
 					<input class="instxt" type="number" min="1001" max="1003"name="idManager" id="idManager" >

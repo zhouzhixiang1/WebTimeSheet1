@@ -176,25 +176,25 @@ public class ManagerHandler {
 	@RequestMapping(value="/addDipenTicket",method = RequestMethod.POST)
 	public String saveDT(DipendenteTicket dipendenteTicket){
 		dipendenteTicketService.saveDT(dipendenteTicket);
-		return "redirect:/main";
+		return "redirect:/listDipenTicket";
 				
 			}
-	// go to page edit dipendente ticket
-	@RequestMapping(value="editDipenTicket/{id}", method = RequestMethod.GET)
-	public String inputDT(@PathVariable("id")Integer id, Map<String , Object>map) {
-		DipendenteTicket listDT = dipendenteTicketService.getOneDT(id);
-		map.put("tickets",ticketService.getAllT());
-		map.put("dipendenti", dipendenteService.getAllD());
-		map.put("listDT",listDT);
-		return "addDT";
-	}
-	//edit dipendete-ticket and return main
-	@RequestMapping(value="/editDipenTicket/{id}",method = RequestMethod.PUT)
-	public String editDT(DipendenteTicket dipendenteTicket){
-		dipendenteTicketService.saveDT(dipendenteTicket);
-		return "redirect:/main";
-					
-			}
+//	// go to page edit dipendente-ticket
+//	@RequestMapping(value="editDipenTicket/{id}", method = RequestMethod.GET)
+//	public String inputDT(@PathVariable("id")Integer id, Map<String , Object>map) {
+//		DipendenteTicket listDT = dipendenteTicketService.getOneDT(id);
+//		map.put("tickets",ticketService.getAllT());
+//		map.put("dipendenti", dipendenteService.getAllD());
+//		map.put("listDT",listDT);
+//		return "addDT";
+//	}
+//	//edit dipendete-ticket and return main
+//	@RequestMapping(value="/editDipenTicket/{id}",method = RequestMethod.PUT)
+//	public String editDT(DipendenteTicket dipendenteTicket){
+//		dipendenteTicketService.saveDT(dipendenteTicket);
+//		return "redirect:/main";
+//					
+//			}
 	//delete dipendente-ticket by id 
 		@RequestMapping(value="/deleteDipenTicket/{id}",method = RequestMethod.DELETE)
 		public String deleteDT(@PathVariable("id")Integer id) {

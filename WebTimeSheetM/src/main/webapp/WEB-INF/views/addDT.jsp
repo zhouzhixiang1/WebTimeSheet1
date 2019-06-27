@@ -24,20 +24,21 @@
 		<!-- ^NAVBAR^ -->
 		<div class="txtbox">
 		<c:set value="${pageContext.request.contextPath }/addDipenTicket" var="url"></c:set>
-	<c:if test ="${listDT.id != null}">
+	<!--<c:if test ="${listDT.id != null}">
 		<c:set value="${pageContext.request.contextPath }/editDipenTicket/${listDT.id }" var="url"></c:set>
-	</c:if>
+	</c:if>-->
 		<form:form method="POST" action="${url}" modelAttribute="listDT">
-		<c:if test="${listDT.id != null }">
+	<!-- <c:if test="${listDT.id != null }">
 				<form:hidden path="id" />
 				<input type="hidden" name="_method" value="PUT"/>
-		</c:if>
-				<p class="txt">Id Ticket
+		</c:if>-->
+		<h2>Assegna ticket-dipendenti</h2>
+				<p class="txt">Ticket
 					<form:select class="instxt" path="idTicket.idTicket" items="${tickets}"
 						itemLabel="Commessa" itemValue="idTicket">
 					</form:select>		
 				</p>
-				<p class="txt">Id Dipendente
+				<p class="txt">Dipendente
 					<form:select class="instxt" path="idDipendente.idDipendente" items="${dipendenti}"
 						itemLabel="nomeDipendente" itemValue="idDipendente">
 					</form:select>

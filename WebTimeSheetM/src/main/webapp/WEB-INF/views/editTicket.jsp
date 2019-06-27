@@ -17,7 +17,11 @@ form {
   width: 160px;
   
 }
+h3 {
+    margin-left: 18px;
+}
 			<%@ include file="/css/stile.css" %>
+			
 		</style>
 	</head>
 	<body>
@@ -36,7 +40,7 @@ form {
 			<form:hidden path="idTicket"/>
 			<form:hidden path="idManager.idManager"/>
 			<input type="hidden" name="_method" value="PUT"/>
-				<h3>Aggiungi Ticket</h3>
+				<h3>Modifica Ticket</h3>
 				<table style=" text-align: left;">
 				<tr>
 					<td class="bold">Cliente</td>

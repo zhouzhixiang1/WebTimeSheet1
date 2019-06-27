@@ -14,6 +14,9 @@ td {
   border-bottom: 0.5px solid gray;
 }
 			<%@ include file="/css/stile.css" %>
+			h2 {
+    margin-left: 200px;
+}
 		</style>
 	</head>
 	<body>
@@ -31,6 +34,7 @@ td {
 			modelAttribute="mticket" id="_form">
 			<form:hidden path="idTicket" />
 			<input type="hidden"  id="_method" name="_method" />
+			<h2>Dettaglio ticket</h2>
 			<table style=" text-align: left;">
 				<tr>
 					<td class="bold">Cliente</td>

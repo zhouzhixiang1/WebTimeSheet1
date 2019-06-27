@@ -17,6 +17,9 @@
 			label {
 			  font-weight: lighter;
 			}
+			h2 {
+    margin-left: 200px;
+}
 			<%@ include file="/css/stile.css" %>
 	</style>
 	</head>
@@ -34,6 +37,7 @@
 			action=""
 			modelAttribute="dticket">
 			<form:hidden path="idTicket" />
+			<h2>Dettaglio Ticket</h2>
 			<table style=" text-align: left;">
 				<tr>
 					<td class="bold">Cliente:</td>

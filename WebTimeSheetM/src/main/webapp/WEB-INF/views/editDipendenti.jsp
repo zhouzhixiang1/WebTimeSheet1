@@ -9,6 +9,9 @@
 		<meta charset="ISO-8859-1">
 		<style type="text/css">
 			<%@ include file="/css/stile.css" %>
+			h2 {
+    margin-left: 200px;
+		}
 		</style>
 		<title></title>
 	</head>
@@ -30,6 +33,7 @@
 			<form:hidden path="passwordDipendente" />
 			<form:hidden path="ruolo" />
 			<input type="hidden" name="_method" value="PUT" />
+			<h2>Modifica ore Lavorate</h2>
 			<table class="table">
 				<tr>
 					<td class="bold" style="padding: 10px;">Dipendente:</td>

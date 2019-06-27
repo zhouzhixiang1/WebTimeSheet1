@@ -9,6 +9,9 @@
 		<title>Tickets-TS</title> <!-- lista ticket per manager  -->
 		<style type="text/css">
 			<%@include file="/css/stile.css"%>
+			h2 {
+    margin-left: 15px;
+}
 		</style>
 	</head>
 	<body>
@@ -24,6 +27,7 @@
 			</p>
 		</div>
 		<!-- ^NAVBAR^ -->
+		<h2>Tabella ticket</h2>
 		<table cellpadding="10" style="width: 20vw">
 			<tr>
 				<th class="bg">Ticket</th>
