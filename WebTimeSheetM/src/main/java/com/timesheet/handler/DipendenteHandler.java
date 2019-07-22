@@ -248,7 +248,7 @@ public class DipendenteHandler {
 		public String edit(Ticket ticket){
 			ticketService.save(ticket);
 			return "redirect:/main1";	
-				}
+		}
 		//data inserimento != null
 		@ModelAttribute
 		public void getTicket(@RequestParam(value="idTicket",required=false)Integer idTicket,
